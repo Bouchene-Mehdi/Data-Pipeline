@@ -3428,3 +3428,171 @@
 [2025-06-09T01:24:32.649+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:24:32.649+0200] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-06-09T01:24:32.664+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:24:32.664+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
 [2025-06-09T01:24:32.695+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 1.019 seconds
+[2025-06-09T01:25:30.814+0200] {processor.py:161} INFO - Started process (PID=1313866) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:25:30.824+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:25:30.825+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:25:30.825+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:25:31.326+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:25:31.337+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:25:31.336+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:25:31.346+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:25:31.345+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:25:31.379+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.571 seconds
+[2025-06-09T01:26:22.922+0200] {processor.py:161} INFO - Started process (PID=1314328) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:26:22.924+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:26:22.925+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:26:22.924+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:26:23.409+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:26:23.420+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:26:23.419+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:26:23.429+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:26:23.429+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:26:23.483+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.567 seconds
+[2025-06-09T01:27:15.357+0200] {processor.py:161} INFO - Started process (PID=1314687) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:27:15.368+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:27:15.369+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:27:15.369+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:27:15.724+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:27:15.732+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:27:15.732+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:27:15.738+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:27:15.737+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:27:15.769+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.417 seconds
+[2025-06-09T01:28:06.219+0200] {processor.py:161} INFO - Started process (PID=1314973) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:28:06.221+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:28:06.221+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:28:06.221+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:28:06.688+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:28:06.697+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:28:06.697+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:28:06.707+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:28:06.707+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:28:06.741+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.528 seconds
+[2025-06-09T01:28:58.528+0200] {processor.py:161} INFO - Started process (PID=1315265) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:28:58.540+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:28:58.541+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:28:58.540+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:28:59.079+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:28:59.091+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:28:59.091+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:28:59.102+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:28:59.102+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:28:59.131+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.609 seconds
+[2025-06-09T01:29:51.340+0200] {processor.py:161} INFO - Started process (PID=1315597) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:29:51.351+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:29:51.352+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:29:51.352+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:29:51.781+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:29:51.791+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:29:51.791+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:29:51.800+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:29:51.800+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:29:51.833+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.498 seconds
+[2025-06-09T01:30:42.125+0200] {processor.py:161} INFO - Started process (PID=1315886) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:30:42.136+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:30:42.137+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:30:42.136+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:30:42.573+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:30:42.582+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:30:42.582+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:30:42.595+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:30:42.594+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:30:42.622+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.502 seconds
+[2025-06-09T01:31:34.468+0200] {processor.py:161} INFO - Started process (PID=1316261) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:31:34.479+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:31:34.480+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:31:34.480+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:31:35.401+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:31:35.416+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:31:35.415+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:31:35.428+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:31:35.428+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:31:35.457+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.994 seconds
+[2025-06-09T01:32:29.289+0200] {processor.py:161} INFO - Started process (PID=1316630) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:32:29.300+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:32:29.301+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:32:29.301+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:32:29.705+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:32:29.716+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:32:29.715+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:32:29.724+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:32:29.723+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:32:29.746+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.461 seconds
+[2025-06-09T01:33:28.065+0200] {processor.py:161} INFO - Started process (PID=1317008) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:33:28.077+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:33:28.078+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:33:28.078+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:33:28.495+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:33:28.503+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:33:28.503+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:33:28.510+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:33:28.510+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:33:28.541+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.480 seconds
+[2025-06-09T01:34:20.108+0200] {processor.py:161} INFO - Started process (PID=1317315) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:34:20.111+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:34:20.111+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:34:20.111+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:34:20.620+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:34:20.632+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:34:20.632+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:34:20.704+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:34:20.704+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:34:20.743+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.640 seconds
+[2025-06-09T01:35:15.998+0200] {processor.py:161} INFO - Started process (PID=1317631) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:35:15.999+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:35:16.000+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:35:16.000+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:35:16.410+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:35:16.419+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:35:16.418+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:35:16.426+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:35:16.426+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:35:16.456+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.462 seconds
+[2025-06-09T01:35:53.436+0200] {processor.py:161} INFO - Started process (PID=1317877) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:35:53.449+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:35:53.453+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:35:53.452+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:35:54.208+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:35:54.431+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:35:54.430+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:35:54.476+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:35:54.475+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:35:54.550+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 1.131 seconds
+[2025-06-09T01:36:35.877+0200] {processor.py:161} INFO - Started process (PID=1318113) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:36:35.895+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:36:35.900+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:36:35.899+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:36:37.814+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:36:37.859+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:36:37.858+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:36:37.893+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:36:37.893+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:36:37.966+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 2.115 seconds
+[2025-06-09T01:37:33.428+0200] {processor.py:161} INFO - Started process (PID=1318471) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:37:33.429+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:37:33.429+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:37:33.429+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:37:33.845+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:37:33.854+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:37:33.853+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:37:33.860+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:37:33.860+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:37:33.888+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.465 seconds
+[2025-06-09T01:38:24.241+0200] {processor.py:161} INFO - Started process (PID=1318822) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:38:24.253+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:38:24.253+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:38:24.253+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:38:24.693+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:38:24.703+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:38:24.702+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:38:24.713+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:38:24.713+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:38:24.745+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.509 seconds
+[2025-06-09T01:39:15.166+0200] {processor.py:161} INFO - Started process (PID=1319190) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:39:15.177+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:39:15.178+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:39:15.178+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:39:15.575+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:39:15.583+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:39:15.583+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:39:15.592+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:39:15.592+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:39:15.642+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.480 seconds
+[2025-06-09T01:40:01.405+0200] {processor.py:161} INFO - Started process (PID=1319464) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:40:01.406+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:40:01.408+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:40:01.407+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:40:01.789+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:40:01.798+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:40:01.798+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:40:01.804+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:40:01.804+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:40:01.835+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.434 seconds
+[2025-06-09T01:40:56.506+0200] {processor.py:161} INFO - Started process (PID=1319891) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:40:56.518+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:40:56.519+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:40:56.519+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:40:56.957+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:40:56.967+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:40:56.966+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:40:56.976+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:40:56.975+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:40:57.007+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.506 seconds
+[2025-06-09T01:41:53.144+0200] {processor.py:161} INFO - Started process (PID=1320193) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:41:53.145+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:41:53.146+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:41:53.146+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:41:53.527+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:41:53.536+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:41:53.536+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:41:53.543+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:41:53.543+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:41:53.583+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.443 seconds
+[2025-06-09T01:42:39.997+0200] {processor.py:161} INFO - Started process (PID=1320427) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:42:39.999+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:42:40.000+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:42:40.000+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:42:40.377+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:42:40.387+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:42:40.387+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:42:40.394+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:42:40.394+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:42:40.420+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.427 seconds
+[2025-06-09T01:43:31.390+0200] {processor.py:161} INFO - Started process (PID=1320694) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:43:31.402+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:43:31.403+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:43:31.403+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:43:31.805+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:43:31.814+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:43:31.814+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:43:31.822+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:43:31.821+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:43:31.853+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.468 seconds
+[2025-06-09T01:44:22.000+0200] {processor.py:161} INFO - Started process (PID=1320983) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:44:22.002+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:44:22.003+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:44:22.003+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:44:22.395+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:44:22.405+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:44:22.405+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:44:22.412+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:44:22.412+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:44:22.444+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.448 seconds
+[2025-06-09T01:45:09.639+0200] {processor.py:161} INFO - Started process (PID=1321268) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:45:09.641+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T01:45:09.643+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:45:09.642+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:45:10.045+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T01:45:10.054+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:45:10.054+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:45:10.061+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:45:10.061+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T01:45:10.084+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.450 seconds

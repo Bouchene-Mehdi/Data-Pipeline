@@ -5,404 +5,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9c9117f-5f2f-4596-af6a-dfa063898d09" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/airflow.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/airflow-webserver.pid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/airflow.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/airflow.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/european_cities.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dags/backfill_dag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dags/daily_dag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dags/inspect_parquet_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dags/test_spark.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T18:48:40.049780+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T18:50:45.287815+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T18:50:45.287815+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T18:56:03.586364+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T18:56:03.586364+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T18:57:46.429303+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T18:57:46.429303+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T18:57:46.429303+00:00/task_id=format_weather_backfill/attempt=1.log.SchedulerJob.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T19:01:26.543495+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T19:01:26.543495+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T19:07:58.386102+00:00/task_id=fetch_full_history_all_cities/attempt=1.log.SchedulerJob.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T19:08:50.150062+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T19:16:16.708132+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T19:18:36.115187+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T19:23:43.475563+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T19:33:25.959858+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T19:35:46.864173+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T19:41:39.306839+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T21:37:31.059774+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T21:46:17.400056+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T21:46:40.129476+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T21:46:52.483712+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-28T21:47:54.926984+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-30T14:11:30.823389+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-30T14:11:30.823389+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-05-30T14:11:30.823389+00:00/task_id=format_weather_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T11:28:01.524862+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T11:28:01.524862+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T11:34:19.189221+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T11:34:19.189221+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T11:46:17.317782+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T12:23:47.021105+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T12:23:47.021105+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T12:47:52.463448+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T12:47:52.463448+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T13:23:32.383860+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T13:23:32.383860+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T13:57:54.755229+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T14:00:13.150454+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T14:00:13.150454+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T14:04:26.657871+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T14:04:26.657871+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T14:27:41.500483+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T14:29:12.797554+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T14:29:12.797554+00:00/task_id=format_weather_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T19:21:34.508455+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T19:21:34.508455+00:00/task_id=format_weather_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T19:55:55.362967+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T19:55:55.362967+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T19:55:55.362967+00:00/task_id=format_pollution_backfill/attempt=1.log.SchedulerJob.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T20:02:16.395494+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T20:03:15.706061+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T20:03:15.706061+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T20:05:12.436579+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T20:05:12.436579+00:00/task_id=format_weather_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T20:19:56.840279+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T20:19:56.840279+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T20:19:56.840279+00:00/task_id=format_weather_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T20:20:51.047547+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T20:20:51.047547+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T20:22:21.251881+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T20:22:21.251881+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T20:22:21.251881+00:00/task_id=format_weather_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T20:36:25.826711+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T20:36:25.826711+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T20:36:25.826711+00:00/task_id=format_weather_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T21:06:15.676444+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T21:06:15.676444+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T21:14:21.166156+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T21:16:57.017383+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T21:20:02.268249+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T21:24:14.214553+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T21:31:33.343204+00:00/task_id=format_pollution_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T21:31:33.343204+00:00/task_id=format_weather_backfill/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T21:50:23.298679+00:00/task_id=format_backfill_all_data/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T21:54:33.869367+00:00/task_id=format_backfill_all_data/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T21:54:33.869367+00:00/task_id=format_backfill_all_data/attempt=2.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T21:54:33.869367+00:00/task_id=format_backfill_all_data/attempt=3.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T21:56:04.789188+00:00/task_id=format_backfill_all_data/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T22:01:01.434960+00:00/task_id=format_backfill_all_data/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T22:11:03.113635+00:00/task_id=format_backfill_all_data/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T22:18:39.044499+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T22:18:39.044499+00:00/task_id=format_backfill_all_data/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T22:40:05.586802+00:00/task_id=fetch_full_history_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=backfill_pollution_weather_dag/run_id=manual__2025-06-08T22:40:05.586802+00:00/task_id=format_backfill_all_data/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=manual__2025-05-30T22:33:57.729826+00:00/task_id=format_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=manual__2025-05-30T22:36:57.684146+00:00/task_id=format_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-23T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-23T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-24T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-24T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-25T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-25T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-26T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-26T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-27T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-27T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-28T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-28T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-29T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-29T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=2.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-29T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-29T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=2.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-05-30T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-05T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-05T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-06T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-06T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-07T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-05-30T19:18:10.782369+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-05-30T23:31:32.032417+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-05-31T10:55:53.529995+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-05-31T11:39:45.222179+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-05-31T11:52:39.839525+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-05-31T12:17:11.498620+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-05-31T12:24:20.880761+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-05-31T13:00:30.827029+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-05-31T13:08:41.804552+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T13:33:53.707293+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T13:36:02.373505+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T13:42:39.622706+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T14:39:23.901032+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T14:40:18.994843+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T14:41:08.390752+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T14:42:22.446262+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T14:45:48.142464+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T14:48:06.685526+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T18:36:24.694501+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T19:28:45.509976+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T19:29:18.417643+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T19:29:36.052317+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T20:08:44.054508+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T20:09:16.628277+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T20:10:44.538651+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T20:11:17.891365+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T20:11:28.019803+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T20:30:31.552923+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T20:43:09.572655+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T20:43:30.642607+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T20:50:49.057467+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T20:51:25.364058+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T20:51:31.328965+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T21:00:19.609580+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T21:01:14.307782+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T22:03:20.715338+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T22:04:20.013470+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T22:04:30.965351+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T23:02:15.372457+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=inspect_static_parquet_file_dag/run_id=manual__2025-06-08T23:05:36.363660+00:00/task_id=inspect_static_parquet/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=test_spark_connection/run_id=manual__2025-05-30T16:03:44.655637+00:00/task_id=test_spark_session/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=test_spark_connection/run_id=manual__2025-05-30T16:11:51.869680+00:00/task_id=test_spark_session/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=test_spark_connection/run_id=manual__2025-05-30T16:14:48.859007+00:00/task_id=test_spark_session/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=test_spark_connection/run_id=manual__2025-05-30T16:16:37.890859+00:00/task_id=test_spark_session/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=test_spark_connection/run_id=manual__2025-05-30T16:18:59.895519+00:00/task_id=test_spark_session/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=test_spark_connection/run_id=manual__2025-05-30T16:20:05.653385+00:00/task_id=test_spark_session/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=test_spark_connection/run_id=manual__2025-05-30T16:21:06.719801+00:00/task_id=test_spark_session/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=test_spark_connection/run_id=manual__2025-05-30T16:24:19.689538+00:00/task_id=test_spark_session/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=test_spark_connection/run_id=manual__2025-05-30T16:36:21.981212+00:00/task_id=test_spark_session/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=test_spark_connection/run_id=manual__2025-06-08T11:41:03.062329+00:00/task_id=test_spark_session/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=test_spark_connection/run_id=manual__2025-06-08T11:42:05.526768+00:00/task_id=test_spark_session/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=test_spark_connection/run_id=manual__2025-06-08T11:42:36.809705+00:00/task_id=test_spark_session/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=test_spark_connection/run_id=manual__2025-06-08T11:42:49.158412+00:00/task_id=test_spark_session/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_id=test_spark_connection/run_id=manual__2025-06-08T11:45:46.918530+00:00/task_id=test_spark_session/attempt=1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/dag_processor_manager/dag_processor_manager.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/backfill_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/daily_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_bash_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_bash_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_branch_datetime_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_branch_day_of_week_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_branch_labels.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_branch_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_branch_operator_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_branch_python_dop_operator_3.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_complex.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_dag_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_datasets.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_display_name.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_dynamic_task_mapping.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_dynamic_task_mapping_with_no_taskflow_operators.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_external_task_marker_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_kubernetes_executor.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_latest_only.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_latest_only_with_trigger.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_local_kubernetes_executor.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_nested_branch_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_params_trigger_ui.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_params_ui_tutorial.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_passing_params_via_test_command.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_python_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_python_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_sensor_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_sensors.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_setup_teardown.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_setup_teardown_taskflow.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_short_circuit_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_short_circuit_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_skip_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_sla_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_subdag_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_task_group.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_task_group_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_time_delta_sensor_async.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_trigger_controller_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_trigger_target_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_xcom.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/example_xcomargs.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/plugins/decreasing_priority_weight_strategy.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/plugins/event_listener.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/plugins/listener_plugin.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/plugins/workday.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/subdags/subdag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/tutorial.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/tutorial_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/tutorial_objectstorage.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/tutorial_taskflow_api.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-28/native_dags/example_dags/tutorial_taskflow_api_virtualenv.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/backfill_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/daily_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/inspect_parquet_file.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_bash_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_bash_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_branch_datetime_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_branch_day_of_week_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_branch_labels.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_branch_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_branch_operator_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_branch_python_dop_operator_3.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_complex.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_dag_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_datasets.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_display_name.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_dynamic_task_mapping.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_dynamic_task_mapping_with_no_taskflow_operators.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_external_task_marker_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_kubernetes_executor.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_latest_only.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_latest_only_with_trigger.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_local_kubernetes_executor.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_nested_branch_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_params_trigger_ui.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_params_ui_tutorial.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_passing_params_via_test_command.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_python_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_python_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_sensor_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_sensors.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_setup_teardown.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_setup_teardown_taskflow.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_short_circuit_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_short_circuit_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_skip_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_sla_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_subdag_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_task_group.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_task_group_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_time_delta_sensor_async.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_trigger_controller_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_trigger_target_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_xcom.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/example_xcomargs.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/plugins/decreasing_priority_weight_strategy.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/plugins/event_listener.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/plugins/listener_plugin.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/plugins/workday.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/subdags/subdag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/tutorial.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/tutorial_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/tutorial_objectstorage.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/tutorial_taskflow_api.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/native_dags/example_dags/tutorial_taskflow_api_virtualenv.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-30/test_spark.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/backfill_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/daily_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/inspect_parquet_file.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_bash_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_bash_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_branch_datetime_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_branch_day_of_week_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_branch_labels.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_branch_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_branch_operator_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_branch_python_dop_operator_3.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_complex.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_dag_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_datasets.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_display_name.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_dynamic_task_mapping.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_dynamic_task_mapping_with_no_taskflow_operators.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_external_task_marker_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_kubernetes_executor.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_latest_only.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_latest_only_with_trigger.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_local_kubernetes_executor.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_nested_branch_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_params_trigger_ui.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_params_ui_tutorial.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_passing_params_via_test_command.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_python_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_python_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_sensor_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_sensors.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_setup_teardown.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_setup_teardown_taskflow.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_short_circuit_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_short_circuit_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_skip_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_sla_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_subdag_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_task_group.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_task_group_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_time_delta_sensor_async.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_trigger_controller_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_trigger_target_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_xcom.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/example_xcomargs.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/plugins/decreasing_priority_weight_strategy.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/plugins/event_listener.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/plugins/listener_plugin.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/plugins/workday.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/subdags/subdag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/tutorial.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/tutorial_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/tutorial_objectstorage.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/tutorial_taskflow_api.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/native_dags/example_dags/tutorial_taskflow_api_virtualenv.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-05-31/test_spark.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/backfill_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/daily_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/inspect_parquet_file.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_bash_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_bash_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_datetime_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_day_of_week_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_labels.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_operator_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_python_dop_operator_3.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_complex.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_dag_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_datasets.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_display_name.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_dynamic_task_mapping.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_dynamic_task_mapping_with_no_taskflow_operators.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_external_task_marker_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_kubernetes_executor.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_latest_only.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_latest_only_with_trigger.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_local_kubernetes_executor.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_nested_branch_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_params_trigger_ui.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_params_ui_tutorial.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_passing_params_via_test_command.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_python_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_python_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_sensor_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_sensors.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_setup_teardown.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_setup_teardown_taskflow.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_short_circuit_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_short_circuit_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_skip_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_sla_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_subdag_operator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_task_group.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_task_group_decorator.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_time_delta_sensor_async.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_trigger_controller_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_trigger_target_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_xcom.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_xcomargs.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/plugins/decreasing_priority_weight_strategy.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/plugins/event_listener.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/plugins/listener_plugin.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/plugins/workday.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/subdags/subdag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/tutorial.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/tutorial_dag.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/tutorial_objectstorage.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/tutorial_taskflow_api.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/tutorial_taskflow_api_virtualenv.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/test_spark.py.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/scheduler/latest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/standalone_admin_password.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webserver_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airflow.db" beforeDir="false" afterPath="$PROJECT_DIR$/airflow.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/dag_processor_manager/dag_processor_manager.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_processor_manager/dag_processor_manager.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/backfill_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/backfill_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/daily_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/daily_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/inspect_parquet_file.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/inspect_parquet_file.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_bash_decorator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_bash_decorator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_bash_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_bash_operator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_datetime_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_datetime_operator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_day_of_week_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_day_of_week_operator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_labels.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_labels.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_operator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_operator_decorator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_operator_decorator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_python_dop_operator_3.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_branch_python_dop_operator_3.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_complex.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_complex.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_dag_decorator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_dag_decorator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_datasets.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_datasets.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_display_name.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_display_name.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_dynamic_task_mapping.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_dynamic_task_mapping.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_dynamic_task_mapping_with_no_taskflow_operators.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_dynamic_task_mapping_with_no_taskflow_operators.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_external_task_marker_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_external_task_marker_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_kubernetes_executor.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_kubernetes_executor.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_latest_only.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_latest_only.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_latest_only_with_trigger.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_latest_only_with_trigger.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_local_kubernetes_executor.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_local_kubernetes_executor.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_nested_branch_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_nested_branch_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_params_trigger_ui.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_params_trigger_ui.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_params_ui_tutorial.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_params_ui_tutorial.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_passing_params_via_test_command.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_passing_params_via_test_command.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_python_decorator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_python_decorator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_python_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_python_operator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_sensor_decorator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_sensor_decorator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_sensors.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_sensors.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_setup_teardown.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_setup_teardown.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_setup_teardown_taskflow.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_setup_teardown_taskflow.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_short_circuit_decorator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_short_circuit_decorator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_short_circuit_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_short_circuit_operator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_skip_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_skip_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_sla_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_sla_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_subdag_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_subdag_operator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_task_group.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_task_group.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_task_group_decorator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_task_group_decorator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_time_delta_sensor_async.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_time_delta_sensor_async.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_trigger_controller_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_trigger_controller_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_trigger_target_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_trigger_target_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_xcom.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_xcom.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_xcomargs.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/example_xcomargs.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/plugins/decreasing_priority_weight_strategy.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/plugins/decreasing_priority_weight_strategy.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/plugins/event_listener.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/plugins/event_listener.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/plugins/listener_plugin.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/plugins/listener_plugin.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/plugins/workday.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/plugins/workday.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/subdags/subdag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/subdags/subdag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/tutorial.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/tutorial.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/tutorial_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/tutorial_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/tutorial_objectstorage.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/tutorial_objectstorage.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/tutorial_taskflow_api.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/tutorial_taskflow_api.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/tutorial_taskflow_api_virtualenv.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/native_dags/example_dags/tutorial_taskflow_api_virtualenv.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-08/test_spark.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-08/test_spark.py.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -451,7 +111,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -481,7 +141,7 @@
       <workItem from="1748611140371" duration="21310000" />
       <workItem from="1748642587255" duration="5503000" />
       <workItem from="1748684955013" duration="14659000" />
-      <workItem from="1749380349099" duration="28187000" />
+      <workItem from="1749380349099" duration="29128000" />
     </task>
     <servers />
   </component>
