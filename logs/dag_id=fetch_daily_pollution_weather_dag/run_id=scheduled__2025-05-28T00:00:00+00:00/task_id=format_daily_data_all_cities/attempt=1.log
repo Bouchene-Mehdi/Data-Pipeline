@@ -1,0 +1,234 @@
+[2025-05-30T15:46:40.201+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-30T15:46:40.218+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-05-28T00:00:00+00:00 [queued]>
+[2025-05-30T15:46:40.222+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-05-28T00:00:00+00:00 [queued]>
+[2025-05-30T15:46:40.222+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-30T15:46:40.236+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): format_daily_data_all_cities> on 2025-05-28 00:00:00+00:00
+[2025-05-30T15:46:40.238+0200] {standard_task_runner.py:63} INFO - Started process 10561 to run task
+[2025-05-30T15:46:40.241+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'format_daily_data_all_cities', 'scheduled__2025-05-28T00:00:00+00:00', '--job-id', '60', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpto7ntohd']
+[2025-05-30T15:46:40.242+0200] {standard_task_runner.py:91} INFO - Job 60: Subtask format_daily_data_all_cities
+[2025-05-30T15:46:40.272+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-05-28T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-30T15:46:40.325+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='format_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-28T00:00:00+00:00'
+[2025-05-30T15:46:40.325+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-30T15:46:40.488+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-30T15:46:40.488+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-30T15:46:40.490+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=format_daily_data_all_cities, execution_date=20250528T000000, start_date=20250530T134640, end_date=20250530T134640
+[2025-05-30T15:46:40.533+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-30T15:46:40.540+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-30T15:46:40.541+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-30T17:28:10.224+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-30T17:28:10.237+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-05-28T00:00:00+00:00 [queued]>
+[2025-05-30T17:28:10.240+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-05-28T00:00:00+00:00 [queued]>
+[2025-05-30T17:28:10.240+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-30T17:28:10.256+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): format_daily_data_all_cities> on 2025-05-28 00:00:00+00:00
+[2025-05-30T17:28:10.258+0200] {standard_task_runner.py:63} INFO - Started process 34696 to run task
+[2025-05-30T17:28:10.260+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'format_daily_data_all_cities', 'scheduled__2025-05-28T00:00:00+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpbeudm2k6']
+[2025-05-30T17:28:10.261+0200] {standard_task_runner.py:91} INFO - Job 84: Subtask format_daily_data_all_cities
+[2025-05-30T17:28:10.286+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-05-28T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-30T17:28:10.335+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='format_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-28T00:00:00+00:00'
+[2025-05-30T17:28:10.335+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-30T17:28:10.432+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-30T17:28:10.432+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-30T17:28:10.434+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=format_daily_data_all_cities, execution_date=20250528T000000, start_date=20250530T152810, end_date=20250530T152810
+[2025-05-30T17:28:10.473+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-30T17:28:10.480+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-30T17:28:10.480+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-30T19:14:49.431+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-30T19:14:49.446+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-05-28T00:00:00+00:00 [queued]>
+[2025-05-30T19:14:49.450+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-05-28T00:00:00+00:00 [queued]>
+[2025-05-30T19:14:49.450+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-30T19:14:49.465+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): format_daily_data_all_cities> on 2025-05-28 00:00:00+00:00
+[2025-05-30T19:14:49.467+0200] {standard_task_runner.py:63} INFO - Started process 62041 to run task
+[2025-05-30T19:14:49.470+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'format_daily_data_all_cities', 'scheduled__2025-05-28T00:00:00+00:00', '--job-id', '111', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmp00nvdreb']
+[2025-05-30T19:14:49.470+0200] {standard_task_runner.py:91} INFO - Job 111: Subtask format_daily_data_all_cities
+[2025-05-30T19:14:49.496+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-05-28T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-30T19:14:49.544+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='format_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-28T00:00:00+00:00'
+[2025-05-30T19:14:49.545+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-30T19:14:55.238+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for istanbul
+[2025-05-30T19:14:55.654+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for istanbul
+[2025-05-30T19:14:55.813+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for moscow
+[2025-05-30T19:14:56.047+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for moscow
+[2025-05-30T19:14:56.182+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for london
+[2025-05-30T19:14:56.392+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for london
+[2025-05-30T19:14:56.562+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for saint_petersburg
+[2025-05-30T19:14:56.758+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for saint_petersburg
+[2025-05-30T19:14:56.919+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for berlin
+[2025-05-30T19:14:57.061+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for berlin
+[2025-05-30T19:14:57.175+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for madrid
+[2025-05-30T19:14:57.311+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for madrid
+[2025-05-30T19:14:57.414+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for kyiv
+[2025-05-30T19:14:57.539+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for kyiv
+[2025-05-30T19:14:57.633+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for rome
+[2025-05-30T19:14:57.768+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for rome
+[2025-05-30T19:14:57.881+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for baku
+[2025-05-30T19:14:58.011+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for baku
+[2025-05-30T19:14:58.102+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for paris
+[2025-05-30T19:14:58.242+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for paris
+[2025-05-30T19:14:58.354+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for vienna
+[2025-05-30T19:14:58.485+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for vienna
+[2025-05-30T19:14:58.580+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for minsk
+[2025-05-30T19:14:58.703+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for minsk
+[2025-05-30T19:14:58.800+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for hamburg
+[2025-05-30T19:14:58.916+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for hamburg
+[2025-05-30T19:14:59.008+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for warsaw
+[2025-05-30T19:14:59.122+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for warsaw
+[2025-05-30T19:14:59.216+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for bucharest
+[2025-05-30T19:14:59.323+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for bucharest
+[2025-05-30T19:14:59.411+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for barcelona
+[2025-05-30T19:14:59.530+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for barcelona
+[2025-05-30T19:14:59.615+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for budapest
+[2025-05-30T19:14:59.727+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for budapest
+[2025-05-30T19:14:59.803+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for belgrade
+[2025-05-30T19:14:59.910+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for belgrade
+[2025-05-30T19:14:59.994+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for munich
+[2025-05-30T19:15:00.113+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for munich
+[2025-05-30T19:15:00.195+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for kharkiv
+[2025-05-30T19:15:00.305+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for kharkiv
+[2025-05-30T19:15:00.385+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for prague
+[2025-05-30T19:15:00.490+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for prague
+[2025-05-30T19:15:00.573+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for milan
+[2025-05-30T19:15:00.678+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for milan
+[2025-05-30T19:15:00.756+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for kazan
+[2025-05-30T19:15:00.868+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for kazan
+[2025-05-30T19:15:00.947+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for sofia
+[2025-05-30T19:15:01.053+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for sofia
+[2025-05-30T19:15:01.146+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for tbilisi
+[2025-05-30T19:15:01.245+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for tbilisi
+[2025-05-30T19:15:01.326+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for nizhny_novgorod
+[2025-05-30T19:15:01.442+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for nizhny_novgorod
+[2025-05-30T19:15:01.519+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for ufa
+[2025-05-30T19:15:01.629+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for ufa
+[2025-05-30T19:15:01.705+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for birmingham
+[2025-05-30T19:15:01.810+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for birmingham
+[2025-05-30T19:15:01.893+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for krasnodar
+[2025-05-30T19:15:01.994+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for krasnodar
+[2025-05-30T19:15:02.068+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for samara
+[2025-05-30T19:15:02.167+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for samara
+[2025-05-30T19:15:02.237+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for rostov-on-don
+[2025-05-30T19:15:02.334+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for rostov-on-don
+[2025-05-30T19:15:02.435+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for yerevan
+[2025-05-30T19:15:02.548+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for yerevan
+[2025-05-30T19:15:02.619+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for cologne
+[2025-05-30T19:15:02.734+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for cologne
+[2025-05-30T19:15:02.819+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for voronezh
+[2025-05-30T19:15:02.940+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for voronezh
+[2025-05-30T19:15:03.010+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for perm
+[2025-05-30T19:15:03.104+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for perm
+[2025-05-30T19:15:03.170+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for volgograd
+[2025-05-30T19:15:03.264+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for volgograd
+[2025-05-30T19:15:03.350+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for odesa
+[2025-05-30T19:15:03.464+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for odesa
+[2025-05-30T19:15:03.794+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-30T19:15:03.794+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-30T19:15:03.798+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=format_daily_data_all_cities, execution_date=20250528T000000, start_date=20250530T171449, end_date=20250530T171503
+[2025-05-30T19:15:03.843+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-30T19:15:03.848+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-30T19:15:03.849+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-30T22:00:49.615+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-30T22:00:49.629+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-05-28T00:00:00+00:00 [queued]>
+[2025-05-30T22:00:49.632+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-05-28T00:00:00+00:00 [queued]>
+[2025-05-30T22:00:49.632+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-30T22:00:49.646+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): format_daily_data_all_cities> on 2025-05-28 00:00:00+00:00
+[2025-05-30T22:00:49.649+0200] {standard_task_runner.py:63} INFO - Started process 109448 to run task
+[2025-05-30T22:00:49.652+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'format_daily_data_all_cities', 'scheduled__2025-05-28T00:00:00+00:00', '--job-id', '122', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpnry_g76k']
+[2025-05-30T22:00:49.652+0200] {standard_task_runner.py:91} INFO - Job 122: Subtask format_daily_data_all_cities
+[2025-05-30T22:00:49.686+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-05-28T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-30T22:00:49.737+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='format_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-28T00:00:00+00:00'
+[2025-05-30T22:00:49.737+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-30T22:00:55.029+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for istanbul
+[2025-05-30T22:00:55.473+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for istanbul
+[2025-05-30T22:00:55.642+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for moscow
+[2025-05-30T22:00:55.974+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for moscow
+[2025-05-30T22:00:56.128+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for london
+[2025-05-30T22:00:56.334+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for london
+[2025-05-30T22:00:56.491+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for saint_petersburg
+[2025-05-30T22:00:56.701+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for saint_petersburg
+[2025-05-30T22:00:56.838+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for berlin
+[2025-05-30T22:00:56.995+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for berlin
+[2025-05-30T22:00:57.118+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for madrid
+[2025-05-30T22:00:57.262+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for madrid
+[2025-05-30T22:00:57.364+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for kyiv
+[2025-05-30T22:00:57.496+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for kyiv
+[2025-05-30T22:00:57.589+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for rome
+[2025-05-30T22:00:57.732+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for rome
+[2025-05-30T22:00:57.840+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for baku
+[2025-05-30T22:00:57.998+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for baku
+[2025-05-30T22:00:58.092+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for paris
+[2025-05-30T22:00:58.225+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for paris
+[2025-05-30T22:00:58.325+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for vienna
+[2025-05-30T22:00:58.460+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for vienna
+[2025-05-30T22:00:58.562+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for minsk
+[2025-05-30T22:00:58.689+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for minsk
+[2025-05-30T22:00:58.781+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for hamburg
+[2025-05-30T22:00:58.890+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for hamburg
+[2025-05-30T22:00:58.975+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for warsaw
+[2025-05-30T22:00:59.080+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for warsaw
+[2025-05-30T22:00:59.170+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for bucharest
+[2025-05-30T22:00:59.295+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for bucharest
+[2025-05-30T22:00:59.399+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for barcelona
+[2025-05-30T22:00:59.571+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for barcelona
+[2025-05-30T22:00:59.674+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for budapest
+[2025-05-30T22:00:59.805+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for budapest
+[2025-05-30T22:00:59.898+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for belgrade
+[2025-05-30T22:01:00.026+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for belgrade
+[2025-05-30T22:01:00.117+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for munich
+[2025-05-30T22:01:00.247+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for munich
+[2025-05-30T22:01:00.354+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for kharkiv
+[2025-05-30T22:01:00.483+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for kharkiv
+[2025-05-30T22:01:00.574+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for prague
+[2025-05-30T22:01:00.690+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for prague
+[2025-05-30T22:01:00.800+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for milan
+[2025-05-30T22:01:00.949+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for milan
+[2025-05-30T22:01:01.094+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for kazan
+[2025-05-30T22:01:01.257+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for kazan
+[2025-05-30T22:01:01.359+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for sofia
+[2025-05-30T22:01:01.484+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for sofia
+[2025-05-30T22:01:01.587+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for tbilisi
+[2025-05-30T22:01:01.706+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for tbilisi
+[2025-05-30T22:01:01.803+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for nizhny_novgorod
+[2025-05-30T22:01:01.928+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for nizhny_novgorod
+[2025-05-30T22:01:02.025+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for ufa
+[2025-05-30T22:01:02.147+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for ufa
+[2025-05-30T22:01:02.229+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for birmingham
+[2025-05-30T22:01:02.335+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for birmingham
+[2025-05-30T22:01:02.418+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for krasnodar
+[2025-05-30T22:01:02.525+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for krasnodar
+[2025-05-30T22:01:02.607+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for samara
+[2025-05-30T22:01:02.718+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for samara
+[2025-05-30T22:01:02.825+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for rostov-on-don
+[2025-05-30T22:01:02.961+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for rostov-on-don
+[2025-05-30T22:01:03.068+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for yerevan
+[2025-05-30T22:01:03.235+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for yerevan
+[2025-05-30T22:01:03.362+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for cologne
+[2025-05-30T22:01:03.507+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for cologne
+[2025-05-30T22:01:03.611+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for voronezh
+[2025-05-30T22:01:03.805+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for voronezh
+[2025-05-30T22:01:03.924+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for perm
+[2025-05-30T22:01:04.058+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for perm
+[2025-05-30T22:01:04.151+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for volgograd
+[2025-05-30T22:01:04.275+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for volgograd
+[2025-05-30T22:01:04.374+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted pollution data for odesa
+[2025-05-30T22:01:04.499+0200] {logging_mixin.py:188} INFO - [OK] Wrote formatted weather data for odesa
+[2025-05-30T22:01:04.806+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-30T22:01:04.806+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-30T22:01:04.821+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=format_daily_data_all_cities, execution_date=20250528T000000, start_date=20250530T200049, end_date=20250530T200104
+[2025-05-30T22:01:04.868+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-30T22:01:04.875+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-30T22:01:04.876+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-30T23:56:34.503+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-30T23:56:34.515+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-05-28T00:00:00+00:00 [queued]>
+[2025-05-30T23:56:34.519+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-05-28T00:00:00+00:00 [queued]>
+[2025-05-30T23:56:34.519+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-30T23:56:34.533+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): format_daily_data_all_cities> on 2025-05-28 00:00:00+00:00
+[2025-05-30T23:56:34.536+0200] {standard_task_runner.py:63} INFO - Started process 140893 to run task
+[2025-05-30T23:56:34.538+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'format_daily_data_all_cities', 'scheduled__2025-05-28T00:00:00+00:00', '--job-id', '124', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpj2twgo2b']
+[2025-05-30T23:56:34.539+0200] {standard_task_runner.py:91} INFO - Job 124: Subtask format_daily_data_all_cities
+[2025-05-30T23:56:34.569+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-05-28T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-30T23:56:34.617+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='format_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-28T00:00:00+00:00'
+[2025-05-30T23:56:34.618+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-30T23:56:34.622+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/utils/context.py:212 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-05-30T23:56:38.240+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-30T23:56:38.241+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-30T23:56:38.244+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=format_daily_data_all_cities, execution_date=20250528T000000, start_date=20250530T215634, end_date=20250530T215638
+[2025-05-30T23:56:38.284+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-30T23:56:38.290+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-30T23:56:38.290+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,19 @@
+[2025-06-09T00:03:22.969+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-09T00:03:22.982+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: inspect_static_parquet_file_dag.inspect_static_parquet manual__2025-06-08T22:03:20.715338+00:00 [queued]>
+[2025-06-09T00:03:22.985+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: inspect_static_parquet_file_dag.inspect_static_parquet manual__2025-06-08T22:03:20.715338+00:00 [queued]>
+[2025-06-09T00:03:22.985+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2025-06-09T00:03:23.007+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): inspect_static_parquet> on 2025-06-08 22:03:20.715338+00:00
+[2025-06-09T00:03:23.009+0200] {standard_task_runner.py:63} INFO - Started process 1234515 to run task
+[2025-06-09T00:03:23.011+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'inspect_static_parquet_file_dag', 'inspect_static_parquet', 'manual__2025-06-08T22:03:20.715338+00:00', '--job-id', '329', '--raw', '--subdir', 'DAGS_FOLDER/inspect_parquet_file.py', '--cfg-path', '/tmp/tmpg5pj4vk1']
+[2025-06-09T00:03:23.012+0200] {standard_task_runner.py:91} INFO - Job 329: Subtask inspect_static_parquet
+[2025-06-09T00:03:23.044+0200] {task_command.py:426} INFO - Running <TaskInstance: inspect_static_parquet_file_dag.inspect_static_parquet manual__2025-06-08T22:03:20.715338+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-06-09T00:03:23.120+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='inspect_static_parquet_file_dag' AIRFLOW_CTX_TASK_ID='inspect_static_parquet' AIRFLOW_CTX_EXECUTION_DATE='2025-06-08T22:03:20.715338+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-08T22:03:20.715338+00:00'
+[2025-06-09T00:03:23.121+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-09T00:03:27.625+0200] {logging_mixin.py:188} INFO - [ERROR] Pollution file not found: /home/ccd/airflow/data/formatted/pollution/paris/2025-06-06/
+[2025-06-09T00:03:27.625+0200] {logging_mixin.py:188} INFO - [ERROR] Weather file not found: /home/ccd/airflow/data/formatted/weather/paris/2025-06-06/
+[2025-06-09T00:03:28.067+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-09T00:03:28.067+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-09T00:03:28.072+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=inspect_static_parquet_file_dag, task_id=inspect_static_parquet, execution_date=20250608T220320, start_date=20250608T220322, end_date=20250608T220328
+[2025-06-09T00:03:28.110+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-09T00:03:28.116+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-09T00:03:28.117+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

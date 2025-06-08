@@ -1,0 +1,52 @@
+[2025-05-29T00:49:27.872+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-29T00:49:27.894+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-24T00:00:00+00:00 [queued]>
+[2025-05-29T00:49:27.900+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-24T00:00:00+00:00 [queued]>
+[2025-05-29T00:49:27.900+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-29T00:49:27.929+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-24 00:00:00+00:00
+[2025-05-29T00:49:27.932+0200] {standard_task_runner.py:63} INFO - Started process 392321 to run task
+[2025-05-29T00:49:27.937+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-24T00:00:00+00:00', '--job-id', '49', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmp31a_twz6']
+[2025-05-29T00:49:27.937+0200] {standard_task_runner.py:91} INFO - Job 49: Subtask fetch_daily_data_all_cities
+[2025-05-29T00:49:27.989+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-24T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-29T00:49:28.103+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-24T00:00:00+00:00'
+[2025-05-29T00:49:28.104+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-29T00:52:13.160+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-29T00:52:13.160+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-29T00:52:13.164+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250524T000000, start_date=20250528T224927, end_date=20250528T225213
+[2025-05-29T00:52:13.235+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-29T00:52:13.244+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-29T00:52:13.255+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-30T16:59:46.788+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-30T16:59:46.798+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-24T00:00:00+00:00 [queued]>
+[2025-05-30T16:59:46.801+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-24T00:00:00+00:00 [queued]>
+[2025-05-30T16:59:46.801+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-30T16:59:46.814+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-24 00:00:00+00:00
+[2025-05-30T16:59:46.817+0200] {standard_task_runner.py:63} INFO - Started process 26898 to run task
+[2025-05-30T16:59:46.818+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-24T00:00:00+00:00', '--job-id', '67', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpnrf4n89_']
+[2025-05-30T16:59:46.819+0200] {standard_task_runner.py:91} INFO - Job 67: Subtask fetch_daily_data_all_cities
+[2025-05-30T16:59:46.846+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-24T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-30T16:59:46.897+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-24T00:00:00+00:00'
+[2025-05-30T16:59:46.899+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-30T17:05:13.477+0200] {local_task_job_runner.py:310} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-05-30T17:05:13.477+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-30T17:05:13.478+0200] {process_utils.py:132} INFO - Sending Signals.SIGTERM to group 26898. PIDs of all processes in the group: [26898]
+[2025-05-30T17:05:13.478+0200] {process_utils.py:87} INFO - Sending the signal Signals.SIGTERM to group 26898
+[2025-05-30T17:05:13.478+0200] {taskinstance.py:2607} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-05-30T17:05:13.479+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-30T17:05:13.504+0200] {process_utils.py:80} INFO - Process psutil.Process(pid=26898, status='terminated', exitcode=0, started='16:59:46') (26898) terminated with exit code 0
+[2025-05-30T17:13:14.975+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-30T17:13:14.986+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-24T00:00:00+00:00 [queued]>
+[2025-05-30T17:13:14.990+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-24T00:00:00+00:00 [queued]>
+[2025-05-30T17:13:14.990+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-30T17:13:15.004+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-24 00:00:00+00:00
+[2025-05-30T17:13:15.006+0200] {standard_task_runner.py:63} INFO - Started process 29730 to run task
+[2025-05-30T17:13:15.008+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-24T00:00:00+00:00', '--job-id', '75', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpx4h9qs_9']
+[2025-05-30T17:13:15.008+0200] {standard_task_runner.py:91} INFO - Job 75: Subtask fetch_daily_data_all_cities
+[2025-05-30T17:13:15.039+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-24T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-30T17:13:15.099+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-24T00:00:00+00:00'
+[2025-05-30T17:13:15.099+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-30T17:16:10.102+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-30T17:16:10.104+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-30T17:16:10.109+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250524T000000, start_date=20250530T151314, end_date=20250530T151610
+[2025-05-30T17:16:10.170+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-30T17:16:10.188+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-30T17:16:10.206+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,44 @@
+[2025-05-28T20:48:43.869+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-28T20:48:43.882+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: backfill_pollution_weather_dag.fetch_full_history_all_cities manual__2025-05-28T18:48:40.049780+00:00 [queued]>
+[2025-05-28T20:48:43.885+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: backfill_pollution_weather_dag.fetch_full_history_all_cities manual__2025-05-28T18:48:40.049780+00:00 [queued]>
+[2025-05-28T20:48:43.885+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2025-05-28T20:48:43.905+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_full_history_all_cities> on 2025-05-28 18:48:40.049780+00:00
+[2025-05-28T20:48:43.907+0200] {standard_task_runner.py:63} INFO - Started process 194503 to run task
+[2025-05-28T20:48:43.911+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'backfill_pollution_weather_dag', 'fetch_full_history_all_cities', 'manual__2025-05-28T18:48:40.049780+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/backfill_dag.py', '--cfg-path', '/tmp/tmpp_1nf9xe']
+[2025-05-28T20:48:43.911+0200] {standard_task_runner.py:91} INFO - Job 11: Subtask fetch_full_history_all_cities
+[2025-05-28T20:48:43.951+0200] {task_command.py:426} INFO - Running <TaskInstance: backfill_pollution_weather_dag.fetch_full_history_all_cities manual__2025-05-28T18:48:40.049780+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-28T20:48:44.013+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='backfill_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_full_history_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T18:48:40.049780+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-28T18:48:40.049780+00:00'
+[2025-05-28T20:48:44.014+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-28T20:48:44.015+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-28T20:48:44.015+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/ccd/airflow/dags/backfill_dag.py", line 84, in fetch_all_data_backfill
+    cities = load_cities()
+  File "/home/ccd/airflow/dags/backfill_dag.py", line 24, in load_cities
+    return pd.read_csv(CITIES_CSV).to_dict(orient='records')
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ccd/airflow/config/european_cities.csv'
+[2025-05-28T20:48:44.018+0200] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=backfill_pollution_weather_dag, task_id=fetch_full_history_all_cities, execution_date=20250528T184840, start_date=20250528T184843, end_date=20250528T184844
+[2025-05-28T20:48:44.039+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 11 for task fetch_full_history_all_cities ([Errno 2] No such file or directory: '/home/ccd/airflow/config/european_cities.csv'; 194503)
+[2025-05-28T20:48:44.042+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-05-28T20:48:44.093+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-28T20:48:44.104+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

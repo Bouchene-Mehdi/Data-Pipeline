@@ -1,0 +1,55 @@
+[2025-06-08T23:17:05.668+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-08T23:17:05.697+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: backfill_pollution_weather_dag.format_pollution_backfill manual__2025-06-08T21:16:57.017383+00:00 [queued]>
+[2025-06-08T23:17:05.704+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: backfill_pollution_weather_dag.format_pollution_backfill manual__2025-06-08T21:16:57.017383+00:00 [queued]>
+[2025-06-08T23:17:05.705+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2025-06-08T23:17:05.737+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): format_pollution_backfill> on 2025-06-08 21:16:57.017383+00:00
+[2025-06-08T23:17:05.742+0200] {standard_task_runner.py:63} INFO - Started process 1201505 to run task
+[2025-06-08T23:17:05.749+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'backfill_pollution_weather_dag', 'format_pollution_backfill', 'manual__2025-06-08T21:16:57.017383+00:00', '--job-id', '306', '--raw', '--subdir', 'DAGS_FOLDER/backfill_dag.py', '--cfg-path', '/tmp/tmp_s6sd7ym']
+[2025-06-08T23:17:05.749+0200] {standard_task_runner.py:91} INFO - Job 306: Subtask format_pollution_backfill
+[2025-06-08T23:17:05.815+0200] {task_command.py:426} INFO - Running <TaskInstance: backfill_pollution_weather_dag.format_pollution_backfill manual__2025-06-08T21:16:57.017383+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-06-08T23:17:05.966+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='backfill_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='format_pollution_backfill' AIRFLOW_CTX_EXECUTION_DATE='2025-06-08T21:16:57.017383+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-08T21:16:57.017383+00:00'
+[2025-06-08T23:17:05.971+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-08T23:17:14.507+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:96 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-08T23:17:14.509+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:97 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-08T23:17:14.512+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:98 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-08T23:17:14.518+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-08T23:17:14.519+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/ccd/airflow/dags/backfill_dag.py", line 143, in format_pollution_backfill
+    df_agg = aggregate_pollution(df_day)
+  File "/home/ccd/airflow/dags/backfill_dag.py", line 110, in aggregate_pollution
+    'time': df_daytime['date'].iloc[2]
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/pandas/core/indexing.py", line 1752, in _getitem_axis
+    self._validate_integer(key, axis)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/pandas/core/indexing.py", line 1685, in _validate_integer
+    raise IndexError("single positional indexer is out-of-bounds")
+IndexError: single positional indexer is out-of-bounds
+[2025-06-08T23:17:14.525+0200] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=backfill_pollution_weather_dag, task_id=format_pollution_backfill, execution_date=20250608T211657, start_date=20250608T211705, end_date=20250608T211714
+[2025-06-08T23:17:14.589+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 306 for task format_pollution_backfill (single positional indexer is out-of-bounds; 1201505)
+[2025-06-08T23:17:14.626+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-08T23:17:14.656+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-08T23:17:14.682+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

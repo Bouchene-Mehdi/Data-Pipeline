@@ -1,0 +1,684 @@
+[2025-05-30T15:46:44.074+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-30T15:46:44.084+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-30T15:46:44.088+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-30T15:46:44.088+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-30T15:46:44.107+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-30T15:46:44.109+0200] {standard_task_runner.py:63} INFO - Started process 10615 to run task
+[2025-05-30T15:46:44.112+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '61', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpk_m_kgn9']
+[2025-05-30T15:46:44.112+0200] {standard_task_runner.py:91} INFO - Job 61: Subtask fetch_daily_data_all_cities
+[2025-05-30T15:46:44.149+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-30T15:46:44.206+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-30T15:46:44.207+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-30T16:06:19.702+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-30T16:06:19.706+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1058, in _validate_conn
+    conn.connect()
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/ccd/.pyenv/versions/3.10.13/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/ccd/.pyenv/versions/3.10.13/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/home/ccd/.pyenv/versions/3.10.13/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 407, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 358, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read timeout=None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/ccd/airflow/dags/daily_dag.py", line 108, in fetch_daily_data
+    fetch_weather(city, execution_date)
+  File "/home/ccd/airflow/dags/daily_dag.py", line 95, in fetch_weather
+    response = requests.get(url, params=params)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read timeout=None)
+[2025-05-30T16:06:19.715+0200] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250530T134644, end_date=20250530T140619
+[2025-05-30T16:06:19.730+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 61 for task fetch_daily_data_all_cities (HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read timeout=None); 10615)
+[2025-05-30T16:06:19.735+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-05-30T16:06:19.742+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-30T16:06:19.742+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-30T17:28:13.979+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-30T17:28:13.993+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-30T17:28:13.998+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-30T17:28:13.998+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-30T17:28:14.015+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-30T17:28:14.018+0200] {standard_task_runner.py:63} INFO - Started process 34784 to run task
+[2025-05-30T17:28:14.021+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '85', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmp9oc8ltbt']
+[2025-05-30T17:28:14.021+0200] {standard_task_runner.py:91} INFO - Job 85: Subtask fetch_daily_data_all_cities
+[2025-05-30T17:28:14.055+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-30T17:28:14.107+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-30T17:28:14.108+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-30T17:31:06.520+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-30T17:31:06.520+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-30T17:31:06.523+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250530T152813, end_date=20250530T153106
+[2025-05-30T17:31:06.544+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-30T17:31:06.550+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-30T17:31:06.561+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-30T19:15:08.551+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-30T19:15:08.566+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-30T19:15:08.570+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-30T19:15:08.571+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-30T19:15:08.588+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-30T19:15:08.591+0200] {standard_task_runner.py:63} INFO - Started process 63991 to run task
+[2025-05-30T19:15:08.594+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '112', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpwo00cgyn']
+[2025-05-30T19:15:08.595+0200] {standard_task_runner.py:91} INFO - Job 112: Subtask fetch_daily_data_all_cities
+[2025-05-30T19:15:08.632+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-30T19:15:08.725+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-30T19:15:08.726+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-30T19:18:01.122+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-30T19:18:01.122+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-30T19:18:01.125+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250530T171508, end_date=20250530T171801
+[2025-05-30T19:18:01.180+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-30T19:18:01.188+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-30T19:18:01.198+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-30T22:01:11.082+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-30T22:01:11.122+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-30T22:01:11.129+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-30T22:01:11.129+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-30T22:01:11.151+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-30T22:01:11.154+0200] {standard_task_runner.py:63} INFO - Started process 111391 to run task
+[2025-05-30T22:01:11.159+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '123', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmp9xlw_1xf']
+[2025-05-30T22:01:11.160+0200] {standard_task_runner.py:91} INFO - Job 123: Subtask fetch_daily_data_all_cities
+[2025-05-30T22:01:11.204+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-30T22:01:11.304+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-30T22:01:11.305+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-30T22:04:05.281+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-30T22:04:05.282+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-30T22:04:05.286+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250530T200111, end_date=20250530T200405
+[2025-05-30T22:04:05.322+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-30T22:04:05.331+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-30T22:04:05.340+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-30T23:56:42.295+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-30T23:56:42.305+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-30T23:56:42.309+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-30T23:56:42.309+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-30T23:56:42.327+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-30T23:56:42.329+0200] {standard_task_runner.py:63} INFO - Started process 141114 to run task
+[2025-05-30T23:56:42.332+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '125', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmps07pfjmh']
+[2025-05-30T23:56:42.333+0200] {standard_task_runner.py:91} INFO - Job 125: Subtask fetch_daily_data_all_cities
+[2025-05-30T23:56:42.363+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-30T23:56:42.426+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-30T23:56:42.427+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-30T23:59:35.927+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-30T23:59:35.928+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-30T23:59:35.932+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250530T215642, end_date=20250530T215935
+[2025-05-30T23:59:35.970+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-30T23:59:35.978+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-30T23:59:35.988+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T00:06:56.066+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T00:06:56.085+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T00:06:56.090+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T00:06:56.090+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T00:06:56.108+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T00:06:56.111+0200] {standard_task_runner.py:63} INFO - Started process 148402 to run task
+[2025-05-31T00:06:56.115+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '125', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpd01__hux']
+[2025-05-31T00:06:56.116+0200] {standard_task_runner.py:91} INFO - Job 125: Subtask fetch_daily_data_all_cities
+[2025-05-31T00:06:56.163+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T00:06:56.230+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T00:06:56.231+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T00:09:49.873+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-31T00:09:49.874+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T00:09:49.877+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250530T220656, end_date=20250530T220949
+[2025-05-31T00:09:49.939+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-31T00:09:49.948+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T00:09:49.966+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T00:23:28.525+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T00:23:28.539+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T00:23:28.541+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T00:23:28.541+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T00:23:28.556+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T00:23:28.558+0200] {standard_task_runner.py:63} INFO - Started process 152853 to run task
+[2025-05-31T00:23:28.561+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '127', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpi6si8w3r']
+[2025-05-31T00:23:28.562+0200] {standard_task_runner.py:91} INFO - Job 127: Subtask fetch_daily_data_all_cities
+[2025-05-31T00:23:28.596+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T00:23:28.646+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T00:23:28.647+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T00:26:18.605+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-31T00:26:18.606+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T00:26:18.609+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250530T222328, end_date=20250530T222618
+[2025-05-31T00:26:18.637+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-31T00:26:18.644+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T00:26:18.653+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T00:42:02.250+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T00:42:02.264+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T00:42:02.267+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T00:42:02.268+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T00:42:02.285+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T00:42:02.287+0200] {standard_task_runner.py:63} INFO - Started process 158476 to run task
+[2025-05-31T00:42:02.290+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '131', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpfzbslni2']
+[2025-05-31T00:42:02.290+0200] {standard_task_runner.py:91} INFO - Job 131: Subtask fetch_daily_data_all_cities
+[2025-05-31T00:42:02.336+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T00:42:02.392+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T00:42:02.392+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T00:42:02.399+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/istanbul/2025-05-29.json
+[2025-05-31T00:42:04.404+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/istanbul/2025-05-29.json
+[2025-05-31T00:44:41.214+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-31T00:44:41.215+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T00:44:41.219+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250530T224202, end_date=20250530T224441
+[2025-05-31T00:44:41.278+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-31T00:44:41.286+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T00:44:41.296+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T00:58:47.020+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T00:58:47.034+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T00:58:47.037+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T00:58:47.038+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T00:58:47.055+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T00:58:47.057+0200] {standard_task_runner.py:63} INFO - Started process 164909 to run task
+[2025-05-31T00:58:47.060+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '131', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpbyju9zib']
+[2025-05-31T00:58:47.060+0200] {standard_task_runner.py:91} INFO - Job 131: Subtask fetch_daily_data_all_cities
+[2025-05-31T00:58:47.099+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T00:58:47.155+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T00:58:47.156+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T01:01:26.242+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-31T01:01:26.243+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T01:01:26.246+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250530T225847, end_date=20250530T230126
+[2025-05-31T01:01:26.287+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-31T01:01:26.294+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T01:01:26.305+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T01:12:49.806+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T01:12:49.820+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T01:12:49.823+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T01:12:49.823+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T01:12:49.889+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T01:12:49.892+0200] {standard_task_runner.py:63} INFO - Started process 169267 to run task
+[2025-05-31T01:12:49.895+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '133', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmp8ftfh3kq']
+[2025-05-31T01:12:49.895+0200] {standard_task_runner.py:91} INFO - Job 133: Subtask fetch_daily_data_all_cities
+[2025-05-31T01:12:49.952+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T01:12:50.010+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T01:12:50.010+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T01:15:29.705+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-31T01:15:29.705+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T01:15:29.708+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250530T231249, end_date=20250530T231529
+[2025-05-31T01:15:29.742+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-31T01:15:29.749+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T01:15:29.762+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T01:27:09.568+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T01:27:09.585+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T01:27:09.590+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T01:27:09.590+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T01:27:09.612+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T01:27:09.614+0200] {standard_task_runner.py:63} INFO - Started process 173718 to run task
+[2025-05-31T01:27:09.619+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '135', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmprbg2iyom']
+[2025-05-31T01:27:09.619+0200] {standard_task_runner.py:91} INFO - Job 135: Subtask fetch_daily_data_all_cities
+[2025-05-31T01:27:09.679+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T01:27:09.754+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T01:27:09.755+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T01:27:09.761+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/istanbul/2025-05-29.json
+[2025-05-31T01:27:11.764+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/istanbul/2025-05-29.json
+[2025-05-31T01:27:13.767+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/moscow/2025-05-29.json
+[2025-05-31T01:27:15.769+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/moscow/2025-05-29.json
+[2025-05-31T01:27:17.770+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/london/2025-05-29.json
+[2025-05-31T01:27:19.773+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/london/2025-05-29.json
+[2025-05-31T01:27:21.775+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/saint_petersburg/2025-05-29.json
+[2025-05-31T01:27:23.778+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/saint_petersburg/2025-05-29.json
+[2025-05-31T01:27:25.781+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/berlin/2025-05-29.json
+[2025-05-31T01:27:27.785+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/berlin/2025-05-29.json
+[2025-05-31T01:27:29.787+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/madrid/2025-05-29.json
+[2025-05-31T01:27:31.790+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/madrid/2025-05-29.json
+[2025-05-31T01:27:33.793+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/kyiv/2025-05-29.json
+[2025-05-31T01:27:35.797+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/kyiv/2025-05-29.json
+[2025-05-31T01:27:37.799+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/rome/2025-05-29.json
+[2025-05-31T01:27:39.802+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/rome/2025-05-29.json
+[2025-05-31T01:27:41.805+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/baku/2025-05-29.json
+[2025-05-31T01:27:43.805+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/baku/2025-05-29.json
+[2025-05-31T01:27:45.808+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/paris/2025-05-29.json
+[2025-05-31T01:27:47.811+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/paris/2025-05-29.json
+[2025-05-31T01:27:49.814+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/vienna/2025-05-29.json
+[2025-05-31T01:27:51.817+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/vienna/2025-05-29.json
+[2025-05-31T01:27:53.820+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/minsk/2025-05-29.json
+[2025-05-31T01:27:55.823+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/minsk/2025-05-29.json
+[2025-05-31T01:27:57.826+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/hamburg/2025-05-29.json
+[2025-05-31T01:27:59.829+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/hamburg/2025-05-29.json
+[2025-05-31T01:28:01.832+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/warsaw/2025-05-29.json
+[2025-05-31T01:28:03.835+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/warsaw/2025-05-29.json
+[2025-05-31T01:28:05.838+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/bucharest/2025-05-29.json
+[2025-05-31T01:28:07.841+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/bucharest/2025-05-29.json
+[2025-05-31T01:28:09.844+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/barcelona/2025-05-29.json
+[2025-05-31T01:28:11.847+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/barcelona/2025-05-29.json
+[2025-05-31T01:28:13.848+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/budapest/2025-05-29.json
+[2025-05-31T01:28:15.851+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/budapest/2025-05-29.json
+[2025-05-31T01:28:17.853+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/belgrade/2025-05-29.json
+[2025-05-31T01:28:19.856+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/belgrade/2025-05-29.json
+[2025-05-31T01:28:21.859+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/munich/2025-05-29.json
+[2025-05-31T01:28:23.862+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/munich/2025-05-29.json
+[2025-05-31T01:28:25.864+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/kharkiv/2025-05-29.json
+[2025-05-31T01:28:27.867+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/kharkiv/2025-05-29.json
+[2025-05-31T01:28:29.870+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/prague/2025-05-29.json
+[2025-05-31T01:28:31.872+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/prague/2025-05-29.json
+[2025-05-31T01:28:33.875+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/milan/2025-05-29.json
+[2025-05-31T01:28:35.877+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/milan/2025-05-29.json
+[2025-05-31T01:28:37.880+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/kazan/2025-05-29.json
+[2025-05-31T01:28:39.883+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/kazan/2025-05-29.json
+[2025-05-31T01:28:41.885+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/sofia/2025-05-29.json
+[2025-05-31T01:28:43.888+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/sofia/2025-05-29.json
+[2025-05-31T01:28:45.890+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/tbilisi/2025-05-29.json
+[2025-05-31T01:28:47.893+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/tbilisi/2025-05-29.json
+[2025-05-31T01:28:49.896+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/nizhny_novgorod/2025-05-29.json
+[2025-05-31T01:28:51.898+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/nizhny_novgorod/2025-05-29.json
+[2025-05-31T01:28:53.901+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/ufa/2025-05-29.json
+[2025-05-31T01:28:55.903+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/ufa/2025-05-29.json
+[2025-05-31T01:28:57.906+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/birmingham/2025-05-29.json
+[2025-05-31T01:28:59.909+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/birmingham/2025-05-29.json
+[2025-05-31T01:29:01.911+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/krasnodar/2025-05-29.json
+[2025-05-31T01:29:03.914+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/krasnodar/2025-05-29.json
+[2025-05-31T01:29:05.916+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/samara/2025-05-29.json
+[2025-05-31T01:29:07.919+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/samara/2025-05-29.json
+[2025-05-31T01:29:09.922+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/rostov-on-don/2025-05-29.json
+[2025-05-31T01:29:11.924+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/rostov-on-don/2025-05-29.json
+[2025-05-31T01:29:13.927+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/yerevan/2025-05-29.json
+[2025-05-31T01:29:15.930+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/yerevan/2025-05-29.json
+[2025-05-31T01:29:17.933+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/cologne/2025-05-29.json
+[2025-05-31T01:29:19.935+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/cologne/2025-05-29.json
+[2025-05-31T01:29:21.938+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/voronezh/2025-05-29.json
+[2025-05-31T01:29:23.940+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/voronezh/2025-05-29.json
+[2025-05-31T01:29:25.943+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/perm/2025-05-29.json
+[2025-05-31T01:29:27.946+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/perm/2025-05-29.json
+[2025-05-31T01:29:29.948+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/volgograd/2025-05-29.json
+[2025-05-31T01:29:31.951+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/volgograd/2025-05-29.json
+[2025-05-31T01:29:33.953+0200] {logging_mixin.py:188} INFO - [SKIP] Pollution data already exists: /home/ccd/airflow/data/raw/pollution/odesa/2025-05-29.json
+[2025-05-31T01:29:35.956+0200] {logging_mixin.py:188} INFO - [SKIP] Weather data already exists: /home/ccd/airflow/data/raw/weather/odesa/2025-05-29.json
+[2025-05-31T01:29:37.957+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-31T01:29:37.958+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T01:29:37.961+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250530T232709, end_date=20250530T232937
+[2025-05-31T01:29:38.025+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-31T01:29:38.033+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T01:29:38.043+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T12:22:04.538+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T12:22:04.556+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T12:22:04.559+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T12:22:04.559+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T12:22:04.577+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T12:22:04.580+0200] {standard_task_runner.py:63} INFO - Started process 13093 to run task
+[2025-05-31T12:22:04.583+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '142', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpika78029']
+[2025-05-31T12:22:04.584+0200] {standard_task_runner.py:91} INFO - Job 142: Subtask fetch_daily_data_all_cities
+[2025-05-31T12:22:04.634+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T12:22:04.690+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T12:22:04.691+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T12:22:04.698+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T12:22:04.698+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/ccd/airflow/dags/daily_dag.py", line 110, in fetch_daily_data
+    fetch_air_pollution(city, execution_date)
+  File "/home/ccd/airflow/dags/daily_dag.py", line 32, in fetch_air_pollution
+    start_dt = datetime.strptime(execution_date, "%Y-%m-%d")
+TypeError: strptime() argument 1 must be str, not datetime.datetime
+[2025-05-31T12:22:04.701+0200] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250531T102204, end_date=20250531T102204
+[2025-05-31T12:22:04.717+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 142 for task fetch_daily_data_all_cities (strptime() argument 1 must be str, not datetime.datetime; 13093)
+[2025-05-31T12:22:04.755+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-05-31T12:22:04.765+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T12:22:04.765+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T12:24:56.555+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T12:24:56.570+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T12:24:56.574+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T12:24:56.574+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T12:24:56.592+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T12:24:56.594+0200] {standard_task_runner.py:63} INFO - Started process 14353 to run task
+[2025-05-31T12:24:56.597+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '144', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpqbqg_csi']
+[2025-05-31T12:24:56.597+0200] {standard_task_runner.py:91} INFO - Job 144: Subtask fetch_daily_data_all_cities
+[2025-05-31T12:24:56.634+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T12:24:56.690+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T12:24:56.691+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T12:24:56.696+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/utils/context.py:320 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-05-31T12:24:56.704+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T12:24:56.704+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/ccd/airflow/dags/daily_dag.py", line 110, in fetch_daily_data
+    fetch_air_pollution(city, execution_date)
+  File "/home/ccd/airflow/dags/daily_dag.py", line 32, in fetch_air_pollution
+    start_dt = datetime.strptime(execution_date, "%Y-%m-%d")
+TypeError: strptime() argument 1 must be str, not DateTime
+[2025-05-31T12:24:56.707+0200] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250531T102456, end_date=20250531T102456
+[2025-05-31T12:24:56.719+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 144 for task fetch_daily_data_all_cities (strptime() argument 1 must be str, not DateTime; 14353)
+[2025-05-31T12:24:56.729+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-05-31T12:24:56.738+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T12:24:56.738+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T12:29:37.040+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T12:29:37.103+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T12:29:37.107+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T12:29:37.107+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T12:29:37.122+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T12:29:37.125+0200] {standard_task_runner.py:63} INFO - Started process 15672 to run task
+[2025-05-31T12:29:37.129+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '147', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpjdycxigs']
+[2025-05-31T12:29:37.129+0200] {standard_task_runner.py:91} INFO - Job 147: Subtask fetch_daily_data_all_cities
+[2025-05-31T12:29:37.192+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T12:29:37.244+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T12:29:37.245+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T12:29:37.249+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/utils/context.py:320 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-05-31T12:29:37.254+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T12:29:37.254+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/ccd/airflow/dags/daily_dag.py", line 110, in fetch_daily_data
+    fetch_air_pollution(city, execution_date)
+  File "/home/ccd/airflow/dags/daily_dag.py", line 35, in fetch_air_pollution
+    if end_dt > now:
+TypeError: can't compare offset-naive and offset-aware datetimes
+[2025-05-31T12:29:37.276+0200] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250531T102937, end_date=20250531T102937
+[2025-05-31T12:29:37.288+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 147 for task fetch_daily_data_all_cities (can't compare offset-naive and offset-aware datetimes; 15672)
+[2025-05-31T12:29:37.301+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-05-31T12:29:37.310+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T12:29:37.310+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T12:41:24.650+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T12:41:24.675+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T12:41:24.678+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T12:41:24.679+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T12:41:24.696+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T12:41:24.698+0200] {standard_task_runner.py:63} INFO - Started process 18916 to run task
+[2025-05-31T12:41:24.702+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '151', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpiirlaoht']
+[2025-05-31T12:41:24.702+0200] {standard_task_runner.py:91} INFO - Job 151: Subtask fetch_daily_data_all_cities
+[2025-05-31T12:41:24.737+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T12:41:24.814+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T12:41:24.816+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T12:44:08.542+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-31T12:44:08.543+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T12:44:08.547+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250531T104124, end_date=20250531T104408
+[2025-05-31T12:44:08.568+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-31T12:44:08.575+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T12:44:08.584+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T13:06:21.901+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T13:06:21.922+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T13:06:21.927+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T13:06:21.928+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T13:06:21.946+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T13:06:21.951+0200] {standard_task_runner.py:63} INFO - Started process 28684 to run task
+[2025-05-31T13:06:21.954+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '160', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpa2_ej839']
+[2025-05-31T13:06:21.955+0200] {standard_task_runner.py:91} INFO - Job 160: Subtask fetch_daily_data_all_cities
+[2025-05-31T13:06:22.001+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T13:06:22.106+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T13:06:22.107+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T13:13:08.978+0200] {local_task_job_runner.py:310} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-05-31T13:13:08.979+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T13:13:08.980+0200] {process_utils.py:132} INFO - Sending Signals.SIGTERM to group 28684. PIDs of all processes in the group: [28684]
+[2025-05-31T13:13:08.980+0200] {process_utils.py:87} INFO - Sending the signal Signals.SIGTERM to group 28684
+[2025-05-31T13:13:08.980+0200] {taskinstance.py:2607} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-05-31T13:13:08.980+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T13:13:09.006+0200] {process_utils.py:80} INFO - Process psutil.Process(pid=28684, status='terminated', exitcode=0, started='13:06:21') (28684) terminated with exit code 0
+[2025-05-31T13:13:55.638+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T13:13:55.659+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T13:13:55.662+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T13:13:55.662+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T13:13:55.720+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T13:13:55.722+0200] {standard_task_runner.py:63} INFO - Started process 30123 to run task
+[2025-05-31T13:13:55.724+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '162', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpt816sdw7']
+[2025-05-31T13:13:55.724+0200] {standard_task_runner.py:91} INFO - Job 162: Subtask fetch_daily_data_all_cities
+[2025-05-31T13:13:55.777+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T13:13:55.826+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T13:13:55.827+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T13:24:51.721+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T13:24:51.732+0200] {process_utils.py:132} INFO - Sending Signals.SIGTERM to group 30123. PIDs of all processes in the group: [30123]
+[2025-05-31T13:24:51.733+0200] {process_utils.py:87} INFO - Sending the signal Signals.SIGTERM to group 30123
+[2025-05-31T13:24:51.733+0200] {taskinstance.py:2607} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-05-31T13:24:51.733+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T13:24:51.756+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/ccd/airflow/dags/daily_dag.py", line 113, in fetch_daily_data
+    fetch_weather(city,  context['ds'])
+  File "/home/ccd/airflow/dags/daily_dag.py", line 95, in fetch_weather
+    response = requests.get(url, params=params)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1058, in _validate_conn
+    conn.connect()
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/ccd/.pyenv/versions/3.10.13/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/ccd/.pyenv/versions/3.10.13/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/home/ccd/.pyenv/versions/3.10.13/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 2609, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-05-31T13:24:51.763+0200] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250531T111355, end_date=20250531T112451
+[2025-05-31T13:24:51.785+0200] {process_utils.py:80} INFO - Process psutil.Process(pid=30123, status='terminated', exitcode=2, started='13:13:55') (30123) terminated with exit code 2
+[2025-05-31T13:25:57.770+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T13:25:57.782+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T13:25:57.785+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T13:25:57.786+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T13:25:57.802+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T13:25:57.805+0200] {standard_task_runner.py:63} INFO - Started process 32295 to run task
+[2025-05-31T13:25:57.808+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '168', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmp56uvtdux']
+[2025-05-31T13:25:57.808+0200] {standard_task_runner.py:91} INFO - Job 168: Subtask fetch_daily_data_all_cities
+[2025-05-31T13:25:57.930+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T13:25:57.987+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T13:25:57.989+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T13:28:41.990+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-31T13:28:41.992+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T13:28:41.996+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250531T112557, end_date=20250531T112841
+[2025-05-31T13:28:42.018+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-31T13:28:42.025+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T13:28:42.035+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T13:35:22.906+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T13:35:22.926+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T13:35:22.930+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T13:35:22.931+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T13:35:22.953+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T13:35:22.955+0200] {standard_task_runner.py:63} INFO - Started process 37716 to run task
+[2025-05-31T13:35:22.961+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '172', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmp6qtv_h_n']
+[2025-05-31T13:35:22.961+0200] {standard_task_runner.py:91} INFO - Job 172: Subtask fetch_daily_data_all_cities
+[2025-05-31T13:35:23.010+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T13:35:23.097+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T13:35:23.098+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T13:38:06.866+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-31T13:38:06.866+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T13:38:06.869+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250531T113522, end_date=20250531T113806
+[2025-05-31T13:38:06.915+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-31T13:38:06.922+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T13:38:06.941+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T13:59:37.338+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T13:59:37.358+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T13:59:37.363+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T13:59:37.364+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T13:59:37.387+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T13:59:37.390+0200] {standard_task_runner.py:63} INFO - Started process 47861 to run task
+[2025-05-31T13:59:37.393+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '179', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmp0fyyzrf4']
+[2025-05-31T13:59:37.394+0200] {standard_task_runner.py:91} INFO - Job 179: Subtask fetch_daily_data_all_cities
+[2025-05-31T13:59:37.453+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T13:59:37.544+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T13:59:37.544+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T14:06:13.318+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T14:06:13.319+0200] {process_utils.py:132} INFO - Sending Signals.SIGTERM to group 47861. PIDs of all processes in the group: [47861]
+[2025-05-31T14:06:13.319+0200] {process_utils.py:87} INFO - Sending the signal Signals.SIGTERM to group 47861
+[2025-05-31T14:06:13.320+0200] {taskinstance.py:2607} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-05-31T14:06:13.320+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T14:06:13.324+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/ccd/airflow/dags/daily_dag.py", line 113, in fetch_daily_data
+    fetch_weather(city,  context['ds'])
+  File "/home/ccd/airflow/dags/daily_dag.py", line 95, in fetch_weather
+    response = requests.get(url, params=params)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1058, in _validate_conn
+    conn.connect()
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/ccd/.pyenv/versions/3.10.13/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/ccd/.pyenv/versions/3.10.13/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/home/ccd/.pyenv/versions/3.10.13/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 2609, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-05-31T14:06:13.326+0200] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250531T115937, end_date=20250531T120613
+[2025-05-31T14:06:13.346+0200] {process_utils.py:80} INFO - Process psutil.Process(pid=47861, status='terminated', exitcode=2, started='13:59:36') (47861) terminated with exit code 2
+[2025-05-31T14:11:26.620+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T14:11:26.632+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T14:11:26.635+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T14:11:26.635+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T14:11:26.656+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T14:11:26.658+0200] {standard_task_runner.py:63} INFO - Started process 50578 to run task
+[2025-05-31T14:11:26.661+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '185', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpoodaifi7']
+[2025-05-31T14:11:26.662+0200] {standard_task_runner.py:91} INFO - Job 185: Subtask fetch_daily_data_all_cities
+[2025-05-31T14:11:26.709+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T14:11:26.782+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T14:11:26.783+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T14:14:10.238+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-31T14:14:10.239+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T14:14:10.245+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250531T121126, end_date=20250531T121410
+[2025-05-31T14:14:10.819+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-31T14:14:10.829+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T14:14:10.841+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T14:56:47.970+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T14:56:47.983+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T14:56:47.986+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T14:56:47.986+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T14:56:48.002+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T14:56:48.004+0200] {standard_task_runner.py:63} INFO - Started process 66746 to run task
+[2025-05-31T14:56:48.007+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '192', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmphekvk6e2']
+[2025-05-31T14:56:48.007+0200] {standard_task_runner.py:91} INFO - Job 192: Subtask fetch_daily_data_all_cities
+[2025-05-31T14:56:48.044+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T14:56:48.099+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T14:56:48.100+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T14:59:31.633+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-31T14:59:31.635+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T14:59:31.640+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250531T125647, end_date=20250531T125931
+[2025-05-31T14:59:31.675+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-31T14:59:31.682+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T14:59:31.691+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-31T15:04:12.924+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T15:04:12.936+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T15:04:12.939+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [queued]>
+[2025-05-31T15:04:12.939+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-05-31T15:04:12.959+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_daily_data_all_cities> on 2025-05-29 00:00:00+00:00
+[2025-05-31T15:04:12.962+0200] {standard_task_runner.py:63} INFO - Started process 71833 to run task
+[2025-05-31T15:04:12.965+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'fetch_daily_data_all_cities', 'scheduled__2025-05-29T00:00:00+00:00', '--job-id', '198', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpy3l_f0r5']
+[2025-05-31T15:04:12.965+0200] {standard_task_runner.py:91} INFO - Job 198: Subtask fetch_daily_data_all_cities
+[2025-05-31T15:04:13.005+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.fetch_daily_data_all_cities scheduled__2025-05-29T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-05-31T15:04:13.061+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T00:00:00+00:00'
+[2025-05-31T15:04:13.062+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T15:06:56.999+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-31T15:06:57.000+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T15:06:57.005+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=fetch_daily_data_all_cities, execution_date=20250529T000000, start_date=20250531T130412, end_date=20250531T130657
+[2025-05-31T15:06:57.062+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-31T15:06:57.071+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T15:06:57.083+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

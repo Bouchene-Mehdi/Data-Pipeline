@@ -1,0 +1,152 @@
+[2025-06-08T23:59:42.261+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-08T23:59:42.273+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: backfill_pollution_weather_dag.format_backfill_all_data manual__2025-06-08T21:54:33.869367+00:00 [queued]>
+[2025-06-08T23:59:42.276+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: backfill_pollution_weather_dag.format_backfill_all_data manual__2025-06-08T21:54:33.869367+00:00 [queued]>
+[2025-06-08T23:59:42.276+0200] {taskinstance.py:2303} INFO - Starting attempt 2 of 2
+[2025-06-08T23:59:42.300+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): format_backfill_all_data> on 2025-06-08 21:54:33.869367+00:00
+[2025-06-08T23:59:42.302+0200] {standard_task_runner.py:63} INFO - Started process 1219551 to run task
+[2025-06-08T23:59:42.306+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'backfill_pollution_weather_dag', 'format_backfill_all_data', 'manual__2025-06-08T21:54:33.869367+00:00', '--job-id', '324', '--raw', '--subdir', 'DAGS_FOLDER/backfill_dag.py', '--cfg-path', '/tmp/tmpxbhdbtgh']
+[2025-06-08T23:59:42.306+0200] {standard_task_runner.py:91} INFO - Job 324: Subtask format_backfill_all_data
+[2025-06-08T23:59:42.339+0200] {task_command.py:426} INFO - Running <TaskInstance: backfill_pollution_weather_dag.format_backfill_all_data manual__2025-06-08T21:54:33.869367+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-06-08T23:59:42.388+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='backfill_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='format_backfill_all_data' AIRFLOW_CTX_EXECUTION_DATE='2025-06-08T21:54:33.869367+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-08T21:54:33.869367+00:00'
+[2025-06-08T23:59:42.389+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-08T23:59:45.764+0200] {logging_mixin.py:188} INFO - [CITY] Processing: istanbul
+[2025-06-08T23:59:49.344+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/istanbul/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:49.924+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/istanbul/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:49.924+0200] {logging_mixin.py:188} INFO - [CITY] Processing: moscow
+[2025-06-08T23:59:50.817+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/moscow/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:51.350+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/moscow/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:51.351+0200] {logging_mixin.py:188} INFO - [CITY] Processing: london
+[2025-06-08T23:59:51.763+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/london/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:52.200+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/london/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:52.200+0200] {logging_mixin.py:188} INFO - [CITY] Processing: saint_petersburg
+[2025-06-08T23:59:52.622+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/saint_petersburg/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:53.023+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/saint_petersburg/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:53.023+0200] {logging_mixin.py:188} INFO - [CITY] Processing: berlin
+[2025-06-08T23:59:53.464+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/berlin/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:53.894+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/berlin/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:53.894+0200] {logging_mixin.py:188} INFO - [CITY] Processing: madrid
+[2025-06-08T23:59:54.299+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/madrid/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:54.783+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/madrid/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:54.784+0200] {logging_mixin.py:188} INFO - [CITY] Processing: kyiv
+[2025-06-08T23:59:55.187+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/kyiv/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:55.605+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/kyiv/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:55.605+0200] {logging_mixin.py:188} INFO - [CITY] Processing: rome
+[2025-06-08T23:59:56.024+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/rome/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:56.434+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/rome/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:56.435+0200] {logging_mixin.py:188} INFO - [CITY] Processing: baku
+[2025-06-08T23:59:56.848+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/baku/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:57.248+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/baku/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:57.248+0200] {logging_mixin.py:188} INFO - [CITY] Processing: paris
+[2025-06-08T23:59:57.649+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/paris/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:58.066+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/paris/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:58.066+0200] {logging_mixin.py:188} INFO - [CITY] Processing: vienna
+[2025-06-08T23:59:58.530+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/vienna/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:58.930+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/vienna/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:58.930+0200] {logging_mixin.py:188} INFO - [CITY] Processing: minsk
+[2025-06-08T23:59:59.304+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/minsk/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:59.732+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/minsk/full_2025-05-20_2025-05-27
+[2025-06-08T23:59:59.732+0200] {logging_mixin.py:188} INFO - [CITY] Processing: hamburg
+[2025-06-09T00:00:00.688+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/hamburg/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:01.260+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/hamburg/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:01.260+0200] {logging_mixin.py:188} INFO - [CITY] Processing: warsaw
+[2025-06-09T00:00:01.704+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/warsaw/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:02.150+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/warsaw/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:02.150+0200] {logging_mixin.py:188} INFO - [CITY] Processing: bucharest
+[2025-06-09T00:00:02.589+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/bucharest/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:03.034+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/bucharest/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:03.034+0200] {logging_mixin.py:188} INFO - [CITY] Processing: barcelona
+[2025-06-09T00:00:03.454+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/barcelona/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:03.876+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/barcelona/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:03.877+0200] {logging_mixin.py:188} INFO - [CITY] Processing: budapest
+[2025-06-09T00:00:04.253+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/budapest/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:04.682+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/budapest/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:04.682+0200] {logging_mixin.py:188} INFO - [CITY] Processing: belgrade
+[2025-06-09T00:00:05.118+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/belgrade/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:05.530+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/belgrade/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:05.530+0200] {logging_mixin.py:188} INFO - [CITY] Processing: munich
+[2025-06-09T00:00:05.976+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/munich/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:06.387+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/munich/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:06.388+0200] {logging_mixin.py:188} INFO - [CITY] Processing: kharkiv
+[2025-06-09T00:00:06.796+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/kharkiv/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:07.173+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/kharkiv/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:07.173+0200] {logging_mixin.py:188} INFO - [CITY] Processing: prague
+[2025-06-09T00:00:07.920+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/prague/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:08.401+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/prague/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:08.401+0200] {logging_mixin.py:188} INFO - [CITY] Processing: milan
+[2025-06-09T00:00:08.789+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/milan/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:09.204+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/milan/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:09.204+0200] {logging_mixin.py:188} INFO - [CITY] Processing: kazan
+[2025-06-09T00:00:09.629+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/kazan/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:10.027+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/kazan/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:10.028+0200] {logging_mixin.py:188} INFO - [CITY] Processing: sofia
+[2025-06-09T00:00:10.604+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/sofia/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:10.985+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/sofia/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:10.985+0200] {logging_mixin.py:188} INFO - [CITY] Processing: tbilisi
+[2025-06-09T00:00:11.778+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/tbilisi/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:12.516+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/tbilisi/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:12.517+0200] {logging_mixin.py:188} INFO - [CITY] Processing: nizhny_novgorod
+[2025-06-09T00:00:13.275+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/nizhny_novgorod/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:14.462+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/nizhny_novgorod/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:14.462+0200] {logging_mixin.py:188} INFO - [CITY] Processing: ufa
+[2025-06-09T00:00:15.220+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/ufa/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:16.341+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/ufa/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:16.342+0200] {logging_mixin.py:188} INFO - [CITY] Processing: birmingham
+[2025-06-09T00:00:17.040+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/birmingham/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:17.671+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/birmingham/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:17.672+0200] {logging_mixin.py:188} INFO - [CITY] Processing: krasnodar
+[2025-06-09T00:00:18.420+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/krasnodar/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:19.073+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/krasnodar/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:19.074+0200] {logging_mixin.py:188} INFO - [CITY] Processing: samara
+[2025-06-09T00:00:19.812+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/samara/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:20.791+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/samara/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:20.792+0200] {logging_mixin.py:188} INFO - [CITY] Processing: rostov-on-don
+[2025-06-09T00:00:21.824+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/rostov-on-don/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:22.636+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/rostov-on-don/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:22.636+0200] {logging_mixin.py:188} INFO - [CITY] Processing: yerevan
+[2025-06-09T00:00:23.375+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/yerevan/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:24.092+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/yerevan/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:24.092+0200] {logging_mixin.py:188} INFO - [CITY] Processing: cologne
+[2025-06-09T00:00:24.795+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/cologne/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:25.495+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/cologne/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:25.496+0200] {logging_mixin.py:188} INFO - [CITY] Processing: voronezh
+[2025-06-09T00:00:26.222+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/voronezh/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:26.993+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/voronezh/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:26.994+0200] {logging_mixin.py:188} INFO - [CITY] Processing: perm
+[2025-06-09T00:00:27.601+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/perm/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:28.289+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/perm/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:28.289+0200] {logging_mixin.py:188} INFO - [CITY] Processing: volgograd
+[2025-06-09T00:00:28.974+0200] {logging_mixin.py:188} INFO - [OK] Wrote pollution data: /home/ccd/airflow/data/formatted/pollution/volgograd/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:29.739+0200] {logging_mixin.py:188} INFO - [OK] Wrote weather data: /home/ccd/airflow/data/formatted/weather/volgograd/full_2025-05-20_2025-05-27
+[2025-06-09T00:00:29.740+0200] {logging_mixin.py:188} INFO - [CITY] Processing: odesa
+[2025-06-09T00:00:30.033+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-06-09T00:00:30.037+0200] {process_utils.py:132} INFO - Sending Signals.SIGTERM to group 1219551. PIDs of all processes in the group: [1219552, 1219696, 1219699, 1219700, 1219703, 1219705, 1219707, 1219709, 1219711, 1219714, 1219716, 1219718, 1219720, 1219722, 1219551]
+[2025-06-09T00:00:30.037+0200] {process_utils.py:87} INFO - Sending the signal Signals.SIGTERM to group 1219551
+[2025-06-09T00:00:30.037+0200] {taskinstance.py:2607} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-06-09T00:00:30.038+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-09T00:00:30.066+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/ccd/airflow/dags/backfill_dag.py", line 196, in format_backfill_all_dates
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/pyspark/sql/readwriter.py", line 2003, in parquet
+    self._jwrite.parquet(path)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/py4j/java_gateway.py", line 1361, in __call__
+    answer = self.gateway_client.send_command(command)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/py4j/clientserver.py", line 535, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/home/ccd/.pyenv/versions/3.10.13/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 2609, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-06-09T00:00:30.101+0200] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=backfill_pollution_weather_dag, task_id=format_backfill_all_data, execution_date=20250608T215433, start_date=20250608T215942, end_date=20250608T220030

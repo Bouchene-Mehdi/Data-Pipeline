@@ -1,0 +1,57 @@
+[2025-06-08T16:42:25.084+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-08T16:42:25.099+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: inspect_static_parquet_file_dag.inspect_static_parquet manual__2025-06-08T14:42:22.446262+00:00 [queued]>
+[2025-06-08T16:42:25.103+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: inspect_static_parquet_file_dag.inspect_static_parquet manual__2025-06-08T14:42:22.446262+00:00 [queued]>
+[2025-06-08T16:42:25.103+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2025-06-08T16:42:25.122+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): inspect_static_parquet> on 2025-06-08 14:42:22.446262+00:00
+[2025-06-08T16:42:25.125+0200] {standard_task_runner.py:63} INFO - Started process 840537 to run task
+[2025-06-08T16:42:25.128+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'inspect_static_parquet_file_dag', 'inspect_static_parquet', 'manual__2025-06-08T14:42:22.446262+00:00', '--job-id', '243', '--raw', '--subdir', 'DAGS_FOLDER/inspect_parquet_file.py', '--cfg-path', '/tmp/tmp46dzoo4g']
+[2025-06-08T16:42:25.130+0200] {standard_task_runner.py:91} INFO - Job 243: Subtask inspect_static_parquet
+[2025-06-08T16:42:25.927+0200] {task_command.py:426} INFO - Running <TaskInstance: inspect_static_parquet_file_dag.inspect_static_parquet manual__2025-06-08T14:42:22.446262+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-06-08T16:42:26.058+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='inspect_static_parquet_file_dag' AIRFLOW_CTX_TASK_ID='inspect_static_parquet' AIRFLOW_CTX_EXECUTION_DATE='2025-06-08T14:42:22.446262+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-08T14:42:22.446262+00:00'
+[2025-06-08T16:42:26.059+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-08T16:42:29.937+0200] {logging_mixin.py:188} INFO - === Pollution Parquet Schema ===
+[2025-06-08T16:42:31.347+0200] {logging_mixin.py:188} INFO - root
+ |-- co: double (nullable = true)
+ |-- no: double (nullable = true)
+ |-- no2: double (nullable = true)
+ |-- o3: double (nullable = true)
+ |-- so2: double (nullable = true)
+ |-- pm2_5: double (nullable = true)
+ |-- pm10: double (nullable = true)
+ |-- nh3: double (nullable = true)
+ |-- aqi_mode: long (nullable = true)
+ |-- lat: double (nullable = true)
+ |-- lon: double (nullable = true)
+ |-- city_name: string (nullable = true)
+[2025-06-08T16:42:32.306+0200] {logging_mixin.py:188} INFO - +-------+-----+-----+------+-----+-----+------+-----+--------+-------+------+---------+
+|co     |no   |no2  |o3    |so2  |pm2_5|pm10  |nh3  |aqi_mode|lat    |lon   |city_name|
++-------+-----+-----+------+-----+-----+------+-----+--------+-------+------+---------+
+|266.832|1.693|9.777|99.968|3.147|9.259|13.296|6.553|3       |48.8566|2.3522|paris    |
++-------+-----+-----+------+-----+-----+------+-----+--------+-------+------+---------+
+[2025-06-08T16:42:32.307+0200] {logging_mixin.py:188} INFO - === Weather Parquet Schema ===
+[2025-06-08T16:42:32.404+0200] {logging_mixin.py:188} INFO - root
+ |-- time: timestamp (nullable = true)
+ |-- temperature_2m_max: double (nullable = true)
+ |-- temperature_2m_min: double (nullable = true)
+ |-- temperature_2m_mean: double (nullable = true)
+ |-- precipitation_sum: double (nullable = true)
+ |-- snowfall_sum: double (nullable = true)
+ |-- cloudcover_mean: long (nullable = true)
+ |-- windgusts_10m_max: double (nullable = true)
+ |-- winddirection_10m_dominant: long (nullable = true)
+ |-- shortwave_radiation_sum: double (nullable = true)
+ |-- et0_fao_evapotranspiration: double (nullable = true)
+ |-- lat: double (nullable = true)
+ |-- lon: double (nullable = true)
+ |-- city_name: string (nullable = true)
+[2025-06-08T16:42:32.607+0200] {logging_mixin.py:188} INFO - +-------------------+------------------+------------------+-------------------+-----------------+------------+---------------+-----------------+--------------------------+-----------------------+--------------------------+---------+---------+---------+
+|time               |temperature_2m_max|temperature_2m_min|temperature_2m_mean|precipitation_sum|snowfall_sum|cloudcover_mean|windgusts_10m_max|winddirection_10m_dominant|shortwave_radiation_sum|et0_fao_evapotranspiration|lat      |lon      |city_name|
++-------------------+------------------+------------------+-------------------+-----------------+------------+---------------+-----------------+--------------------------+-----------------------+--------------------------+---------+---------+---------+
+|2023-01-29 00:00:00|4.9               |-3.3              |1.6                |0.0              |0.0         |80             |23.0             |275                       |5.19                   |0.65                      |48.822495|2.2881355|paris    |
++-------------------+------------------+------------------+-------------------+-----------------+------------+---------------+-----------------+--------------------------+-----------------------+--------------------------+---------+---------+---------+
+[2025-06-08T16:42:32.936+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-08T16:42:32.937+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-08T16:42:32.941+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=inspect_static_parquet_file_dag, task_id=inspect_static_parquet, execution_date=20250608T144222, start_date=20250608T144225, end_date=20250608T144232
+[2025-06-08T16:42:32.974+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-08T16:42:32.979+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-08T16:42:32.980+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

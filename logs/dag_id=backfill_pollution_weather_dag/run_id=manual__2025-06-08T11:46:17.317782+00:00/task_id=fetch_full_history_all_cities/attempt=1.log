@@ -1,0 +1,84 @@
+[2025-06-08T13:46:20.051+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-08T13:46:20.071+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: backfill_pollution_weather_dag.fetch_full_history_all_cities manual__2025-06-08T11:46:17.317782+00:00 [queued]>
+[2025-06-08T13:46:20.075+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: backfill_pollution_weather_dag.fetch_full_history_all_cities manual__2025-06-08T11:46:17.317782+00:00 [queued]>
+[2025-06-08T13:46:20.075+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2025-06-08T13:46:20.090+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_full_history_all_cities> on 2025-06-08 11:46:17.317782+00:00
+[2025-06-08T13:46:20.092+0200] {standard_task_runner.py:63} INFO - Started process 14268 to run task
+[2025-06-08T13:46:20.096+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'backfill_pollution_weather_dag', 'fetch_full_history_all_cities', 'manual__2025-06-08T11:46:17.317782+00:00', '--job-id', '222', '--raw', '--subdir', 'DAGS_FOLDER/backfill_dag.py', '--cfg-path', '/tmp/tmppcqmxw88']
+[2025-06-08T13:46:20.096+0200] {standard_task_runner.py:91} INFO - Job 222: Subtask fetch_full_history_all_cities
+[2025-06-08T13:46:20.142+0200] {task_command.py:426} INFO - Running <TaskInstance: backfill_pollution_weather_dag.fetch_full_history_all_cities manual__2025-06-08T11:46:17.317782+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-06-08T13:46:20.196+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='backfill_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='fetch_full_history_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-06-08T11:46:17.317782+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-08T11:46:17.317782+00:00'
+[2025-06-08T13:46:20.196+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-08T14:05:32.748+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-08T14:05:32.758+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1058, in _validate_conn
+    conn.connect()
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/ccd/.pyenv/versions/3.10.13/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/ccd/.pyenv/versions/3.10.13/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/home/ccd/.pyenv/versions/3.10.13/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 407, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 358, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read timeout=None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/ccd/airflow/dags/backfill_dag.py", line 74, in fetch_all_data_backfill
+    fetch_weather(city)
+  File "/home/ccd/airflow/dags/backfill_dag.py", line 62, in fetch_weather
+    response = requests.get(url, params=params)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/ccd/airflow_venv/lib/python3.10/site-packages/requests/adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read timeout=None)
+[2025-06-08T14:05:32.768+0200] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=backfill_pollution_weather_dag, task_id=fetch_full_history_all_cities, execution_date=20250608T114617, start_date=20250608T114620, end_date=20250608T120532
+[2025-06-08T14:05:32.784+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 222 for task fetch_full_history_all_cities (HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read timeout=None); 14268)
+[2025-06-08T14:05:32.821+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-08T14:05:32.832+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-08T14:05:32.843+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

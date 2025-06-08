@@ -1,0 +1,17 @@
+[2025-06-08T23:31:42.136+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-08T23:31:42.165+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: backfill_pollution_weather_dag.format_pollution_backfill manual__2025-06-08T21:31:33.343204+00:00 [queued]>
+[2025-06-08T23:31:42.171+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: backfill_pollution_weather_dag.format_pollution_backfill manual__2025-06-08T21:31:33.343204+00:00 [queued]>
+[2025-06-08T23:31:42.172+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2025-06-08T23:31:42.198+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): format_pollution_backfill> on 2025-06-08 21:31:33.343204+00:00
+[2025-06-08T23:31:42.204+0200] {standard_task_runner.py:63} INFO - Started process 1206197 to run task
+[2025-06-08T23:31:42.210+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'backfill_pollution_weather_dag', 'format_pollution_backfill', 'manual__2025-06-08T21:31:33.343204+00:00', '--job-id', '311', '--raw', '--subdir', 'DAGS_FOLDER/backfill_dag.py', '--cfg-path', '/tmp/tmppia44pa2']
+[2025-06-08T23:31:42.211+0200] {standard_task_runner.py:91} INFO - Job 311: Subtask format_pollution_backfill
+[2025-06-08T23:31:42.279+0200] {task_command.py:426} INFO - Running <TaskInstance: backfill_pollution_weather_dag.format_pollution_backfill manual__2025-06-08T21:31:33.343204+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-06-08T23:31:42.407+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='backfill_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='format_pollution_backfill' AIRFLOW_CTX_EXECUTION_DATE='2025-06-08T21:31:33.343204+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-08T21:31:33.343204+00:00'
+[2025-06-08T23:31:42.409+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-08T23:31:53.355+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-08T23:31:53.356+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-08T23:31:53.367+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=backfill_pollution_weather_dag, task_id=format_pollution_backfill, execution_date=20250608T213133, start_date=20250608T213142, end_date=20250608T213153
+[2025-06-08T23:31:53.451+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-08T23:31:53.483+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-08T23:31:53.499+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
