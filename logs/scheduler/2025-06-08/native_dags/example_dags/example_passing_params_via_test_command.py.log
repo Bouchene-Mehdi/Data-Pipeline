@@ -3092,3 +3092,10 @@
 [2025-06-09T01:44:48.819+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:44:48.819+0200] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-06-09T01:44:48.837+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:44:48.837+0200] {dag.py:3954} INFO - Setting next_dagrun for example_passing_params_via_test_command to 2025-06-08 23:43:00+00:00, run_after=2025-06-08 23:44:00+00:00
 [2025-06-09T01:44:48.862+0200] {processor.py:183} INFO - Processing /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_passing_params_via_test_command.py took 0.070 seconds
+[2025-06-09T01:45:37.313+0200] {processor.py:161} INFO - Started process (PID=1321560) to work on /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2025-06-09T01:45:37.316+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_passing_params_via_test_command.py for tasks to queue
+[2025-06-09T01:45:37.316+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:45:37.316+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2025-06-09T01:45:37.324+0200] {processor.py:840} INFO - DAG(s) 'example_passing_params_via_test_command' retrieved from /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2025-06-09T01:45:37.335+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:45:37.335+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:45:37.351+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:45:37.351+0200] {dag.py:3954} INFO - Setting next_dagrun for example_passing_params_via_test_command to 2025-06-08 23:44:00+00:00, run_after=2025-06-08 23:45:00+00:00
+[2025-06-09T01:45:37.375+0200] {processor.py:183} INFO - Processing /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_passing_params_via_test_command.py took 0.067 seconds

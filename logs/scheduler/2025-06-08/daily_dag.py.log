@@ -3492,3 +3492,10 @@
 [2025-06-09T01:44:48.520+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:44:48.519+0200] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-06-09T01:44:48.532+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:44:48.532+0200] {dag.py:3954} INFO - Setting next_dagrun for fetch_daily_pollution_weather_dag to 2025-06-08 00:00:00+00:00, run_after=2025-06-09 00:00:00+00:00
 [2025-06-09T01:44:48.556+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/daily_dag.py took 0.520 seconds
+[2025-06-09T01:45:35.768+0200] {processor.py:161} INFO - Started process (PID=1321544) to work on /home/ccd/airflow/dags/daily_dag.py
+[2025-06-09T01:45:35.779+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/daily_dag.py for tasks to queue
+[2025-06-09T01:45:35.780+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:45:35.779+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/daily_dag.py
+[2025-06-09T01:45:36.184+0200] {processor.py:840} INFO - DAG(s) 'fetch_daily_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/daily_dag.py
+[2025-06-09T01:45:36.193+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:45:36.193+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T01:45:36.205+0200] {logging_mixin.py:188} INFO - [2025-06-09T01:45:36.204+0200] {dag.py:3954} INFO - Setting next_dagrun for fetch_daily_pollution_weather_dag to 2025-06-08 00:00:00+00:00, run_after=2025-06-09 00:00:00+00:00
+[2025-06-09T01:45:36.229+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/daily_dag.py took 0.466 seconds
