@@ -1167,3 +1167,10 @@ NameError: name 'combine_backfill' is not defined
 [2025-06-09T20:32:36.283+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:32:36.283+0200] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-06-09T20:32:36.289+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:32:36.289+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
 [2025-06-09T20:32:36.322+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.579 seconds
+[2025-06-09T20:33:02.982+0200] {processor.py:161} INFO - Started process (PID=306281) to work on /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T20:33:02.984+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/backfill_dag.py for tasks to queue
+[2025-06-09T20:33:02.984+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:33:02.984+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T20:33:03.498+0200] {processor.py:840} INFO - DAG(s) 'backfill_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/backfill_dag.py
+[2025-06-09T20:33:03.507+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:33:03.506+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T20:33:03.515+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:33:03.515+0200] {dag.py:3954} INFO - Setting next_dagrun for backfill_pollution_weather_dag to None, run_after=None
+[2025-06-09T20:33:03.547+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/backfill_dag.py took 0.570 seconds

@@ -1094,3 +1094,11 @@
 [2025-06-09T20:32:20.662+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:32:20.662+0200] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-06-09T20:32:20.672+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:32:20.672+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_decorator to None, run_after=None
 [2025-06-09T20:32:20.697+0200] {processor.py:183} INFO - Processing /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_python_decorator.py took 0.159 seconds
+[2025-06-09T20:33:16.064+0200] {processor.py:161} INFO - Started process (PID=306460) to work on /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-06-09T20:33:16.067+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_python_decorator.py for tasks to queue
+[2025-06-09T20:33:16.070+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:33:16.068+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-06-09T20:33:16.572+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:33:16.572+0200] {example_python_decorator.py:80} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-09T20:33:16.573+0200] {processor.py:840} INFO - DAG(s) 'example_python_decorator' retrieved from /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-06-09T20:33:16.587+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:33:16.587+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T20:33:16.597+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:33:16.596+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_decorator to None, run_after=None
+[2025-06-09T20:33:16.622+0200] {processor.py:183} INFO - Processing /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_python_decorator.py took 0.575 seconds

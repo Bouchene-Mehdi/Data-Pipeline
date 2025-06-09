@@ -1098,3 +1098,10 @@ NameError: name 'combine_daily_data' is not defined
 [2025-06-09T20:32:35.585+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:32:35.584+0200] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-06-09T20:32:35.598+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:32:35.597+0200] {dag.py:3954} INFO - Setting next_dagrun for fetch_daily_pollution_weather_dag to 2025-06-09 00:00:00+00:00, run_after=2025-06-10 00:00:00+00:00
 [2025-06-09T20:32:35.624+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/daily_dag.py took 0.642 seconds
+[2025-06-09T20:33:31.185+0200] {processor.py:161} INFO - Started process (PID=306606) to work on /home/ccd/airflow/dags/daily_dag.py
+[2025-06-09T20:33:31.189+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/daily_dag.py for tasks to queue
+[2025-06-09T20:33:31.189+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:33:31.189+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/daily_dag.py
+[2025-06-09T20:33:31.689+0200] {processor.py:840} INFO - DAG(s) 'fetch_daily_pollution_weather_dag' retrieved from /home/ccd/airflow/dags/daily_dag.py
+[2025-06-09T20:33:31.697+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:33:31.697+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T20:33:31.708+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:33:31.708+0200] {dag.py:3954} INFO - Setting next_dagrun for fetch_daily_pollution_weather_dag to 2025-06-09 00:00:00+00:00, run_after=2025-06-10 00:00:00+00:00
+[2025-06-09T20:33:31.738+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/daily_dag.py took 0.558 seconds

@@ -1076,3 +1076,10 @@
 [2025-06-09T20:32:39.406+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:32:39.405+0200] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-06-09T20:32:39.418+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:32:39.418+0200] {dag.py:3954} INFO - Setting next_dagrun for test_spark_connection to None, run_after=None
 [2025-06-09T20:32:39.453+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/test_spark.py took 0.237 seconds
+[2025-06-09T20:33:34.103+0200] {processor.py:161} INFO - Started process (PID=306649) to work on /home/ccd/airflow/dags/test_spark.py
+[2025-06-09T20:33:34.114+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/test_spark.py for tasks to queue
+[2025-06-09T20:33:34.115+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:33:34.114+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/test_spark.py
+[2025-06-09T20:33:34.270+0200] {processor.py:840} INFO - DAG(s) 'test_spark_connection' retrieved from /home/ccd/airflow/dags/test_spark.py
+[2025-06-09T20:33:34.283+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:33:34.282+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T20:33:34.291+0200] {logging_mixin.py:188} INFO - [2025-06-09T20:33:34.291+0200] {dag.py:3954} INFO - Setting next_dagrun for test_spark_connection to None, run_after=None
+[2025-06-09T20:33:34.315+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/test_spark.py took 0.218 seconds
