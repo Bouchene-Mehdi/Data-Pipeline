@@ -7,7 +7,8 @@ import time
 import json
 import pandas as pd
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import from_unixtime, to_date, col, lit, hour, avg
+from pyspark.sql.functions import from_unixtime, to_date, col, lit, hour, avg, trim
+
 from pyspark.sql.types import IntegerType
 from collections import Counter
 
@@ -20,6 +21,8 @@ FORMATTED_WEATHER_DIR = '/home/ccd/airflow/data/formatted/weather'
 START_DATE = '2025-05-20'
 END_DATE = '2025-05-27'
 POLLUTION_API_KEY = '7815b1bfdf9c82631772b3e93f87f69c'
+FORMATTED_COMBINED_DIR = '/home/ccd/airflow/data/formatted/combined'
+
 
 def fetch_air_pollution(city):
     lat = city['latitude']
@@ -173,8 +176,11 @@ def format_backfill_all_dates():
                         print(f"[SKIP] Corrupted file: {raw_path}")
                         continue
 
+
+
                 if path_type == "pollution":
                     df = flatten_func(data)
+
                     if df.empty:
                         continue
                     df['date'] = df['timestamp'].dt.strftime('%Y-%m-%d')
@@ -199,6 +205,54 @@ def format_backfill_all_dates():
                         print(f"[OK] Weather written: {output_path}")
     spark.stop()
 
+
+def combine_backfill_data():
+    spark = SparkSession.builder.appName("CombineBackfillData").master("local[*]").getOrCreate()
+    cities = load_cities()
+
+    for city in cities:
+        city_name = city['name'].lower().replace(" ", "_")
+        print(f"[COMBINING] City: {city_name}")
+
+        pollution_dir = os.path.join(FORMATTED_POLLUTION_DIR, city_name)
+        weather_dir = os.path.join(FORMATTED_WEATHER_DIR, city_name)
+        combined_dir = os.path.join(FORMATTED_COMBINED_DIR, city_name)
+        os.makedirs(combined_dir, exist_ok=True)
+
+        pollution_dates = set(os.listdir(pollution_dir)) if os.path.exists(pollution_dir) else set()
+        weather_dates = set(os.listdir(weather_dir)) if os.path.exists(weather_dir) else set()
+        common_dates = sorted(pollution_dates & weather_dates)
+
+        for date in common_dates:
+            pollution_path = os.path.join(pollution_dir, date)
+            weather_path = os.path.join(weather_dir, date)
+            output_path = os.path.join(combined_dir, date)
+
+            try:
+                df_poll = spark.read.parquet(pollution_path).withColumn("city_name", trim(col("city_name")))
+                df_weather = spark.read.parquet(weather_path).withColumn("city_name", trim(col("city_name")))
+                # Drop conflicting columns from weather
+                df_weather = df_weather.drop("lat", "lon")
+
+                # Join only on city_name and time
+                df_combined = df_poll.join(
+                    df_weather,
+                    on=["city_name", "time"],
+                    how="inner"
+                )
+
+                if not df_combined.rdd.isEmpty():
+                    df_combined.write.mode("overwrite").parquet(output_path)
+                    print(f"[OK] Combined {city_name} {date}")
+                else:
+                    print(f"[SKIP] No rows after join for {city_name} {date}")
+            except Exception as e:
+                print(f"[ERROR] Failed to combine {city_name} {date}: {e}")
+
+    spark.stop()
+    print("[DONE] Backfill combining completed")
+
+# -*
 # Airflow DAG
 default_args = {
     'owner': 'airflow',
@@ -219,16 +273,19 @@ with DAG(
     tags=['pollution', 'weather', 'backfill'],
 ) as dag:
 
-    format_all_backfill = PythonOperator(
-        task_id='format_backfill_all_data',
-        python_callable=format_backfill_all_dates
+    # format_all_backfill = PythonOperator(
+    #     task_id='format_backfill_all_data',
+    #     python_callable=format_backfill_all_dates
+    # )
+    #
+    # fetch_task = PythonOperator(
+    #     task_id='fetch_full_history_all_cities',
+    #     python_callable=fetch_all_data_backfill
+    # )
+
+    combine_backfill = PythonOperator(
+        task_id='combine_backfill_data',
+        python_callable=combine_backfill_data
     )
 
-    fetch_task = PythonOperator(
-        task_id='fetch_full_history_all_cities',
-        python_callable=fetch_all_data_backfill
-    )
-
-
-
-    fetch_task >> format_all_backfill
+    combine_backfill

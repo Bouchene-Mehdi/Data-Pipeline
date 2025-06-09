@@ -9,6 +9,7 @@ import json
 import pandas as pd
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import lit
+from pyspark.sql.functions import trim, col
 
 # Configuration
 CITIES_CSV = '/home/ccd/airflow/config/european_cities.csv'
@@ -17,6 +18,7 @@ RAW_WEATHER_DIR = '/home/ccd/airflow/data/raw/weather'
 FORMATTED_POLLUTION_DIR = '/home/ccd/airflow/data/formatted/pollution'
 FORMATTED_WEATHER_DIR = '/home/ccd/airflow/data/formatted/weather'
 POLLUTION_API_KEY = '7815b1bfdf9c82631772b3e93f87f69c'
+FORMATTED_COMBINED_DIR = '/home/ccd/airflow/data/formatted/combined'
 
 # Load cities from CSV
 def load_cities():
@@ -288,7 +290,49 @@ def format_daily_data(**context):
 
     spark.stop()
     print("[DONE] Spark session closed")
+def combine_daily_data(**context):
+    execution_date = context['ds']
+    spark = SparkSession.builder.appName("CombineDailyData").master("local[*]").getOrCreate()
+    cities = load_cities()
 
+    print(f"[START] Combining daily data for {execution_date}")
+
+    for city in cities:
+        city_name = city['name'].lower().replace(" ", "_")
+        print(f"[COMBINING] City: {city_name}")
+
+        pollution_path = os.path.join(FORMATTED_POLLUTION_DIR, city_name, execution_date)
+        weather_path = os.path.join(FORMATTED_WEATHER_DIR, city_name, execution_date)
+        combined_path = os.path.join(FORMATTED_COMBINED_DIR, city_name, execution_date)
+
+        if not (os.path.exists(pollution_path) and os.path.exists(weather_path)):
+            print(f"[SKIP] Missing pollution or weather file for {city_name} on {execution_date}")
+            continue
+
+        try:
+            df_poll = spark.read.parquet(pollution_path).withColumn("city_name", trim(col("city_name")))
+            df_weather = spark.read.parquet(weather_path).withColumn("city_name", trim(col("city_name")))
+
+            df_weather = df_weather.drop("lat", "lon")  # Remove conflicting columns
+
+            df_combined = df_poll.join(
+                df_weather,
+                on=["city_name", "time"],
+                how="inner"
+            )
+
+            if not df_combined.rdd.isEmpty():
+                os.makedirs(os.path.dirname(combined_path), exist_ok=True)
+                df_combined.write.mode("overwrite").parquet(combined_path)
+                print(f"[OK] Combined written: {combined_path}")
+            else:
+                print(f"[SKIP] Empty join result for {city_name} on {execution_date}")
+
+        except Exception as e:
+            print(f"[ERROR] Failed to combine {city_name} on {execution_date}: {e}")
+
+    spark.stop()
+    print(f"[DONE] Finished combining daily data for {execution_date}")
 # # DAG definition
 default_args = {
     'owner': 'airflow',
@@ -322,4 +366,10 @@ with DAG(
         provide_context=True
     )
 
-    fetch_daily_task >> format_daily_task
+    combine_daily_task = PythonOperator(
+        task_id='combine_daily_data_all_cities',
+        python_callable=combine_daily_data,
+        provide_context=True
+    )
+
+    fetch_daily_task >> format_daily_task >> combine_daily_task
