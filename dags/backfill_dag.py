@@ -1,3 +1,6 @@
+from concurrent.futures import ThreadPoolExecutor
+import pyarrow as pa
+import pyarrow.parquet as pq
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta, timezone
@@ -19,8 +22,8 @@ RAW_POLLUTION_DIR = '/home/ccd/airflow/data/raw/pollution'
 RAW_WEATHER_DIR = '/home/ccd/airflow/data/raw/weather'
 FORMATTED_POLLUTION_DIR = '/home/ccd/airflow/data/formatted/pollution'
 FORMATTED_WEATHER_DIR = '/home/ccd/airflow/data/formatted/weather'
-START_DATE = '2025-05-20'
-END_DATE = '2025-05-27'
+START_DATE = '2023-01-01'
+END_DATE = '2025-06-05'
 POLLUTION_API_KEY = '7815b1bfdf9c82631772b3e93f87f69c'
 FORMATTED_COMBINED_DIR = '/home/ccd/airflow/data/formatted/combined'
 
@@ -146,14 +149,14 @@ def aggregate_pollution(df: pd.DataFrame) -> pd.DataFrame:
         'aqi_mode': aqi_mode,
         'lat': df_daytime['lat'].iloc[0],
         'lon': df_daytime['lon'].iloc[0],
-        'time': df_daytime['date'].iloc[2]
+        'time': df_daytime['date'].iloc[0],
     }
     return pd.DataFrame([result])
 
-# Format backfill data into daily folders
+
 def format_backfill_all_dates():
-    spark = SparkSession.builder.appName("BackfillFormat").master("local[*]").getOrCreate()
     cities = load_cities()
+
     for city in cities:
         city_name = city['name'].lower().replace(" ", "_")
         print(f"[CITY] Processing: {city_name}")
@@ -170,45 +173,43 @@ def format_backfill_all_dates():
                 if not filename.endswith('.json'):
                     continue
                 raw_path = os.path.join(raw_city_dir, filename)
-                with open(raw_path, 'r') as f:
-                    try:
+
+                try:
+                    with open(raw_path, 'r') as f:
                         data = json.load(f)
-                    except json.JSONDecodeError:
-                        print(f"[SKIP] Corrupted file: {raw_path}")
-                        continue
-
-
+                except json.JSONDecodeError:
+                    print(f"[SKIP] Corrupted file: {raw_path}")
+                    continue
 
                 if path_type == "pollution":
                     df = flatten_func(data)
-
                     if df.empty:
                         continue
                     df['date'] = df['timestamp'].dt.strftime('%Y-%m-%d')
-                    for date in df['date'].unique():
-                        df_day = df[df['date'] == date]
+                    for date, df_day in df.groupby("date"):
                         df_agg = aggregate_pollution(df_day)
                         if df_agg.empty:
                             continue
-                        df_spark = spark.createDataFrame(df_agg).withColumn("city_name", lit(city_name))
-                        output_path = os.path.join(formatted_city_dir, date)  # No '.parquet'
-                        df_spark.write.mode("overwrite").parquet(output_path)
-                        print(f"[OK] Pollution written: {output_path}")
+                        df_agg["city_name"] = city_name
+                        df_agg["population"] = city['population']
+                        out_dir = os.path.join(formatted_city_dir, date)
+                        os.makedirs(out_dir, exist_ok=True)
+                        pq.write_table(pa.Table.from_pandas(df_agg), os.path.join(out_dir, "data.parquet"))
+                        print(f"[OK] Pollution written: {out_dir}")
                 else:
                     df = flatten_func(data)
                     if df.empty or "time" not in df.columns:
                         continue
-                    for date in df["time"].unique():
-                        df_day = df[df["time"] == date]
-                        df_spark = spark.createDataFrame(df_day).withColumn("city_name", lit(city_name))
-                        output_path = os.path.join(formatted_city_dir, date)  # No '.parquet'
-                        df_spark.write.mode("overwrite").parquet(output_path)
-                        print(f"[OK] Weather written: {output_path}")
-    spark.stop()
+                    for date, df_day in df.groupby("time"):
+                        df_day["city_name"] = city_name
+                        out_dir = os.path.join(formatted_city_dir, date)
+                        os.makedirs(out_dir, exist_ok=True)
+                        pq.write_table(pa.Table.from_pandas(df_day), os.path.join(out_dir, "data.parquet"))
+                        print(f"[OK] Weather written: {out_dir}")
+    print("[DONE] Backfill formatting completed.")
 
 
 def combine_backfill_data():
-    spark = SparkSession.builder.appName("CombineBackfillData").master("local[*]").getOrCreate()
     cities = load_cities()
 
     for city in cities:
@@ -225,32 +226,38 @@ def combine_backfill_data():
         common_dates = sorted(pollution_dates & weather_dates)
 
         for date in common_dates:
-            pollution_path = os.path.join(pollution_dir, date)
-            weather_path = os.path.join(weather_dir, date)
-            output_path = os.path.join(combined_dir, date)
+            pollution_file = os.path.join(pollution_dir, date, "data.parquet")
+            weather_file = os.path.join(weather_dir, date, "data.parquet")
+            output_dir = os.path.join(combined_dir, date)
+            output_file = os.path.join(output_dir, "data.parquet")
+
+            if not (os.path.exists(pollution_file) and os.path.exists(weather_file)):
+                print(f"[SKIP] Missing files for {city_name} {date}")
+                continue
 
             try:
-                df_poll = spark.read.parquet(pollution_path).withColumn("city_name", trim(col("city_name")))
-                df_weather = spark.read.parquet(weather_path).withColumn("city_name", trim(col("city_name")))
-                # Drop conflicting columns from weather
-                df_weather = df_weather.drop("lat", "lon")
+                df_poll = pd.read_parquet(pollution_file)
+                df_weather = pd.read_parquet(weather_file)
 
-                # Join only on city_name and time
-                df_combined = df_poll.join(
-                    df_weather,
+                if "lat" in df_weather.columns: df_weather.drop(columns=["lat"], inplace=True)
+                if "lon" in df_weather.columns: df_weather.drop(columns=["lon"], inplace=True)
+
+                df_combined = pd.merge(
+                    df_poll, df_weather,
                     on=["city_name", "time"],
                     how="inner"
                 )
 
-                if not df_combined.rdd.isEmpty():
-                    df_combined.write.mode("overwrite").parquet(output_path)
+                if not df_combined.empty:
+                    os.makedirs(output_dir, exist_ok=True)
+                    pq.write_table(pa.Table.from_pandas(df_combined), output_file)
                     print(f"[OK] Combined {city_name} {date}")
                 else:
                     print(f"[SKIP] No rows after join for {city_name} {date}")
+
             except Exception as e:
                 print(f"[ERROR] Failed to combine {city_name} {date}: {e}")
 
-    spark.stop()
     print("[DONE] Backfill combining completed")
 def index_backfill_to_elasticsearch():
     spark = SparkSession.builder.appName("IndexBackfillES").master("local[*]").getOrCreate()
@@ -307,15 +314,15 @@ with DAG(
     tags=['pollution', 'weather', 'backfill'],
 ) as dag:
 
-    format_all_backfill = PythonOperator(
-        task_id='format_backfill_all_data',
-        python_callable=format_backfill_all_dates
-    )
+    # format_all_backfill = PythonOperator(
+    #     task_id='format_backfill_all_data',
+    #     python_callable=format_backfill_all_dates
+    # )
 
-    fetch_task = PythonOperator(
-        task_id='fetch_full_history_all_cities',
-        python_callable=fetch_all_data_backfill
-    )
+    # fetch_task = PythonOperator(
+    #     task_id='fetch_full_history_all_cities',
+    #     python_callable=fetch_all_data_backfill
+    # )
 
     combine_backfill = PythonOperator(
         task_id='combine_backfill_data',
@@ -326,4 +333,4 @@ with DAG(
         python_callable=index_backfill_to_elasticsearch
     )
 
-    fetch_task >> format_all_backfill >> combine_backfill >> index_backfill
+    combine_backfill >> index_backfill
