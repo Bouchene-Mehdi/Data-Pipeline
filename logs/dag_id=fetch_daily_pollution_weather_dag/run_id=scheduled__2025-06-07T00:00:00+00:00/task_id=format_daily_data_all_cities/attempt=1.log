@@ -1,0 +1,74 @@
+[2025-06-09T17:55:07.892+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-09T17:55:07.906+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-06-07T00:00:00+00:00 [queued]>
+[2025-06-09T17:55:07.929+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-06-07T00:00:00+00:00 [queued]>
+[2025-06-09T17:55:07.929+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-06-09T17:55:07.949+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): format_daily_data_all_cities> on 2025-06-07 00:00:00+00:00
+[2025-06-09T17:55:07.952+0200] {standard_task_runner.py:63} INFO - Started process 121215 to run task
+[2025-06-09T17:55:07.954+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'format_daily_data_all_cities', 'scheduled__2025-06-07T00:00:00+00:00', '--job-id', '421', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmptztb3ibh']
+[2025-06-09T17:55:07.955+0200] {standard_task_runner.py:91} INFO - Job 421: Subtask format_daily_data_all_cities
+[2025-06-09T17:55:07.992+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-06-07T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-06-09T17:55:08.061+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='format_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-06-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-07T00:00:00+00:00'
+[2025-06-09T17:55:08.061+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-09T17:55:08.063+0200] {logging_mixin.py:188} INFO - [START] Formatting data for execution_date: 2025-06-07
+[2025-06-09T17:55:14.427+0200] {logging_mixin.py:188} INFO - [INFO] Spark session started
+[2025-06-09T17:55:14.443+0200] {logging_mixin.py:188} INFO - [INFO] Loaded 2 cities from config
+[2025-06-09T17:55:14.443+0200] {logging_mixin.py:188} INFO - [PROCESSING] City: istanbul
+[2025-06-09T17:55:14.443+0200] {logging_mixin.py:188} INFO - [FOUND] Pollution file exists: /home/ccd/airflow/data/raw/pollution/istanbul/2025-06-07.json
+[2025-06-09T17:55:14.446+0200] {logging_mixin.py:188} INFO - [INFO] Flattened pollution data: 25 rows
+[2025-06-09T17:55:14.455+0200] {logging_mixin.py:188} INFO - [INFO] Aggregated pollution data: 1 rows
+[2025-06-09T17:55:18.790+0200] {logging_mixin.py:188} INFO - [OK] Formatted pollution for istanbul
+[2025-06-09T17:55:18.791+0200] {logging_mixin.py:188} INFO - [FOUND] Weather file exists: /home/ccd/airflow/data/raw/weather/istanbul/2025-06-07.json
+[2025-06-09T17:55:18.794+0200] {logging_mixin.py:188} INFO - [INFO] Flattened weather data: 1 rows
+[2025-06-09T17:55:19.818+0200] {logging_mixin.py:188} INFO - [OK] Formatted weather for istanbul
+[2025-06-09T17:55:19.818+0200] {logging_mixin.py:188} INFO - [PROCESSING] City: moscow
+[2025-06-09T17:55:19.819+0200] {logging_mixin.py:188} INFO - [FOUND] Pollution file exists: /home/ccd/airflow/data/raw/pollution/moscow/2025-06-07.json
+[2025-06-09T17:55:19.822+0200] {logging_mixin.py:188} INFO - [INFO] Flattened pollution data: 25 rows
+[2025-06-09T17:55:19.827+0200] {logging_mixin.py:188} INFO - [INFO] Aggregated pollution data: 1 rows
+[2025-06-09T17:55:20.793+0200] {logging_mixin.py:188} INFO - [OK] Formatted pollution for moscow
+[2025-06-09T17:55:20.794+0200] {logging_mixin.py:188} INFO - [FOUND] Weather file exists: /home/ccd/airflow/data/raw/weather/moscow/2025-06-07.json
+[2025-06-09T17:55:20.799+0200] {logging_mixin.py:188} INFO - [INFO] Flattened weather data: 1 rows
+[2025-06-09T17:55:21.676+0200] {logging_mixin.py:188} INFO - [OK] Formatted weather for moscow
+[2025-06-09T17:55:22.660+0200] {logging_mixin.py:188} INFO - [DONE] Spark session closed
+[2025-06-09T17:55:22.660+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-09T17:55:22.661+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-09T17:55:22.664+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=format_daily_data_all_cities, execution_date=20250607T000000, start_date=20250609T155507, end_date=20250609T155522
+[2025-06-09T17:55:22.719+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-09T17:55:22.728+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-09T17:55:22.738+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-06-09T18:00:49.854+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-09T18:00:49.871+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-06-07T00:00:00+00:00 [queued]>
+[2025-06-09T18:00:49.875+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-06-07T00:00:00+00:00 [queued]>
+[2025-06-09T18:00:49.876+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-06-09T18:00:49.894+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): format_daily_data_all_cities> on 2025-06-07 00:00:00+00:00
+[2025-06-09T18:00:49.897+0200] {standard_task_runner.py:63} INFO - Started process 125594 to run task
+[2025-06-09T18:00:49.900+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'format_daily_data_all_cities', 'scheduled__2025-06-07T00:00:00+00:00', '--job-id', '421', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpipwoodgg']
+[2025-06-09T18:00:49.901+0200] {standard_task_runner.py:91} INFO - Job 421: Subtask format_daily_data_all_cities
+[2025-06-09T18:00:49.935+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.format_daily_data_all_cities scheduled__2025-06-07T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-06-09T18:00:49.995+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='format_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-06-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-07T00:00:00+00:00'
+[2025-06-09T18:00:49.996+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-09T18:00:49.996+0200] {logging_mixin.py:188} INFO - [START] Formatting data for execution_date: 2025-06-07
+[2025-06-09T18:00:55.981+0200] {logging_mixin.py:188} INFO - [INFO] Spark session started
+[2025-06-09T18:00:56.000+0200] {logging_mixin.py:188} INFO - [INFO] Loaded 2 cities from config
+[2025-06-09T18:00:56.001+0200] {logging_mixin.py:188} INFO - [PROCESSING] City: istanbul
+[2025-06-09T18:00:56.001+0200] {logging_mixin.py:188} INFO - [FOUND] Pollution file exists: /home/ccd/airflow/data/raw/pollution/istanbul/2025-06-07.json
+[2025-06-09T18:00:56.008+0200] {logging_mixin.py:188} INFO - [INFO] Flattened pollution data: 25 rows
+[2025-06-09T18:00:56.030+0200] {logging_mixin.py:188} INFO - [INFO] Aggregated pollution data: 1 rows
+[2025-06-09T18:01:02.358+0200] {logging_mixin.py:188} INFO - [OK] Formatted pollution for istanbul
+[2025-06-09T18:01:02.359+0200] {logging_mixin.py:188} INFO - [FOUND] Weather file exists: /home/ccd/airflow/data/raw/weather/istanbul/2025-06-07.json
+[2025-06-09T18:01:02.362+0200] {logging_mixin.py:188} INFO - [INFO] Flattened weather data: 1 rows
+[2025-06-09T18:01:03.410+0200] {logging_mixin.py:188} INFO - [OK] Formatted weather for istanbul
+[2025-06-09T18:01:03.411+0200] {logging_mixin.py:188} INFO - [PROCESSING] City: moscow
+[2025-06-09T18:01:03.411+0200] {logging_mixin.py:188} INFO - [FOUND] Pollution file exists: /home/ccd/airflow/data/raw/pollution/moscow/2025-06-07.json
+[2025-06-09T18:01:03.415+0200] {logging_mixin.py:188} INFO - [INFO] Flattened pollution data: 25 rows
+[2025-06-09T18:01:03.431+0200] {logging_mixin.py:188} INFO - [INFO] Aggregated pollution data: 1 rows
+[2025-06-09T18:01:04.641+0200] {logging_mixin.py:188} INFO - [OK] Formatted pollution for moscow
+[2025-06-09T18:01:04.641+0200] {logging_mixin.py:188} INFO - [FOUND] Weather file exists: /home/ccd/airflow/data/raw/weather/moscow/2025-06-07.json
+[2025-06-09T18:01:04.648+0200] {logging_mixin.py:188} INFO - [INFO] Flattened weather data: 1 rows
+[2025-06-09T18:01:05.702+0200] {logging_mixin.py:188} INFO - [OK] Formatted weather for moscow
+[2025-06-09T18:01:06.688+0200] {logging_mixin.py:188} INFO - [DONE] Spark session closed
+[2025-06-09T18:01:06.688+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-09T18:01:06.688+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-09T18:01:06.692+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=format_daily_data_all_cities, execution_date=20250607T000000, start_date=20250609T160049, end_date=20250609T160106
+[2025-06-09T18:01:06.761+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-09T18:01:06.769+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-09T18:01:06.788+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

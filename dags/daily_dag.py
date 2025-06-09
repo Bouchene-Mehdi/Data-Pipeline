@@ -257,7 +257,9 @@ def format_daily_data(**context):
                 print(f"[INFO] Aggregated pollution data: {len(df_pollution)} rows")
 
                 if not df_pollution.empty:
-                    df_pollution_spark = spark.createDataFrame(df_pollution).withColumn("city_name", lit(city_name))
+                    df_pollution_spark = spark.createDataFrame(df_pollution)
+                    df_pollution_spark = df_pollution_spark.withColumn("city_name", lit(city_name))
+                    df_pollution_spark = df_pollution_spark.withColumn("population", lit(city['population']))
                     os.makedirs(os.path.dirname(output_pollution_path), exist_ok=True)
                     df_pollution_spark.write.mode("overwrite").parquet(output_pollution_path)
                     print(f"[OK] Formatted pollution for {city_name}")
@@ -280,7 +282,9 @@ def format_daily_data(**context):
 
 
                 if not df_weather.empty:
-                    df_weather_spark = spark.createDataFrame(df_weather).withColumn("city_name", lit(city_name))
+                    df_weather_spark = spark.createDataFrame(df_weather)
+                    df_weather_spark = df_weather_spark.withColumn("city_name", lit(city_name))
+                    df_weather_spark = df_weather_spark.withColumn("population", lit(city['population']))
                     os.makedirs(os.path.dirname(output_weather_path), exist_ok=True)
                     df_weather_spark.write.mode("overwrite").parquet(output_weather_path)
                     print(f"[OK] Formatted weather for {city_name}")
@@ -314,7 +318,7 @@ def combine_daily_data(**context):
             df_poll = spark.read.parquet(pollution_path).withColumn("city_name", trim(col("city_name")))
             df_weather = spark.read.parquet(weather_path).withColumn("city_name", trim(col("city_name")))
 
-            df_weather = df_weather.drop("lat", "lon")  # Remove conflicting columns
+            df_weather = df_weather.drop("lat", "lon","population")  # Remove conflicting columns
 
             df_combined = df_poll.join(
                 df_weather,
@@ -410,4 +414,4 @@ with DAG(
         provide_context=True
     )
 
-    fetch_daily_task >> format_daily_task >> combine_daily_task >> index_daily
+    fetch_daily_task >> format_daily_task >> combine_daily_task

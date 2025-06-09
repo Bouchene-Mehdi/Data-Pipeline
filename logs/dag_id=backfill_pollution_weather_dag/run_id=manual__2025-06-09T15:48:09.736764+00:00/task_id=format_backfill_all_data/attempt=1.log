@@ -1,0 +1,321 @@
+[2025-06-09T17:48:34.739+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-09T17:48:34.758+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: backfill_pollution_weather_dag.format_backfill_all_data manual__2025-06-09T15:48:09.736764+00:00 [queued]>
+[2025-06-09T17:48:34.764+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: backfill_pollution_weather_dag.format_backfill_all_data manual__2025-06-09T15:48:09.736764+00:00 [queued]>
+[2025-06-09T17:48:34.764+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-06-09T17:48:34.785+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): format_backfill_all_data> on 2025-06-09 15:48:09.736764+00:00
+[2025-06-09T17:48:34.790+0200] {standard_task_runner.py:63} INFO - Started process 114487 to run task
+[2025-06-09T17:48:34.793+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'backfill_pollution_weather_dag', 'format_backfill_all_data', 'manual__2025-06-09T15:48:09.736764+00:00', '--job-id', '408', '--raw', '--subdir', 'DAGS_FOLDER/backfill_dag.py', '--cfg-path', '/tmp/tmp3ted8d_m']
+[2025-06-09T17:48:34.793+0200] {standard_task_runner.py:91} INFO - Job 408: Subtask format_backfill_all_data
+[2025-06-09T17:48:34.832+0200] {task_command.py:426} INFO - Running <TaskInstance: backfill_pollution_weather_dag.format_backfill_all_data manual__2025-06-09T15:48:09.736764+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-06-09T17:48:34.898+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='backfill_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='format_backfill_all_data' AIRFLOW_CTX_EXECUTION_DATE='2025-06-09T15:48:09.736764+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-09T15:48:09.736764+00:00'
+[2025-06-09T17:48:34.899+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-09T17:48:40.062+0200] {logging_mixin.py:188} INFO - [CITY] Processing: istanbul
+[2025-06-09T17:48:40.076+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:40.077+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:40.080+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:46.109+0200] {logging_mixin.py:188} INFO - [OK] Pollution written: /home/ccd/airflow/data/formatted/pollution/istanbul/2025-05-20
+[2025-06-09T17:48:46.112+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:46.114+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:46.117+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:48.731+0200] {logging_mixin.py:188} INFO - [OK] Pollution written: /home/ccd/airflow/data/formatted/pollution/istanbul/2025-05-21
+[2025-06-09T17:48:48.737+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:48.741+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:48.746+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:50.726+0200] {logging_mixin.py:188} INFO - [OK] Pollution written: /home/ccd/airflow/data/formatted/pollution/istanbul/2025-05-22
+[2025-06-09T17:48:50.733+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:50.737+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:50.743+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:52.141+0200] {logging_mixin.py:188} INFO - [OK] Pollution written: /home/ccd/airflow/data/formatted/pollution/istanbul/2025-05-23
+[2025-06-09T17:48:52.148+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:52.152+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:52.159+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:53.083+0200] {logging_mixin.py:188} INFO - [OK] Pollution written: /home/ccd/airflow/data/formatted/pollution/istanbul/2025-05-24
+[2025-06-09T17:48:53.085+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:53.087+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:53.089+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:53.905+0200] {logging_mixin.py:188} INFO - [OK] Pollution written: /home/ccd/airflow/data/formatted/pollution/istanbul/2025-05-25
+[2025-06-09T17:48:53.908+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:53.911+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:53.913+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:55.367+0200] {logging_mixin.py:188} INFO - [OK] Pollution written: /home/ccd/airflow/data/formatted/pollution/istanbul/2025-05-26
+[2025-06-09T17:48:55.371+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:55.372+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:55.375+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:56.154+0200] {logging_mixin.py:188} INFO - [OK] Pollution written: /home/ccd/airflow/data/formatted/pollution/istanbul/2025-05-27
+[2025-06-09T17:48:56.157+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:56.159+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:56.161+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:48:57.201+0200] {logging_mixin.py:188} INFO - [OK] Weather written: /home/ccd/airflow/data/formatted/weather/istanbul/2025-05-20
+[2025-06-09T17:48:57.956+0200] {logging_mixin.py:188} INFO - [OK] Weather written: /home/ccd/airflow/data/formatted/weather/istanbul/2025-05-21
+[2025-06-09T17:48:58.728+0200] {logging_mixin.py:188} INFO - [OK] Weather written: /home/ccd/airflow/data/formatted/weather/istanbul/2025-05-22
+[2025-06-09T17:48:59.591+0200] {logging_mixin.py:188} INFO - [OK] Weather written: /home/ccd/airflow/data/formatted/weather/istanbul/2025-05-23
+[2025-06-09T17:49:00.768+0200] {logging_mixin.py:188} INFO - [OK] Weather written: /home/ccd/airflow/data/formatted/weather/istanbul/2025-05-24
+[2025-06-09T17:49:01.579+0200] {logging_mixin.py:188} INFO - [OK] Weather written: /home/ccd/airflow/data/formatted/weather/istanbul/2025-05-25
+[2025-06-09T17:49:02.298+0200] {logging_mixin.py:188} INFO - [OK] Weather written: /home/ccd/airflow/data/formatted/weather/istanbul/2025-05-26
+[2025-06-09T17:49:03.093+0200] {logging_mixin.py:188} INFO - [OK] Weather written: /home/ccd/airflow/data/formatted/weather/istanbul/2025-05-27
+[2025-06-09T17:49:03.094+0200] {logging_mixin.py:188} INFO - [CITY] Processing: moscow
+[2025-06-09T17:49:03.106+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:03.108+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:03.111+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:03.774+0200] {logging_mixin.py:188} INFO - [OK] Pollution written: /home/ccd/airflow/data/formatted/pollution/moscow/2025-05-20
+[2025-06-09T17:49:03.778+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:03.780+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:03.782+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:04.426+0200] {logging_mixin.py:188} INFO - [OK] Pollution written: /home/ccd/airflow/data/formatted/pollution/moscow/2025-05-21
+[2025-06-09T17:49:04.429+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:04.431+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:04.432+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:05.070+0200] {logging_mixin.py:188} INFO - [OK] Pollution written: /home/ccd/airflow/data/formatted/pollution/moscow/2025-05-22
+[2025-06-09T17:49:05.074+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:05.075+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:05.077+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:05.774+0200] {logging_mixin.py:188} INFO - [OK] Pollution written: /home/ccd/airflow/data/formatted/pollution/moscow/2025-05-23
+[2025-06-09T17:49:05.778+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:05.780+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:05.782+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:06.504+0200] {logging_mixin.py:188} INFO - [OK] Pollution written: /home/ccd/airflow/data/formatted/pollution/moscow/2025-05-24
+[2025-06-09T17:49:06.508+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:06.510+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:06.514+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:07.212+0200] {logging_mixin.py:188} INFO - [OK] Pollution written: /home/ccd/airflow/data/formatted/pollution/moscow/2025-05-25
+[2025-06-09T17:49:07.216+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:07.218+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:07.220+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:07.941+0200] {logging_mixin.py:188} INFO - [OK] Pollution written: /home/ccd/airflow/data/formatted/pollution/moscow/2025-05-26
+[2025-06-09T17:49:07.945+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:07.948+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:07.950+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:08.644+0200] {logging_mixin.py:188} INFO - [OK] Pollution written: /home/ccd/airflow/data/formatted/pollution/moscow/2025-05-27
+[2025-06-09T17:49:08.649+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:135 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:08.652+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:136 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:08.654+0200] {logging_mixin.py:188} WARNING - /home/ccd/airflow/dags/backfill_dag.py:137 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-06-09T17:49:09.315+0200] {logging_mixin.py:188} INFO - [OK] Weather written: /home/ccd/airflow/data/formatted/weather/moscow/2025-05-20
+[2025-06-09T17:49:10.132+0200] {logging_mixin.py:188} INFO - [OK] Weather written: /home/ccd/airflow/data/formatted/weather/moscow/2025-05-21
+[2025-06-09T17:49:11.169+0200] {logging_mixin.py:188} INFO - [OK] Weather written: /home/ccd/airflow/data/formatted/weather/moscow/2025-05-22
+[2025-06-09T17:49:12.466+0200] {logging_mixin.py:188} INFO - [OK] Weather written: /home/ccd/airflow/data/formatted/weather/moscow/2025-05-23
+[2025-06-09T17:49:13.685+0200] {logging_mixin.py:188} INFO - [OK] Weather written: /home/ccd/airflow/data/formatted/weather/moscow/2025-05-24
+[2025-06-09T17:49:14.765+0200] {logging_mixin.py:188} INFO - [OK] Weather written: /home/ccd/airflow/data/formatted/weather/moscow/2025-05-25
+[2025-06-09T17:49:15.868+0200] {logging_mixin.py:188} INFO - [OK] Weather written: /home/ccd/airflow/data/formatted/weather/moscow/2025-05-26
+[2025-06-09T17:49:16.877+0200] {logging_mixin.py:188} INFO - [OK] Weather written: /home/ccd/airflow/data/formatted/weather/moscow/2025-05-27
+[2025-06-09T17:49:17.862+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-09T17:49:17.862+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-09T17:49:17.873+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=backfill_pollution_weather_dag, task_id=format_backfill_all_data, execution_date=20250609T154809, start_date=20250609T154834, end_date=20250609T154917
+[2025-06-09T17:49:17.915+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-09T17:49:17.938+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-09T17:49:17.958+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
