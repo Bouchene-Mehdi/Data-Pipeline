@@ -362,3 +362,10 @@
 [2025-06-09T12:09:15.036+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:09:15.035+0200] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-06-09T12:09:15.051+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:09:15.051+0200] {dag.py:3954} INFO - Setting next_dagrun for example_passing_params_via_test_command to 2025-06-09 10:08:00+00:00, run_after=2025-06-09 10:09:00+00:00
 [2025-06-09T12:09:15.071+0200] {processor.py:183} INFO - Processing /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_passing_params_via_test_command.py took 0.061 seconds
+[2025-06-09T12:10:12.107+0200] {processor.py:161} INFO - Started process (PID=26627) to work on /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2025-06-09T12:10:12.109+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_passing_params_via_test_command.py for tasks to queue
+[2025-06-09T12:10:12.110+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:10:12.110+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2025-06-09T12:10:12.116+0200] {processor.py:840} INFO - DAG(s) 'example_passing_params_via_test_command' retrieved from /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2025-06-09T12:10:12.126+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:10:12.126+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:10:12.143+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:10:12.143+0200] {dag.py:3954} INFO - Setting next_dagrun for example_passing_params_via_test_command to 2025-06-09 10:09:00+00:00, run_after=2025-06-09 10:10:00+00:00
+[2025-06-09T12:10:12.170+0200] {processor.py:183} INFO - Processing /home/ccd/airflow_venv/lib/python3.10/site-packages/airflow/example_dags/example_passing_params_via_test_command.py took 0.067 seconds

@@ -273,19 +273,19 @@ with DAG(
     tags=['pollution', 'weather', 'backfill'],
 ) as dag:
 
-    # format_all_backfill = PythonOperator(
-    #     task_id='format_backfill_all_data',
-    #     python_callable=format_backfill_all_dates
-    # )
-    #
-    # fetch_task = PythonOperator(
-    #     task_id='fetch_full_history_all_cities',
-    #     python_callable=fetch_all_data_backfill
-    # )
+    format_all_backfill = PythonOperator(
+        task_id='format_backfill_all_data',
+        python_callable=format_backfill_all_dates
+    )
+
+    fetch_task = PythonOperator(
+        task_id='fetch_full_history_all_cities',
+        python_callable=fetch_all_data_backfill
+    )
 
     combine_backfill = PythonOperator(
         task_id='combine_backfill_data',
         python_callable=combine_backfill_data
     )
 
-    combine_backfill
+    fetch_task >> format_all_backfill >> combine_backfill
