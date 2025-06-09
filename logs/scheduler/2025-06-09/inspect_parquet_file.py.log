@@ -418,3 +418,738 @@
 [2025-06-09T12:10:25.466+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:10:25.466+0200] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-06-09T12:10:25.473+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:10:25.473+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
 [2025-06-09T12:10:25.493+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.229 seconds
+[2025-06-09T12:11:23.837+0200] {processor.py:161} INFO - Started process (PID=27369) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:11:23.838+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:11:23.839+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:11:23.839+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:11:24.017+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:11:24.024+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:11:24.024+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:11:24.030+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:11:24.030+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:11:24.049+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.215 seconds
+[2025-06-09T12:12:15.703+0200] {processor.py:161} INFO - Started process (PID=27608) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:12:15.704+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:12:15.705+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:12:15.704+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:12:15.867+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:12:15.875+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:12:15.875+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:12:15.881+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:12:15.881+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:12:15.902+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.203 seconds
+[2025-06-09T12:13:07.104+0200] {processor.py:161} INFO - Started process (PID=27847) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:13:07.116+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:13:07.117+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:13:07.116+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:13:07.282+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:13:07.288+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:13:07.288+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:13:07.294+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:13:07.294+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:13:07.314+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.214 seconds
+[2025-06-09T12:14:01.471+0200] {processor.py:161} INFO - Started process (PID=28113) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:14:01.481+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:14:01.482+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:14:01.482+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:14:01.584+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:14:01.597+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:14:01.597+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:14:01.605+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:14:01.605+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:14:01.630+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.163 seconds
+[2025-06-09T12:14:52.493+0200] {processor.py:161} INFO - Started process (PID=28355) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:14:52.494+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:14:52.495+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:14:52.495+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:14:52.594+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:14:52.608+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:14:52.607+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:14:52.618+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:14:52.618+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:14:52.639+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.150 seconds
+[2025-06-09T12:15:43.772+0200] {processor.py:161} INFO - Started process (PID=28617) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:15:43.782+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:15:43.783+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:15:43.783+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:15:43.906+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:15:43.919+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:15:43.918+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:15:43.926+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:15:43.926+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:15:43.948+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.180 seconds
+[2025-06-09T12:16:31.341+0200] {processor.py:161} INFO - Started process (PID=28899) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:16:31.353+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:16:31.354+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:16:31.353+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:16:31.489+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:16:31.501+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:16:31.501+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:16:31.510+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:16:31.510+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:16:31.535+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.198 seconds
+[2025-06-09T12:17:27.201+0200] {processor.py:161} INFO - Started process (PID=29233) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:17:27.211+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:17:27.212+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:17:27.212+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:17:27.342+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:17:27.353+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:17:27.353+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:17:27.361+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:17:27.361+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:17:27.388+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.191 seconds
+[2025-06-09T12:18:20.465+0200] {processor.py:161} INFO - Started process (PID=29523) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:18:20.468+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:18:20.469+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:18:20.469+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:18:20.620+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:18:20.633+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:18:20.633+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:18:20.643+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:18:20.643+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:18:20.669+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.209 seconds
+[2025-06-09T12:19:11.798+0200] {processor.py:161} INFO - Started process (PID=29829) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:19:11.801+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:19:11.802+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:19:11.801+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:19:11.919+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:19:11.931+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:19:11.930+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:19:11.941+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:19:11.940+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:19:11.964+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.171 seconds
+[2025-06-09T12:20:07.251+0200] {processor.py:161} INFO - Started process (PID=30119) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:20:07.261+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:20:07.263+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:20:07.262+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:20:07.410+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:20:07.421+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:20:07.421+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:20:07.429+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:20:07.429+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:20:07.458+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.212 seconds
+[2025-06-09T12:21:01.682+0200] {processor.py:161} INFO - Started process (PID=30428) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:21:01.685+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:21:01.686+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:21:01.686+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:21:01.823+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:21:01.838+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:21:01.837+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:21:01.849+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:21:01.849+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:21:01.883+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.205 seconds
+[2025-06-09T12:22:01.006+0200] {processor.py:161} INFO - Started process (PID=30773) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:22:01.009+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:22:01.011+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:22:01.011+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:22:01.170+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:22:01.189+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:22:01.189+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:22:01.205+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:22:01.205+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:22:01.238+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.237 seconds
+[2025-06-09T12:23:01.464+0200] {processor.py:161} INFO - Started process (PID=31106) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:23:01.475+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:23:01.476+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:23:01.476+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:23:01.599+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:23:01.611+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:23:01.610+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:23:01.620+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:23:01.620+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:23:01.645+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.185 seconds
+[2025-06-09T12:24:03.101+0200] {processor.py:161} INFO - Started process (PID=31453) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:24:03.104+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:24:03.105+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:24:03.105+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:24:03.245+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:24:03.261+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:24:03.260+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:24:03.358+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:24:03.357+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:24:03.394+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.297 seconds
+[2025-06-09T12:25:03.303+0200] {processor.py:161} INFO - Started process (PID=31789) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:25:03.315+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:25:03.317+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:25:03.316+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:25:03.492+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:25:03.512+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:25:03.512+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:25:03.526+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:25:03.525+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:25:03.569+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.271 seconds
+[2025-06-09T12:25:36.477+0200] {processor.py:161} INFO - Started process (PID=31964) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:25:36.479+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:25:36.480+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:25:36.480+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:25:36.639+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:25:36.654+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:25:36.653+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:25:36.739+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:25:36.739+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:25:36.773+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.301 seconds
+[2025-06-09T12:26:38.054+0200] {processor.py:161} INFO - Started process (PID=32311) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:26:38.065+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:26:38.066+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:26:38.066+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:26:38.202+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:26:38.218+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:26:38.218+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:26:38.304+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:26:38.303+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:26:38.345+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.296 seconds
+[2025-06-09T12:27:38.733+0200] {processor.py:161} INFO - Started process (PID=32680) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:27:38.743+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:27:38.745+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:27:38.744+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:27:38.987+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:27:39.000+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:27:39.000+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:27:39.008+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:27:39.008+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:27:39.050+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.323 seconds
+[2025-06-09T12:28:35.888+0200] {processor.py:161} INFO - Started process (PID=33013) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:28:35.891+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:28:35.892+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:28:35.892+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:28:36.143+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:28:36.172+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:28:36.171+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:28:36.182+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:28:36.182+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:28:36.209+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.325 seconds
+[2025-06-09T12:29:37.570+0200] {processor.py:161} INFO - Started process (PID=33349) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:29:37.581+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:29:37.582+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:29:37.582+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:29:37.822+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:29:37.833+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:29:37.832+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:29:37.849+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:29:37.849+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:29:37.908+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.343 seconds
+[2025-06-09T12:30:10.494+0200] {processor.py:161} INFO - Started process (PID=33546) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:30:10.505+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:30:10.506+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:30:10.506+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:30:10.762+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:30:10.774+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:30:10.773+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:30:10.782+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:30:10.782+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:30:10.839+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.351 seconds
+[2025-06-09T12:31:08.937+0200] {processor.py:161} INFO - Started process (PID=33857) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:31:08.947+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:31:08.948+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:31:08.948+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:31:09.197+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:31:09.210+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:31:09.210+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:31:09.221+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:31:09.221+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:31:09.257+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.326 seconds
+[2025-06-09T12:32:11.663+0200] {processor.py:161} INFO - Started process (PID=34202) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:32:11.674+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:32:11.675+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:32:11.675+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:32:11.912+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:32:11.924+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:32:11.923+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:32:11.932+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:32:11.932+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:32:11.960+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.302 seconds
+[2025-06-09T12:33:14.665+0200] {processor.py:161} INFO - Started process (PID=34597) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:33:14.676+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:33:14.681+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:33:14.680+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:33:15.937+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:33:15.959+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:33:15.958+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:33:15.977+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:33:15.977+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:33:16.016+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 1.371 seconds
+[2025-06-09T12:33:47.280+0200] {processor.py:161} INFO - Started process (PID=34760) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:33:47.281+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:33:47.283+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:33:47.282+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:33:47.409+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:33:47.422+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:33:47.421+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:33:47.429+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:33:47.429+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:33:47.459+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.182 seconds
+[2025-06-09T12:34:44.929+0200] {processor.py:161} INFO - Started process (PID=35080) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:34:44.939+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:34:44.941+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:34:44.940+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:34:45.079+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:34:45.091+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:34:45.091+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:34:45.099+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:34:45.099+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:34:45.128+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.203 seconds
+[2025-06-09T12:56:21.306+0200] {processor.py:161} INFO - Started process (PID=35349) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:56:21.317+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:56:21.318+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:56:21.318+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:56:21.438+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:56:21.450+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:56:21.450+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:56:21.458+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:56:21.458+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:56:21.481+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.179 seconds
+[2025-06-09T12:56:55.577+0200] {processor.py:161} INFO - Started process (PID=35579) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:56:55.589+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:56:55.590+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:56:55.590+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:56:55.731+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:56:55.744+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:56:55.744+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:56:55.754+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:56:55.754+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:56:55.778+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.206 seconds
+[2025-06-09T12:57:46.418+0200] {processor.py:161} INFO - Started process (PID=35868) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:57:46.430+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:57:46.431+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:57:46.430+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:57:46.562+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:57:46.574+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:57:46.574+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:57:46.582+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:57:46.582+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:57:46.607+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.192 seconds
+[2025-06-09T12:58:38.697+0200] {processor.py:161} INFO - Started process (PID=36172) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:58:38.708+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:58:38.709+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:58:38.709+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:58:38.829+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:58:38.847+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:58:38.846+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:58:38.856+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:58:38.856+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:58:38.882+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.191 seconds
+[2025-06-09T12:59:31.830+0200] {processor.py:161} INFO - Started process (PID=36510) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:59:31.842+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T12:59:31.843+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:59:31.843+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:59:31.975+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T12:59:31.985+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:59:31.985+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T12:59:31.993+0200] {logging_mixin.py:188} INFO - [2025-06-09T12:59:31.993+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T12:59:32.014+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.188 seconds
+[2025-06-09T13:00:24.791+0200] {processor.py:161} INFO - Started process (PID=36797) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:00:24.802+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:00:24.803+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:00:24.803+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:00:24.932+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:00:24.943+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:00:24.943+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:00:24.950+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:00:24.950+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:00:24.974+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.188 seconds
+[2025-06-09T13:01:16.114+0200] {processor.py:161} INFO - Started process (PID=37103) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:01:16.116+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:01:16.118+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:01:16.118+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:01:16.303+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:01:16.313+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:01:16.313+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:01:16.322+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:01:16.322+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:01:16.353+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.253 seconds
+[2025-06-09T13:02:08.908+0200] {processor.py:161} INFO - Started process (PID=37390) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:02:08.921+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:02:08.922+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:02:08.922+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:02:09.050+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:02:09.063+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:02:09.062+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:02:09.071+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:02:09.071+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:02:09.105+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.200 seconds
+[2025-06-09T13:03:01.126+0200] {processor.py:161} INFO - Started process (PID=37695) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:03:01.137+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:03:01.138+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:03:01.138+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:03:01.394+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:03:01.432+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:03:01.431+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:03:01.454+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:03:01.453+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:03:01.502+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.381 seconds
+[2025-06-09T13:03:55.562+0200] {processor.py:161} INFO - Started process (PID=38007) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:03:55.564+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:03:55.565+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:03:55.565+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:03:55.702+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:03:55.712+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:03:55.712+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:03:55.721+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:03:55.721+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:03:55.744+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.187 seconds
+[2025-06-09T13:04:51.885+0200] {processor.py:161} INFO - Started process (PID=38312) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:04:51.897+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:04:51.898+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:04:51.898+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:04:52.024+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:04:52.034+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:04:52.034+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:04:52.041+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:04:52.041+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:04:52.063+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.182 seconds
+[2025-06-09T13:05:44.169+0200] {processor.py:161} INFO - Started process (PID=38596) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:05:44.179+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:05:44.181+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:05:44.180+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:05:44.314+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:05:44.326+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:05:44.325+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:05:44.334+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:05:44.334+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:05:44.364+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.200 seconds
+[2025-06-09T13:06:34.532+0200] {processor.py:161} INFO - Started process (PID=38902) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:06:34.534+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:06:34.536+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:06:34.535+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:06:34.672+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:06:34.683+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:06:34.682+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:06:34.691+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:06:34.691+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:06:34.715+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.186 seconds
+[2025-06-09T13:07:25.354+0200] {processor.py:161} INFO - Started process (PID=39187) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:07:25.365+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:07:25.367+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:07:25.366+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:07:25.499+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:07:25.510+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:07:25.510+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:07:25.519+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:07:25.519+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:07:25.598+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.250 seconds
+[2025-06-09T13:08:19.671+0200] {processor.py:161} INFO - Started process (PID=39490) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:08:19.672+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:08:19.673+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:08:19.673+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:08:19.875+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:08:19.884+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:08:19.883+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:08:19.890+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:08:19.889+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:08:19.919+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.251 seconds
+[2025-06-09T13:09:13.564+0200] {processor.py:161} INFO - Started process (PID=39803) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:09:13.566+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:09:13.568+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:09:13.567+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:09:13.740+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:09:13.746+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:09:13.746+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:09:13.752+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:09:13.752+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:09:13.771+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.211 seconds
+[2025-06-09T13:10:05.033+0200] {processor.py:161} INFO - Started process (PID=40105) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:10:05.035+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:10:05.036+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:10:05.036+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:10:05.228+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:10:05.235+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:10:05.235+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:10:05.241+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:10:05.241+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:10:05.264+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.236 seconds
+[2025-06-09T13:11:01.120+0200] {processor.py:161} INFO - Started process (PID=40457) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:11:01.121+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:11:01.122+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:11:01.122+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:11:01.355+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:11:01.363+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:11:01.363+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:11:01.370+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:11:01.370+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:11:01.390+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.274 seconds
+[2025-06-09T13:11:50.775+0200] {processor.py:161} INFO - Started process (PID=40790) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:11:50.778+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:11:50.779+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:11:50.779+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:11:50.965+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:11:50.972+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:11:50.972+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:11:50.978+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:11:50.978+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:11:50.999+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.227 seconds
+[2025-06-09T13:12:45.216+0200] {processor.py:161} INFO - Started process (PID=41098) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:12:45.226+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:12:45.227+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:12:45.227+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:12:45.417+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:12:45.423+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:12:45.422+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:12:45.428+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:12:45.428+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:12:45.447+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.235 seconds
+[2025-06-09T13:13:39.268+0200] {processor.py:161} INFO - Started process (PID=41412) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:13:39.279+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:13:39.280+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:13:39.280+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:13:39.480+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:13:39.490+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:13:39.490+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:13:39.497+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:13:39.497+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:13:39.522+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.257 seconds
+[2025-06-09T13:14:30.225+0200] {processor.py:161} INFO - Started process (PID=41717) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:14:30.236+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:14:30.237+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:14:30.237+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:14:30.431+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:14:30.440+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:14:30.440+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:14:30.447+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:14:30.447+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:14:30.480+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.260 seconds
+[2025-06-09T13:15:25.232+0200] {processor.py:161} INFO - Started process (PID=42003) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:15:25.243+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:15:25.246+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:15:25.245+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:15:25.421+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:15:25.429+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:15:25.428+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:15:25.434+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:15:25.434+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:15:25.457+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.230 seconds
+[2025-06-09T13:16:23.448+0200] {processor.py:161} INFO - Started process (PID=42337) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:16:23.458+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:16:23.460+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:16:23.459+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:16:23.582+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:16:23.595+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:16:23.595+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:16:23.605+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:16:23.605+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:16:23.630+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.186 seconds
+[2025-06-09T13:17:18.098+0200] {processor.py:161} INFO - Started process (PID=42646) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:17:18.109+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:17:18.110+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:17:18.110+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:17:18.217+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:17:18.228+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:17:18.228+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:17:18.237+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:17:18.236+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:17:18.259+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.164 seconds
+[2025-06-09T13:18:10.932+0200] {processor.py:161} INFO - Started process (PID=42933) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:18:10.943+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:18:10.944+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:18:10.944+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:18:11.075+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:18:11.086+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:18:11.086+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:18:11.095+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:18:11.095+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:18:11.118+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.189 seconds
+[2025-06-09T13:19:04.250+0200] {processor.py:161} INFO - Started process (PID=43239) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:19:04.253+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:19:04.254+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:19:04.254+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:19:04.367+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:19:04.378+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:19:04.378+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:19:04.386+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:19:04.385+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:19:04.410+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.164 seconds
+[2025-06-09T13:19:54.169+0200] {processor.py:161} INFO - Started process (PID=43524) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:19:54.181+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:19:54.182+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:19:54.182+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:19:54.292+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:19:54.303+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:19:54.303+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:19:54.311+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:19:54.311+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:19:54.335+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.169 seconds
+[2025-06-09T13:20:47.734+0200] {processor.py:161} INFO - Started process (PID=43873) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:20:47.746+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:20:47.747+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:20:47.747+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:20:47.930+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:20:47.941+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:20:47.941+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:20:47.949+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:20:47.949+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:20:47.977+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.248 seconds
+[2025-06-09T13:21:38.551+0200] {processor.py:161} INFO - Started process (PID=44186) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:21:38.562+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:21:38.563+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:21:38.563+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:21:38.691+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:21:38.703+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:21:38.703+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:21:38.711+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:21:38.711+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:21:38.734+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.187 seconds
+[2025-06-09T13:22:26.808+0200] {processor.py:161} INFO - Started process (PID=44474) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:22:26.819+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:22:26.820+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:22:26.820+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:22:26.928+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:22:26.939+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:22:26.939+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:22:26.946+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:22:26.946+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:22:26.970+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.165 seconds
+[2025-06-09T13:23:14.027+0200] {processor.py:161} INFO - Started process (PID=44759) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:23:14.039+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:23:14.040+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:23:14.040+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:23:14.143+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:23:14.154+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:23:14.154+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:23:14.162+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:23:14.162+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:23:14.187+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.163 seconds
+[2025-06-09T13:24:04.443+0200] {processor.py:161} INFO - Started process (PID=45043) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:24:04.446+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:24:04.447+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:24:04.447+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:24:04.555+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:24:04.566+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:24:04.566+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:24:04.573+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:24:04.573+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:24:04.596+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.156 seconds
+[2025-06-09T13:24:57.735+0200] {processor.py:161} INFO - Started process (PID=45346) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:24:57.738+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:24:57.739+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:24:57.738+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:24:57.837+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:24:57.851+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:24:57.850+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:24:57.859+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:24:57.859+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:24:57.939+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.208 seconds
+[2025-06-09T13:25:47.500+0200] {processor.py:161} INFO - Started process (PID=45629) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:25:47.503+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:25:47.504+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:25:47.504+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:25:47.625+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:25:47.636+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:25:47.635+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:25:47.643+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:25:47.643+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:25:47.667+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.171 seconds
+[2025-06-09T13:26:40.139+0200] {processor.py:161} INFO - Started process (PID=45934) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:26:40.151+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T13:26:40.152+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:26:40.152+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:26:40.355+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T13:26:40.363+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:26:40.363+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T13:26:40.369+0200] {logging_mixin.py:188} INFO - [2025-06-09T13:26:40.369+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T13:26:40.400+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.265 seconds
+[2025-06-09T14:52:19.996+0200] {processor.py:161} INFO - Started process (PID=60381) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:52:19.997+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T14:52:20.000+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:52:19.999+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:52:20.205+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:52:20.209+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:52:20.209+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T14:52:20.215+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:52:20.215+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T14:52:20.250+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.259 seconds
+[2025-06-09T14:54:21.554+0200] {processor.py:161} INFO - Started process (PID=63838) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:54:21.556+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T14:54:21.557+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:54:21.557+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:54:21.663+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:54:21.720+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:54:21.719+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T14:54:21.725+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:54:21.725+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T14:54:21.748+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.197 seconds
+[2025-06-09T14:55:06.368+0200] {processor.py:161} INFO - Started process (PID=64098) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:55:06.379+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T14:55:06.380+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:55:06.380+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:55:06.505+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:55:06.514+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:55:06.514+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T14:55:06.522+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:55:06.522+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T14:55:06.543+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.179 seconds
+[2025-06-09T14:55:57.754+0200] {processor.py:161} INFO - Started process (PID=64427) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:55:57.756+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T14:55:57.758+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:55:57.757+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:55:57.893+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:55:57.903+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:55:57.903+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T14:55:57.912+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:55:57.911+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T14:55:57.936+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.186 seconds
+[2025-06-09T14:56:52.642+0200] {processor.py:161} INFO - Started process (PID=64724) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:56:52.653+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T14:56:52.654+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:56:52.654+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:56:52.774+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:56:52.785+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:56:52.785+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T14:56:52.795+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:56:52.794+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T14:56:52.818+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.181 seconds
+[2025-06-09T14:57:48.255+0200] {processor.py:161} INFO - Started process (PID=65081) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:57:48.256+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T14:57:48.257+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:57:48.257+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:57:48.391+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:57:48.402+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:57:48.402+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T14:57:48.410+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:57:48.410+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T14:57:48.433+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.181 seconds
+[2025-06-09T14:58:39.489+0200] {processor.py:161} INFO - Started process (PID=65413) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:58:39.492+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T14:58:39.493+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:58:39.493+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:58:39.666+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:58:39.682+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:58:39.681+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T14:58:39.692+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:58:39.692+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T14:58:39.725+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.240 seconds
+[2025-06-09T14:59:32.005+0200] {processor.py:161} INFO - Started process (PID=65766) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:59:32.009+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T14:59:32.012+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:59:32.011+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:59:32.359+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T14:59:32.370+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:59:32.370+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T14:59:32.378+0200] {logging_mixin.py:188} INFO - [2025-06-09T14:59:32.378+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T14:59:32.411+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.417 seconds
+[2025-06-09T15:00:26.726+0200] {processor.py:161} INFO - Started process (PID=66181) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:00:26.738+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:00:26.740+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:00:26.740+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:00:26.944+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:00:26.956+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:00:26.955+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:00:26.969+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:00:26.968+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:00:27.015+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.296 seconds
+[2025-06-09T15:01:23.799+0200] {processor.py:161} INFO - Started process (PID=66643) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:01:23.809+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:01:23.811+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:01:23.810+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:01:23.947+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:01:23.960+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:01:23.960+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:01:23.969+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:01:23.969+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:01:23.991+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.196 seconds
+[2025-06-09T15:01:58.550+0200] {processor.py:161} INFO - Started process (PID=67041) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:01:58.551+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:01:58.552+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:01:58.552+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:01:58.662+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:01:58.672+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:01:58.671+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:01:58.680+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:01:58.680+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:01:58.719+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.173 seconds
+[2025-06-09T15:02:55.287+0200] {processor.py:161} INFO - Started process (PID=67343) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:02:55.288+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:02:55.289+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:02:55.289+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:02:55.440+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:02:55.452+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:02:55.452+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:02:55.461+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:02:55.461+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:02:55.499+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.217 seconds
+[2025-06-09T15:03:50.361+0200] {processor.py:161} INFO - Started process (PID=67716) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:03:50.374+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:03:50.375+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:03:50.375+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:03:50.495+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:03:50.506+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:03:50.506+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:03:50.513+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:03:50.513+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:03:50.536+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.178 seconds
+[2025-06-09T15:04:50.600+0200] {processor.py:161} INFO - Started process (PID=68061) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:04:50.602+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:04:50.603+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:04:50.603+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:04:50.733+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:04:50.745+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:04:50.745+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:04:50.753+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:04:50.753+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:04:50.783+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.187 seconds
+[2025-06-09T15:05:50.344+0200] {processor.py:161} INFO - Started process (PID=68390) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:05:50.345+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:05:50.348+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:05:50.348+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:05:50.660+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:05:50.684+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:05:50.684+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:05:50.698+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:05:50.698+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:05:50.750+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.412 seconds
+[2025-06-09T15:06:50.066+0200] {processor.py:161} INFO - Started process (PID=68809) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:06:50.076+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:06:50.077+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:06:50.077+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:06:50.224+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:06:50.236+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:06:50.236+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:06:50.246+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:06:50.246+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:06:50.270+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.208 seconds
+[2025-06-09T15:07:48.373+0200] {processor.py:161} INFO - Started process (PID=69371) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:07:48.385+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:07:48.387+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:07:48.386+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:07:48.557+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:07:48.663+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:07:48.662+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:07:48.672+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:07:48.671+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:07:48.700+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.334 seconds
+[2025-06-09T15:08:32.676+0200] {processor.py:161} INFO - Started process (PID=69790) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:08:32.687+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:08:32.688+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:08:32.688+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:08:33.001+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:08:33.016+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:08:33.015+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:08:33.029+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:08:33.028+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:08:33.058+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.389 seconds
+[2025-06-09T15:09:56.423+0200] {processor.py:161} INFO - Started process (PID=70367) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:09:56.424+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:09:56.425+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:09:56.424+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:09:56.641+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:09:56.646+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:09:56.646+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:09:56.654+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:09:56.654+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:09:56.679+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.262 seconds
+[2025-06-09T15:11:19.273+0200] {processor.py:161} INFO - Started process (PID=71295) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:11:19.284+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:11:19.286+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:11:19.285+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:11:19.495+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:11:19.601+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:11:19.601+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:11:19.613+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:11:19.613+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:11:19.646+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.378 seconds
+[2025-06-09T15:12:16.701+0200] {processor.py:161} INFO - Started process (PID=71666) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:12:16.703+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:12:16.704+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:12:16.704+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:12:17.650+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:12:17.662+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:12:17.662+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:12:17.670+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:12:17.670+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:12:17.692+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.158 seconds
+[2025-06-09T15:13:13.253+0200] {processor.py:161} INFO - Started process (PID=72021) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:13:13.264+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:13:13.265+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:13:13.264+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:13:13.395+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:13:13.408+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:13:13.408+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:13:13.418+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:13:13.418+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:13:13.446+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.197 seconds
+[2025-06-09T15:14:06.074+0200] {processor.py:161} INFO - Started process (PID=72348) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:14:06.075+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:14:06.077+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:14:06.076+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:14:06.269+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:14:06.284+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:14:06.284+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:14:06.297+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:14:06.296+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:14:06.334+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.266 seconds
+[2025-06-09T15:15:03.455+0200] {processor.py:161} INFO - Started process (PID=72658) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:15:03.466+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:15:03.467+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:15:03.467+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:15:03.575+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:15:03.587+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:15:03.587+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:15:03.595+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:15:03.595+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:15:03.617+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.165 seconds
+[2025-06-09T15:15:57.391+0200] {processor.py:161} INFO - Started process (PID=72964) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:15:57.402+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:15:57.403+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:15:57.403+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:15:57.530+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:15:57.540+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:15:57.540+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:15:57.547+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:15:57.547+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:15:57.569+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.182 seconds
+[2025-06-09T15:16:52.848+0200] {processor.py:161} INFO - Started process (PID=73285) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:16:52.849+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:16:52.850+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:16:52.849+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:16:52.976+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:16:52.985+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:16:52.985+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:16:52.992+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:16:52.992+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:16:53.012+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.168 seconds
+[2025-06-09T15:17:45.934+0200] {processor.py:161} INFO - Started process (PID=73595) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:17:45.945+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:17:45.946+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:17:45.946+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:17:46.056+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:17:46.067+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:17:46.067+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:17:46.075+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:17:46.075+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:17:46.103+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.172 seconds
+[2025-06-09T15:18:40.234+0200] {processor.py:161} INFO - Started process (PID=73882) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:18:40.236+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:18:40.237+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:18:40.236+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:18:40.337+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:18:40.349+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:18:40.349+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:18:40.357+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:18:40.357+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:18:40.378+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.148 seconds
+[2025-06-09T15:19:33.955+0200] {processor.py:161} INFO - Started process (PID=74186) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:19:33.959+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:19:33.960+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:19:33.959+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:19:34.086+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:19:34.097+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:19:34.097+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:19:34.105+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:19:34.105+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:19:34.127+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.176 seconds
+[2025-06-09T15:20:22.860+0200] {processor.py:161} INFO - Started process (PID=74473) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:20:22.871+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:20:22.872+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:20:22.872+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:20:22.973+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:20:22.986+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:20:22.986+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:20:22.995+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:20:22.995+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:20:23.018+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.161 seconds
+[2025-06-09T15:21:10.681+0200] {processor.py:161} INFO - Started process (PID=74758) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:21:10.683+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:21:10.684+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:21:10.684+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:21:10.780+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:21:10.793+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:21:10.793+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:21:10.801+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:21:10.801+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:21:10.826+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.149 seconds
+[2025-06-09T15:22:04.109+0200] {processor.py:161} INFO - Started process (PID=75062) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:22:04.121+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:22:04.122+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:22:04.122+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:22:04.227+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:22:04.239+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:22:04.238+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:22:04.246+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:22:04.246+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:22:04.267+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.162 seconds
+[2025-06-09T15:23:01.036+0200] {processor.py:161} INFO - Started process (PID=75400) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:23:01.048+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:23:01.049+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:23:01.049+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:23:01.176+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:23:01.186+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:23:01.185+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:23:01.193+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:23:01.193+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:23:01.215+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.183 seconds
+[2025-06-09T15:23:56.148+0200] {processor.py:161} INFO - Started process (PID=75690) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:23:56.159+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:23:56.160+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:23:56.160+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:23:56.258+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:23:56.271+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:23:56.270+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:23:56.277+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:23:56.277+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:23:56.353+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.209 seconds
+[2025-06-09T15:24:47.027+0200] {processor.py:161} INFO - Started process (PID=75995) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:24:47.029+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:24:47.030+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:24:47.030+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:24:47.128+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:24:47.204+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:24:47.204+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:24:47.210+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:24:47.210+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:24:47.230+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.207 seconds
+[2025-06-09T15:25:37.258+0200] {processor.py:161} INFO - Started process (PID=76282) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:25:37.269+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:25:37.271+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:25:37.270+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:25:37.468+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:25:37.475+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:25:37.475+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:25:37.480+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:25:37.480+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:25:37.505+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.250 seconds
+[2025-06-09T15:26:32.100+0200] {processor.py:161} INFO - Started process (PID=76594) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:26:32.103+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:26:32.106+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:26:32.105+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:26:32.323+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:26:32.329+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:26:32.329+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:26:32.335+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:26:32.335+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:26:32.368+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.274 seconds
+[2025-06-09T15:27:27.136+0200] {processor.py:161} INFO - Started process (PID=76999) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:27:27.147+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:27:27.148+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:27:27.148+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:27:27.336+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:27:27.344+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:27:27.344+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:27:27.350+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:27:27.349+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:27:27.374+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.241 seconds
+[2025-06-09T15:30:18.242+0200] {processor.py:161} INFO - Started process (PID=80627) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:30:18.244+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:30:18.245+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:30:18.245+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:30:18.441+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:30:18.449+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:30:18.449+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:30:18.456+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:30:18.455+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:30:18.486+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.248 seconds
+[2025-06-09T15:31:10.016+0200] {processor.py:161} INFO - Started process (PID=80948) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:31:10.026+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:31:10.027+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:31:10.027+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:31:10.195+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:31:10.202+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:31:10.202+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:31:10.208+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:31:10.208+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:31:10.226+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.213 seconds
+[2025-06-09T15:32:05.508+0200] {processor.py:161} INFO - Started process (PID=81427) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:32:05.510+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:32:05.512+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:32:05.512+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:32:05.719+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:32:05.729+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:32:05.729+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:32:05.736+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:32:05.736+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:32:05.761+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.258 seconds
+[2025-06-09T15:32:56.835+0200] {processor.py:161} INFO - Started process (PID=81883) to work on /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:32:56.846+0200] {processor.py:830} INFO - Processing file /home/ccd/airflow/dags/inspect_parquet_file.py for tasks to queue
+[2025-06-09T15:32:56.848+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:32:56.847+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:32:57.046+0200] {processor.py:840} INFO - DAG(s) 'inspect_static_parquet_file_dag' retrieved from /home/ccd/airflow/dags/inspect_parquet_file.py
+[2025-06-09T15:32:57.053+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:32:57.053+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-09T15:32:57.059+0200] {logging_mixin.py:188} INFO - [2025-06-09T15:32:57.059+0200] {dag.py:3954} INFO - Setting next_dagrun for inspect_static_parquet_file_dag to None, run_after=None
+[2025-06-09T15:32:57.092+0200] {processor.py:183} INFO - Processing /home/ccd/airflow/dags/inspect_parquet_file.py took 0.261 seconds

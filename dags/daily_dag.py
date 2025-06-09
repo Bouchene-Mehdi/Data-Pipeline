@@ -10,6 +10,7 @@ import pandas as pd
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import lit
 from pyspark.sql.functions import trim, col
+from elasticsearch import Elasticsearch
 
 # Configuration
 CITIES_CSV = '/home/ccd/airflow/config/european_cities.csv'
@@ -333,6 +334,38 @@ def combine_daily_data(**context):
 
     spark.stop()
     print(f"[DONE] Finished combining daily data for {execution_date}")
+def index_daily_to_elasticsearch(**context):
+    spark = SparkSession.builder.appName("IndexDailyES").master("local[*]").getOrCreate()
+    es = Elasticsearch("http://localhost:9200")
+    index_name = "environment_data"
+    execution_date = context['ds']
+    cities = load_cities()
+
+    if not es.ping():
+        print("[ERROR] Cannot connect to Elasticsearch.")
+        return
+
+    for city in cities:
+        city_name = city['name'].lower().replace(" ", "_")
+        file_path = os.path.join(FORMATTED_COMBINED_DIR, city_name, execution_date)
+
+        if not os.path.exists(file_path):
+            continue
+
+        try:
+            df = spark.read.parquet(file_path)
+            records = df.toJSON().collect()
+
+            for record in records:
+                doc = json.loads(record)
+                es.index(index=index_name, document=doc)
+
+            print(f"[OK] Indexed {city_name}/{execution_date}")
+        except Exception as e:
+            print(f"[ERROR] Failed to index {city_name}/{execution_date}: {e}")
+
+    spark.stop()
+    print(f"[DONE] Finished indexing daily data for {execution_date}")
 # # DAG definition
 default_args = {
     'owner': 'airflow',
@@ -371,5 +404,10 @@ with DAG(
         python_callable=combine_daily_data,
         provide_context=True
     )
+    index_daily = PythonOperator(
+        task_id='index_daily_combined_to_elasticsearch',
+        python_callable=index_daily_to_elasticsearch,
+        provide_context=True
+    )
 
-    fetch_daily_task >> format_daily_task >> combine_daily_task
+    fetch_daily_task >> format_daily_task >> combine_daily_task >> index_daily
