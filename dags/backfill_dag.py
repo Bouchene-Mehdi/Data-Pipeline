@@ -254,7 +254,8 @@ def combine_backfill_data():
     print("[DONE] Backfill combining completed")
 def index_backfill_to_elasticsearch():
     spark = SparkSession.builder.appName("IndexBackfillES").master("local[*]").getOrCreate()
-    es = Elasticsearch("http://localhost:9200")
+    # es = Elasticsearch("http://localhost:9200")
+    es = Elasticsearch("http://elasticsearch:9200")
     index_name = "environment_data"
 
     try:
