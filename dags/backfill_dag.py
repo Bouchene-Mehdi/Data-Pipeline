@@ -306,23 +306,23 @@ with DAG(
     tags=['pollution', 'weather', 'backfill'],
 ) as dag:
 
-    # format_all_backfill = PythonOperator(
-    #     task_id='format_backfill_all_data',
-    #     python_callable=format_backfill_all_dates
-    # )
-    #
-    # fetch_task = PythonOperator(
-    #     task_id='fetch_full_history_all_cities',
-    #     python_callable=fetch_all_data_backfill
-    # )
-    #
-    # combine_backfill = PythonOperator(
-    #     task_id='combine_backfill_data',
-    #     python_callable=combine_backfill_data
-    # )
+    format_all_backfill = PythonOperator(
+        task_id='format_backfill_all_data',
+        python_callable=format_backfill_all_dates
+    )
+
+    fetch_task = PythonOperator(
+        task_id='fetch_full_history_all_cities',
+        python_callable=fetch_all_data_backfill
+    )
+
+    combine_backfill = PythonOperator(
+        task_id='combine_backfill_data',
+        python_callable=combine_backfill_data
+    )
     index_backfill = PythonOperator(
         task_id='index_backfill_combined_to_elasticsearch',
         python_callable=index_backfill_to_elasticsearch
     )
 
-    index_backfill
+    fetch_task >> format_all_backfill >> combine_backfill >> index_backfill
