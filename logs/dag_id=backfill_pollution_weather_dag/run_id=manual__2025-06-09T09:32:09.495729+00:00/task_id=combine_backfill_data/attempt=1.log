@@ -1,0 +1,55 @@
+[2025-06-09T11:32:11.992+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-09T11:32:12.002+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: backfill_pollution_weather_dag.combine_backfill_data manual__2025-06-09T09:32:09.495729+00:00 [queued]>
+[2025-06-09T11:32:12.005+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: backfill_pollution_weather_dag.combine_backfill_data manual__2025-06-09T09:32:09.495729+00:00 [queued]>
+[2025-06-09T11:32:12.005+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-06-09T11:32:12.020+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): combine_backfill_data> on 2025-06-09 09:32:09.495729+00:00
+[2025-06-09T11:32:12.022+0200] {standard_task_runner.py:63} INFO - Started process 4354 to run task
+[2025-06-09T11:32:12.026+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'backfill_pollution_weather_dag', 'combine_backfill_data', 'manual__2025-06-09T09:32:09.495729+00:00', '--job-id', '347', '--raw', '--subdir', 'DAGS_FOLDER/backfill_dag.py', '--cfg-path', '/tmp/tmptb7hfgb3']
+[2025-06-09T11:32:12.026+0200] {standard_task_runner.py:91} INFO - Job 347: Subtask combine_backfill_data
+[2025-06-09T11:32:12.055+0200] {task_command.py:426} INFO - Running <TaskInstance: backfill_pollution_weather_dag.combine_backfill_data manual__2025-06-09T09:32:09.495729+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-06-09T11:32:12.107+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='backfill_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='combine_backfill_data' AIRFLOW_CTX_EXECUTION_DATE='2025-06-09T09:32:09.495729+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-09T09:32:09.495729+00:00'
+[2025-06-09T11:32:12.107+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-09T11:32:18.448+0200] {logging_mixin.py:188} INFO - [COMBINING] City: istanbul
+[2025-06-09T11:32:18.449+0200] {logging_mixin.py:188} INFO - [COMBINING] City: moscow
+[2025-06-09T11:32:18.449+0200] {logging_mixin.py:188} INFO - [COMBINING] City: london
+[2025-06-09T11:32:18.449+0200] {logging_mixin.py:188} INFO - [COMBINING] City: saint_petersburg
+[2025-06-09T11:32:18.450+0200] {logging_mixin.py:188} INFO - [COMBINING] City: berlin
+[2025-06-09T11:32:18.450+0200] {logging_mixin.py:188} INFO - [COMBINING] City: madrid
+[2025-06-09T11:32:18.450+0200] {logging_mixin.py:188} INFO - [COMBINING] City: kyiv
+[2025-06-09T11:32:18.450+0200] {logging_mixin.py:188} INFO - [COMBINING] City: rome
+[2025-06-09T11:32:18.450+0200] {logging_mixin.py:188} INFO - [COMBINING] City: baku
+[2025-06-09T11:32:18.451+0200] {logging_mixin.py:188} INFO - [COMBINING] City: paris
+[2025-06-09T11:32:18.451+0200] {logging_mixin.py:188} INFO - [COMBINING] City: vienna
+[2025-06-09T11:32:18.451+0200] {logging_mixin.py:188} INFO - [COMBINING] City: minsk
+[2025-06-09T11:32:18.451+0200] {logging_mixin.py:188} INFO - [COMBINING] City: hamburg
+[2025-06-09T11:32:18.451+0200] {logging_mixin.py:188} INFO - [COMBINING] City: warsaw
+[2025-06-09T11:32:18.451+0200] {logging_mixin.py:188} INFO - [COMBINING] City: bucharest
+[2025-06-09T11:32:18.452+0200] {logging_mixin.py:188} INFO - [COMBINING] City: barcelona
+[2025-06-09T11:32:18.452+0200] {logging_mixin.py:188} INFO - [COMBINING] City: budapest
+[2025-06-09T11:32:18.452+0200] {logging_mixin.py:188} INFO - [COMBINING] City: belgrade
+[2025-06-09T11:32:18.452+0200] {logging_mixin.py:188} INFO - [COMBINING] City: munich
+[2025-06-09T11:32:18.453+0200] {logging_mixin.py:188} INFO - [COMBINING] City: kharkiv
+[2025-06-09T11:32:18.454+0200] {logging_mixin.py:188} INFO - [COMBINING] City: prague
+[2025-06-09T11:32:18.455+0200] {logging_mixin.py:188} INFO - [COMBINING] City: milan
+[2025-06-09T11:32:18.455+0200] {logging_mixin.py:188} INFO - [COMBINING] City: kazan
+[2025-06-09T11:32:18.455+0200] {logging_mixin.py:188} INFO - [COMBINING] City: sofia
+[2025-06-09T11:32:18.456+0200] {logging_mixin.py:188} INFO - [COMBINING] City: tbilisi
+[2025-06-09T11:32:18.456+0200] {logging_mixin.py:188} INFO - [COMBINING] City: nizhny_novgorod
+[2025-06-09T11:32:18.456+0200] {logging_mixin.py:188} INFO - [COMBINING] City: ufa
+[2025-06-09T11:32:18.457+0200] {logging_mixin.py:188} INFO - [COMBINING] City: birmingham
+[2025-06-09T11:32:18.457+0200] {logging_mixin.py:188} INFO - [COMBINING] City: krasnodar
+[2025-06-09T11:32:18.457+0200] {logging_mixin.py:188} INFO - [COMBINING] City: samara
+[2025-06-09T11:32:18.457+0200] {logging_mixin.py:188} INFO - [COMBINING] City: rostov-on-don
+[2025-06-09T11:32:18.458+0200] {logging_mixin.py:188} INFO - [COMBINING] City: yerevan
+[2025-06-09T11:32:18.458+0200] {logging_mixin.py:188} INFO - [COMBINING] City: cologne
+[2025-06-09T11:32:18.458+0200] {logging_mixin.py:188} INFO - [COMBINING] City: voronezh
+[2025-06-09T11:32:18.458+0200] {logging_mixin.py:188} INFO - [COMBINING] City: perm
+[2025-06-09T11:32:18.458+0200] {logging_mixin.py:188} INFO - [COMBINING] City: volgograd
+[2025-06-09T11:32:18.458+0200] {logging_mixin.py:188} INFO - [COMBINING] City: odesa
+[2025-06-09T11:32:18.506+0200] {logging_mixin.py:188} INFO - [DONE] Backfill combining completed
+[2025-06-09T11:32:18.506+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-09T11:32:18.506+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-09T11:32:18.512+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=backfill_pollution_weather_dag, task_id=combine_backfill_data, execution_date=20250609T093209, start_date=20250609T093212, end_date=20250609T093218
+[2025-06-09T11:32:18.543+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-09T11:32:18.550+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-09T11:32:18.550+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

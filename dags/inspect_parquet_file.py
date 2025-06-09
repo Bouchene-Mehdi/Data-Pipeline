@@ -5,8 +5,8 @@ from pyspark.sql import SparkSession
 import os
 
 # Correct paths to the partition directories
-POLLUTION_PARQUET_PATH = '/home/ccd/airflow/data/formatted/pollution/paris/2025-06-06/'
-WEATHER_PARQUET_PATH = '/home/ccd/airflow/data/formatted/weather/paris/2025-06-06/'
+POLLUTION_PARQUET_PATH = '/home/ccd/airflow/data/formatted/combined/istanbul/2025-06-06/'
+WEATHER_PARQUET_PATH = '/home/ccd/airflow/data/formatted/combined/istanbul/2025-06-06/'
 
 def inspect_static_parquet():
     spark = SparkSession.builder \
