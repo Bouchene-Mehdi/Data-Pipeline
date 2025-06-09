@@ -8,7 +8,8 @@ import json
 import pandas as pd
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import from_unixtime, to_date, col, lit, hour, avg, trim
-
+from elasticsearch import Elasticsearch
+import json
 from pyspark.sql.types import IntegerType
 from collections import Counter
 
@@ -251,7 +252,39 @@ def combine_backfill_data():
 
     spark.stop()
     print("[DONE] Backfill combining completed")
+def index_backfill_to_elasticsearch():
+    spark = SparkSession.builder.appName("IndexBackfillES").master("local[*]").getOrCreate()
+    es = Elasticsearch("http://localhost:9200")
+    index_name = "environment_data"
 
+    try:
+        es.info()
+    except Exception as e:
+        print(f"[ERROR] Cannot connect to Elasticsearch: {e}")
+        return
+
+    for city in os.listdir(FORMATTED_COMBINED_DIR):
+        city_path = os.path.join(FORMATTED_COMBINED_DIR, city)
+        if not os.path.isdir(city_path):
+            continue
+
+        for date in os.listdir(city_path):
+            parquet_path = os.path.join(city_path, date)
+
+            try:
+                df = spark.read.parquet(parquet_path)
+                records = df.toJSON().collect()
+
+                for record in records:
+                    doc = json.loads(record)
+                    es.index(index=index_name, document=doc)
+
+                print(f"[OK] Indexed {city}/{date}")
+            except Exception as e:
+                print(f"[ERROR] Failed to index {city}/{date}: {e}")
+
+    spark.stop()
+    print("[DONE] Finished indexing backfill data to Elasticsearch")
 # -*
 # Airflow DAG
 default_args = {
@@ -273,19 +306,23 @@ with DAG(
     tags=['pollution', 'weather', 'backfill'],
 ) as dag:
 
-    format_all_backfill = PythonOperator(
-        task_id='format_backfill_all_data',
-        python_callable=format_backfill_all_dates
+    # format_all_backfill = PythonOperator(
+    #     task_id='format_backfill_all_data',
+    #     python_callable=format_backfill_all_dates
+    # )
+    #
+    # fetch_task = PythonOperator(
+    #     task_id='fetch_full_history_all_cities',
+    #     python_callable=fetch_all_data_backfill
+    # )
+    #
+    # combine_backfill = PythonOperator(
+    #     task_id='combine_backfill_data',
+    #     python_callable=combine_backfill_data
+    # )
+    index_backfill = PythonOperator(
+        task_id='index_backfill_combined_to_elasticsearch',
+        python_callable=index_backfill_to_elasticsearch
     )
 
-    fetch_task = PythonOperator(
-        task_id='fetch_full_history_all_cities',
-        python_callable=fetch_all_data_backfill
-    )
-
-    combine_backfill = PythonOperator(
-        task_id='combine_backfill_data',
-        python_callable=combine_backfill_data
-    )
-
-    fetch_task >> format_all_backfill >> combine_backfill
+    index_backfill
