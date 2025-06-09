@@ -6,20 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a9c9117f-5f2f-4596-af6a-dfa063898d09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airflow-webserver.pid" beforeDir="false" afterPath="$PROJECT_DIR$/airflow-webserver.pid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/airflow.db" beforeDir="false" afterPath="$PROJECT_DIR$/airflow.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dags/backfill_dag.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/backfill_dag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dags/daily_dag.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/daily_dag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-05T00:00:00+00:00/task_id=combine_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-05T00:00:00+00:00/task_id=combine_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-05T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-05T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-05T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-05T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-06T00:00:00+00:00/task_id=combine_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-06T00:00:00+00:00/task_id=combine_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-06T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-06T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-06T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-06T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-07T00:00:00+00:00/task_id=combine_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-07T00:00:00+00:00/task_id=combine_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-07T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-07T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-07T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-07T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-08T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-08T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/dag_processor_manager/dag_processor_manager.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_processor_manager/dag_processor_manager.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-09/backfill_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-09/backfill_dag.py.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-09/daily_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-09/daily_dag.py.log" afterDir="false" />
@@ -109,12 +96,12 @@
     &quot;assignee&quot;: &quot;Bouchene-Mehdi&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Bouchene-Mehdi/Data-Pipeline.git",
-    "accountId": "6d2f6bb1-50ec-4822-9b32-69dd7fe5466d"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Bouchene-Mehdi/Data-Pipeline.git&quot;,
+    &quot;accountId&quot;: &quot;6d2f6bb1-50ec-4822-9b32-69dd7fe5466d&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -123,23 +110,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.my_first_dag.executor": "Run",
-    "Python.test_data_fetcher.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "mehdi",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.my_first_dag.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_data_fetcher.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;mehdi&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -168,7 +155,8 @@
       <workItem from="1748684955013" duration="14659000" />
       <workItem from="1749380349099" duration="29423000" />
       <workItem from="1749426359641" duration="1140000" />
-      <workItem from="1749460479766" duration="11059000" />
+      <workItem from="1749460479766" duration="11848000" />
+      <workItem from="1749476801669" duration="345000" />
     </task>
     <servers />
   </component>
