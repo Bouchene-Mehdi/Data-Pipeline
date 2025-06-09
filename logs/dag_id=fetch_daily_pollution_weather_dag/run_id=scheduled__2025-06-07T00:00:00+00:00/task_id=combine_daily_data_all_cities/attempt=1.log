@@ -44,3 +44,68 @@
 [2025-06-09T18:01:23.963+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
 [2025-06-09T18:01:23.968+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
 [2025-06-09T18:01:23.968+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-06-09T20:19:47.248+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-09T20:19:47.262+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.combine_daily_data_all_cities scheduled__2025-06-07T00:00:00+00:00 [queued]>
+[2025-06-09T20:19:47.265+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_daily_pollution_weather_dag.combine_daily_data_all_cities scheduled__2025-06-07T00:00:00+00:00 [queued]>
+[2025-06-09T20:19:47.265+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-06-09T20:19:47.281+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): combine_daily_data_all_cities> on 2025-06-07 00:00:00+00:00
+[2025-06-09T20:19:47.284+0200] {standard_task_runner.py:63} INFO - Started process 301156 to run task
+[2025-06-09T20:19:47.287+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fetch_daily_pollution_weather_dag', 'combine_daily_data_all_cities', 'scheduled__2025-06-07T00:00:00+00:00', '--job-id', '450', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpzvs_ey1w']
+[2025-06-09T20:19:47.287+0200] {standard_task_runner.py:91} INFO - Job 450: Subtask combine_daily_data_all_cities
+[2025-06-09T20:19:47.323+0200] {task_command.py:426} INFO - Running <TaskInstance: fetch_daily_pollution_weather_dag.combine_daily_data_all_cities scheduled__2025-06-07T00:00:00+00:00 [running]> on host DESKTOP-2QS8J6D.
+[2025-06-09T20:19:47.465+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='fetch_daily_pollution_weather_dag' AIRFLOW_CTX_TASK_ID='combine_daily_data_all_cities' AIRFLOW_CTX_EXECUTION_DATE='2025-06-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-07T00:00:00+00:00'
+[2025-06-09T20:19:47.466+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-09T20:19:47.470+0200] {logging_mixin.py:188} INFO - [START] Combining daily data for 2025-06-07
+[2025-06-09T20:19:47.470+0200] {logging_mixin.py:188} INFO - [COMBINING] City: istanbul
+[2025-06-09T20:19:47.495+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/istanbul/2025-06-07/data.parquet
+[2025-06-09T20:19:47.495+0200] {logging_mixin.py:188} INFO - [COMBINING] City: moscow
+[2025-06-09T20:19:47.503+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/moscow/2025-06-07/data.parquet
+[2025-06-09T20:19:47.503+0200] {logging_mixin.py:188} INFO - [COMBINING] City: london
+[2025-06-09T20:19:47.511+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/london/2025-06-07/data.parquet
+[2025-06-09T20:19:47.511+0200] {logging_mixin.py:188} INFO - [COMBINING] City: saint_petersburg
+[2025-06-09T20:19:47.521+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/saint_petersburg/2025-06-07/data.parquet
+[2025-06-09T20:19:47.521+0200] {logging_mixin.py:188} INFO - [COMBINING] City: berlin
+[2025-06-09T20:19:47.529+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/berlin/2025-06-07/data.parquet
+[2025-06-09T20:19:47.530+0200] {logging_mixin.py:188} INFO - [COMBINING] City: madrid
+[2025-06-09T20:19:47.538+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/madrid/2025-06-07/data.parquet
+[2025-06-09T20:19:47.538+0200] {logging_mixin.py:188} INFO - [COMBINING] City: kyiv
+[2025-06-09T20:19:47.546+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/kyiv/2025-06-07/data.parquet
+[2025-06-09T20:19:47.547+0200] {logging_mixin.py:188} INFO - [COMBINING] City: rome
+[2025-06-09T20:19:47.556+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/rome/2025-06-07/data.parquet
+[2025-06-09T20:19:47.557+0200] {logging_mixin.py:188} INFO - [COMBINING] City: baku
+[2025-06-09T20:19:47.564+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/baku/2025-06-07/data.parquet
+[2025-06-09T20:19:47.564+0200] {logging_mixin.py:188} INFO - [COMBINING] City: paris
+[2025-06-09T20:19:47.572+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/paris/2025-06-07/data.parquet
+[2025-06-09T20:19:47.572+0200] {logging_mixin.py:188} INFO - [COMBINING] City: vienna
+[2025-06-09T20:19:47.581+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/vienna/2025-06-07/data.parquet
+[2025-06-09T20:19:47.582+0200] {logging_mixin.py:188} INFO - [COMBINING] City: minsk
+[2025-06-09T20:19:47.591+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/minsk/2025-06-07/data.parquet
+[2025-06-09T20:19:47.591+0200] {logging_mixin.py:188} INFO - [COMBINING] City: hamburg
+[2025-06-09T20:19:47.599+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/hamburg/2025-06-07/data.parquet
+[2025-06-09T20:19:47.599+0200] {logging_mixin.py:188} INFO - [COMBINING] City: warsaw
+[2025-06-09T20:19:47.607+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/warsaw/2025-06-07/data.parquet
+[2025-06-09T20:19:47.607+0200] {logging_mixin.py:188} INFO - [COMBINING] City: bucharest
+[2025-06-09T20:19:47.616+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/bucharest/2025-06-07/data.parquet
+[2025-06-09T20:19:47.616+0200] {logging_mixin.py:188} INFO - [COMBINING] City: barcelona
+[2025-06-09T20:19:47.633+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/barcelona/2025-06-07/data.parquet
+[2025-06-09T20:19:47.633+0200] {logging_mixin.py:188} INFO - [COMBINING] City: budapest
+[2025-06-09T20:19:47.650+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/budapest/2025-06-07/data.parquet
+[2025-06-09T20:19:47.650+0200] {logging_mixin.py:188} INFO - [COMBINING] City: belgrade
+[2025-06-09T20:19:47.662+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/belgrade/2025-06-07/data.parquet
+[2025-06-09T20:19:47.663+0200] {logging_mixin.py:188} INFO - [COMBINING] City: munich
+[2025-06-09T20:19:47.678+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/munich/2025-06-07/data.parquet
+[2025-06-09T20:19:47.678+0200] {logging_mixin.py:188} INFO - [COMBINING] City: kharkiv
+[2025-06-09T20:19:47.689+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/kharkiv/2025-06-07/data.parquet
+[2025-06-09T20:19:47.690+0200] {logging_mixin.py:188} INFO - [COMBINING] City: prague
+[2025-06-09T20:19:47.700+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/prague/2025-06-07/data.parquet
+[2025-06-09T20:19:47.701+0200] {logging_mixin.py:188} INFO - [COMBINING] City: milan
+[2025-06-09T20:19:47.709+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/milan/2025-06-07/data.parquet
+[2025-06-09T20:19:47.710+0200] {logging_mixin.py:188} INFO - [COMBINING] City: algiers
+[2025-06-09T20:19:47.718+0200] {logging_mixin.py:188} INFO - [OK] Combined written: /home/ccd/airflow/data/formatted/combined/algiers/2025-06-07/data.parquet
+[2025-06-09T20:19:47.718+0200] {logging_mixin.py:188} INFO - [DONE] Finished combining daily data for 2025-06-07
+[2025-06-09T20:19:47.718+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-09T20:19:47.718+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-09T20:19:47.721+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=fetch_daily_pollution_weather_dag, task_id=combine_daily_data_all_cities, execution_date=20250607T000000, start_date=20250609T181947, end_date=20250609T181947
+[2025-06-09T20:19:47.780+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-09T20:19:47.792+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-09T20:19:47.802+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

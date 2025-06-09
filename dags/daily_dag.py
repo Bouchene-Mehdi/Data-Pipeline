@@ -11,7 +11,8 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import lit
 from pyspark.sql.functions import trim, col
 from elasticsearch import Elasticsearch
-
+import pyarrow as pa
+import pyarrow.parquet as pq
 # Configuration
 CITIES_CSV = '/home/ccd/airflow/config/european_cities.csv'
 RAW_POLLUTION_DIR = '/home/ccd/airflow/data/raw/pollution'
@@ -229,9 +230,6 @@ def format_daily_data(**context):
     execution_date = context['ds']
     print(f"[START] Formatting data for execution_date: {execution_date}")
 
-    spark = SparkSession.builder.appName("FormatAndFlatten").master("local[*]").getOrCreate()
-    print("[INFO] Spark session started")
-
     cities = load_cities()
     print(f"[INFO] Loaded {len(cities)} cities from config")
 
@@ -241,7 +239,8 @@ def format_daily_data(**context):
 
         # === Pollution Data ===
         pollution_path = os.path.join(RAW_POLLUTION_DIR, city_name, f"{execution_date}.json")
-        output_pollution_path = os.path.join(FORMATTED_POLLUTION_DIR, city_name, execution_date)
+        output_pollution_dir = os.path.join(FORMATTED_POLLUTION_DIR, city_name, execution_date)
+        os.makedirs(output_pollution_dir, exist_ok=True)
 
         if os.path.exists(pollution_path):
             print(f"[FOUND] Pollution file exists: {pollution_path}")
@@ -250,18 +249,13 @@ def format_daily_data(**context):
                 df_pollution = flatten_pollution(json_data)
                 print(f"[INFO] Flattened pollution data: {len(df_pollution)} rows")
 
-
                 df_pollution = aggregate_pollution(df_pollution)
-                # Round the numerical values to 3 decimal places
-
                 print(f"[INFO] Aggregated pollution data: {len(df_pollution)} rows")
 
                 if not df_pollution.empty:
-                    df_pollution_spark = spark.createDataFrame(df_pollution)
-                    df_pollution_spark = df_pollution_spark.withColumn("city_name", lit(city_name))
-                    df_pollution_spark = df_pollution_spark.withColumn("population", lit(city['population']))
-                    os.makedirs(os.path.dirname(output_pollution_path), exist_ok=True)
-                    df_pollution_spark.write.mode("overwrite").parquet(output_pollution_path)
+                    df_pollution["city_name"] = city_name
+                    df_pollution["population"] = city['population']
+                    pq.write_table(pa.Table.from_pandas(df_pollution), os.path.join(output_pollution_dir, "data.parquet"))
                     print(f"[OK] Formatted pollution for {city_name}")
                 else:
                     print(f"[SKIP] No pollution data after aggregation for {city_name}")
@@ -270,7 +264,9 @@ def format_daily_data(**context):
 
         # === Weather Data ===
         weather_path = os.path.join(RAW_WEATHER_DIR, city_name, f"{execution_date}.json")
-        output_weather_path = os.path.join(FORMATTED_WEATHER_DIR, city_name, execution_date)
+        output_weather_dir = os.path.join(FORMATTED_WEATHER_DIR, city_name, execution_date)
+        os.makedirs(output_weather_dir, exist_ok=True)
+
         if os.path.exists(weather_path):
             print(f"[FOUND] Weather file exists: {weather_path}")
             with open(weather_path, 'r') as f:
@@ -278,26 +274,19 @@ def format_daily_data(**context):
                 df_weather = flatten_weather(json_data)
                 print(f"[INFO] Flattened weather data: {len(df_weather)} rows")
 
-                # Round the numerical values to 3 decimal places
-
-
                 if not df_weather.empty:
-                    df_weather_spark = spark.createDataFrame(df_weather)
-                    df_weather_spark = df_weather_spark.withColumn("city_name", lit(city_name))
-                    df_weather_spark = df_weather_spark.withColumn("population", lit(city['population']))
-                    os.makedirs(os.path.dirname(output_weather_path), exist_ok=True)
-                    df_weather_spark.write.mode("overwrite").parquet(output_weather_path)
+                    df_weather["city_name"] = city_name
+                    df_weather["population"] = city['population']
+                    pq.write_table(pa.Table.from_pandas(df_weather), os.path.join(output_weather_dir, "data.parquet"))
                     print(f"[OK] Formatted weather for {city_name}")
                 else:
                     print(f"[SKIP] No weather data for {city_name}")
         else:
             print(f"[MISSING] Weather file does not exist for {city_name}")
 
-    spark.stop()
     print("[DONE] Spark session closed")
 def combine_daily_data(**context):
     execution_date = context['ds']
-    spark = SparkSession.builder.appName("CombineDailyData").master("local[*]").getOrCreate()
     cities = load_cities()
 
     print(f"[START] Combining daily data for {execution_date}")
@@ -306,37 +295,33 @@ def combine_daily_data(**context):
         city_name = city['name'].lower().replace(" ", "_")
         print(f"[COMBINING] City: {city_name}")
 
-        pollution_path = os.path.join(FORMATTED_POLLUTION_DIR, city_name, execution_date)
-        weather_path = os.path.join(FORMATTED_WEATHER_DIR, city_name, execution_date)
-        combined_path = os.path.join(FORMATTED_COMBINED_DIR, city_name, execution_date)
+        pollution_file = os.path.join(FORMATTED_POLLUTION_DIR, city_name, execution_date, "data.parquet")
+        weather_file = os.path.join(FORMATTED_WEATHER_DIR, city_name, execution_date, "data.parquet")
+        output_dir = os.path.join(FORMATTED_COMBINED_DIR, city_name, execution_date)
+        output_file = os.path.join(output_dir, "data.parquet")
+        os.makedirs(output_dir, exist_ok=True)
 
-        if not (os.path.exists(pollution_path) and os.path.exists(weather_path)):
+        if not (os.path.exists(pollution_file) and os.path.exists(weather_file)):
             print(f"[SKIP] Missing pollution or weather file for {city_name} on {execution_date}")
             continue
 
         try:
-            df_poll = spark.read.parquet(pollution_path).withColumn("city_name", trim(col("city_name")))
-            df_weather = spark.read.parquet(weather_path).withColumn("city_name", trim(col("city_name")))
+            df_poll = pd.read_parquet(pollution_file)
+            df_weather = pd.read_parquet(weather_file)
 
-            df_weather = df_weather.drop("lat", "lon","population")  # Remove conflicting columns
+            df_weather = df_weather.drop(columns=[c for c in ["lat", "lon", "population"] if c in df_weather.columns])
 
-            df_combined = df_poll.join(
-                df_weather,
-                on=["city_name", "time"],
-                how="inner"
-            )
+            df_combined = pd.merge(df_poll, df_weather, on=["city_name", "time"], how="inner")
 
-            if not df_combined.rdd.isEmpty():
-                os.makedirs(os.path.dirname(combined_path), exist_ok=True)
-                df_combined.write.mode("overwrite").parquet(combined_path)
-                print(f"[OK] Combined written: {combined_path}")
+            if not df_combined.empty:
+                pq.write_table(pa.Table.from_pandas(df_combined), output_file)
+                print(f"[OK] Combined written: {output_file}")
             else:
                 print(f"[SKIP] Empty join result for {city_name} on {execution_date}")
 
         except Exception as e:
             print(f"[ERROR] Failed to combine {city_name} on {execution_date}: {e}")
 
-    spark.stop()
     print(f"[DONE] Finished combining daily data for {execution_date}")
 def index_daily_to_elasticsearch(**context):
     spark = SparkSession.builder.appName("IndexDailyES").master("local[*]").getOrCreate()
@@ -384,7 +369,7 @@ with DAG(
     dag_id='fetch_daily_pollution_weather_dag',
     default_args=default_args,
     description='Daily fetch of air pollution and weather data for all cities',
-    start_date=datetime(2025, 6, 5),
+    start_date=datetime(2025, 6, 6),
     schedule_interval='@daily',  # Run daily
     catchup=True,
     max_active_runs=1,
@@ -414,4 +399,4 @@ with DAG(
         provide_context=True
     )
 
-    fetch_daily_task >> format_daily_task >> combine_daily_task
+    fetch_daily_task >> format_daily_task >> combine_daily_task >> index_daily
