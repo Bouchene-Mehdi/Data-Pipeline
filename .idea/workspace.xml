@@ -6,21 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a9c9117f-5f2f-4596-af6a-dfa063898d09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airflow-webserver.pid" beforeDir="false" afterPath="$PROJECT_DIR$/airflow-webserver.pid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/airflow.db" beforeDir="false" afterPath="$PROJECT_DIR$/airflow.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/european_cities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/config/european_cities.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dags/backfill_dag.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/backfill_dag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dags/daily_dag.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/daily_dag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dags/inspect_parquet_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/inspect_parquet_file.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-06T00:00:00+00:00/task_id=combine_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-06T00:00:00+00:00/task_id=combine_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-06T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-06T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-06T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-06T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-06T00:00:00+00:00/task_id=index_daily_combined_to_elasticsearch/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-06T00:00:00+00:00/task_id=index_daily_combined_to_elasticsearch/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-07T00:00:00+00:00/task_id=combine_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-07T00:00:00+00:00/task_id=combine_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-07T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-07T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-07T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-07T00:00:00+00:00/task_id=format_daily_data_all_cities/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-07T00:00:00+00:00/task_id=index_daily_combined_to_elasticsearch/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-07T00:00:00+00:00/task_id=index_daily_combined_to_elasticsearch/attempt=1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-08T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_id=fetch_daily_pollution_weather_dag/run_id=scheduled__2025-06-08T00:00:00+00:00/task_id=fetch_daily_data_all_cities/attempt=1.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/dag_processor_manager/dag_processor_manager.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_processor_manager/dag_processor_manager.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-09/backfill_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-09/backfill_dag.py.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-09/daily_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-09/daily_dag.py.log" afterDir="false" />
@@ -170,7 +156,7 @@
       <workItem from="1749380349099" duration="29423000" />
       <workItem from="1749426359641" duration="1140000" />
       <workItem from="1749460479766" duration="11848000" />
-      <workItem from="1749476801669" duration="12802000" />
+      <workItem from="1749476801669" duration="14050000" />
     </task>
     <servers />
   </component>
