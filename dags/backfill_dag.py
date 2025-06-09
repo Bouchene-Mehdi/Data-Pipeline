@@ -146,7 +146,7 @@ def aggregate_pollution(df: pd.DataFrame) -> pd.DataFrame:
         'aqi_mode': aqi_mode,
         'lat': df_daytime['lat'].iloc[0],
         'lon': df_daytime['lon'].iloc[0],
-        'time': df_daytime['date'].iloc[2]
+        'time': df_daytime['date'].iloc[0],
     }
     return pd.DataFrame([result])
 
@@ -190,7 +190,9 @@ def format_backfill_all_dates():
                         df_agg = aggregate_pollution(df_day)
                         if df_agg.empty:
                             continue
-                        df_spark = spark.createDataFrame(df_agg).withColumn("city_name", lit(city_name))
+                        df_spark = spark.createDataFrame(df_agg)
+                        df_spark = df_spark.withColumn("city_name", lit(city_name))
+                        df_spark = df_spark.withColumn("population", lit(city['population']))
                         output_path = os.path.join(formatted_city_dir, date)  # No '.parquet'
                         df_spark.write.mode("overwrite").parquet(output_path)
                         print(f"[OK] Pollution written: {output_path}")
