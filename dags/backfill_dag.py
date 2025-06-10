@@ -12,6 +12,7 @@ import pandas as pd
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import from_unixtime, to_date, col, lit, hour, avg, trim
 from elasticsearch import Elasticsearch
+from elasticsearch.helpers import bulk
 import json
 from pyspark.sql.types import IntegerType
 from collections import Counter
@@ -283,9 +284,18 @@ def index_backfill_to_elasticsearch():
                 df = spark.read.parquet(parquet_path)
                 records = df.toJSON().collect()
 
-                for record in records:
-                    doc = json.loads(record)
-                    es.index(index=index_name, document=doc)
+                bulk_docs = [
+                    {
+                        "_index": index_name,
+                        "_source": json.loads(record),
+                    }
+                    for record in records
+                ]
+                bulk(es, bulk_docs)
+
+                # for record in records:
+                #     doc = json.loads(record)
+                #     es.index(index=index_name, document=doc)
 
                 print(f"[OK] Indexed {city}/{date}")
             except Exception as e:
@@ -314,15 +324,15 @@ with DAG(
     tags=['pollution', 'weather', 'backfill'],
 ) as dag:
 
-    # format_all_backfill = PythonOperator(
-    #     task_id='format_backfill_all_data',
-    #     python_callable=format_backfill_all_dates
-    # )
+    format_all_backfill = PythonOperator(
+        task_id='format_backfill_all_data',
+        python_callable=format_backfill_all_dates
+    )
 
-    # fetch_task = PythonOperator(
-    #     task_id='fetch_full_history_all_cities',
-    #     python_callable=fetch_all_data_backfill
-    # )
+    fetch_task = PythonOperator(
+        task_id='fetch_full_history_all_cities',
+        python_callable=fetch_all_data_backfill
+    )
 
     combine_backfill = PythonOperator(
         task_id='combine_backfill_data',
@@ -333,4 +343,4 @@ with DAG(
         python_callable=index_backfill_to_elasticsearch
     )
 
-    combine_backfill >> index_backfill
+    fetch_task >> format_all_backfill >> combine_backfill >> index_backfill
